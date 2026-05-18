@@ -6,6 +6,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import FAQAccordion from '@/components/FAQAccordion';
 import CTABanner from '@/components/CTABanner';
 import { CheckCircle, XCircle, MinusCircle } from 'lucide-react';
+import Image from 'next/image';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Lending Locations - Real Estate Investment Loans Nationwide',
@@ -94,9 +95,7 @@ export default function LendingLocationsPage() {
           <div className="bg-[#0a1628] rounded-2xl aspect-[16/7] flex items-center justify-center mb-10 overflow-hidden relative">
             <div className="absolute inset-0 opacity-10"
               style={{ backgroundImage: 'radial-gradient(circle at 30% 50%, #c8922a, transparent 60%), radial-gradient(circle at 70% 40%, #1a3560, transparent 60%)' }} />
-            <p className="text-white/30 text-sm font-medium relative z-10">
-              Interactive US Lending Map - Replace with SVG or Mapbox component
-            </p>
+             <Image src="/integratedcapital-Map-1-5pt.svg" alt="Map of the United States showing lending locations" width={800} height={400} className="w-full h-full object-cover" />
           </div>
 
           {/* Legend */}
