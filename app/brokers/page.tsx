@@ -6,9 +6,11 @@ import CTABanner from '@/components/CTABanner';
 import SchemaScript from '@/components/SchemaScript';
 import { buildMetadata, faqPageSchema } from '@/lib/seo';
 import { Star, Handshake, Zap, Settings } from 'lucide-react';
+import Image from 'next/image';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Broker Program — Partner with Integrated Capital Solutions',
+  title: 'Broker Program - Partner with Integrated Capital Solutions',
   description:
     'Integrated Capital Solutions partners with real estate brokers nationwide. Access fast closings, competitive terms, and a full suite of fix-and-flip, DSCR, ground-up, and bridge loan products for your clients.',
   slug: '/brokers',
@@ -36,7 +38,7 @@ const brokerFAQs = [
   {
     question: 'How quickly will my client receive a term sheet?',
     answer:
-      'Integrated Capital Solutionsprovides term sheets within 24 hours of a complete loan inquiry submission. Once a term sheet is issued, our team works to close as fast as possible — typically 7–14 days depending on the loan type.',
+      'Integrated Capital Solutionsprovides term sheets within 24 hours of a complete loan inquiry submission. Once a term sheet is issued, our team works to close as fast as possible - typically 7–14 days depending on the loan type.',
   },
   {
     question: 'What loan products are available through the broker channel?',
@@ -50,7 +52,7 @@ const testimonials = [
     name: 'Dawna T.',
     role: 'Mortgage Broker',
     quote:
-      'Integrated Capital Solutionsis hands-down the most reliable private lending partner I\'ve worked with. Their responsiveness is unmatched — every time I submit a file, I know exactly where it stands and when it will close.',
+      'Integrated Capital Solutionsis hands-down the most reliable private lending partner I\'ve worked with. Their responsiveness is unmatched - every time I submit a file, I know exactly where it stands and when it will close.',
   },
   {
     name: 'Jason S.',
@@ -79,8 +81,11 @@ export default function BrokersPage() {
       <SchemaScript schema={faqPageSchema(brokerFAQs)} />
 
       {/* Hero */}
-      <section className="section-dark pt-28 pb-16">
+      <section className="section-dark pt-28 h-[500px] pb-16 bg-[url('/brokers-hero.jpg')] bg-cover bg-top ">
+      <div className="absolute inset-0 h-[500px] bg-[#0a1628]/80"/>
+      < div className="absolute linear-to-b from-[#0a1628]/80 w-full h-full"/>
         <div className="container-wide">
+          <Breadcrumb items={[{ name: 'Partners', href: '/brokers' }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fadeUp">
             Strategic Lending Solutions for<br />Brokers and Their Clients
           </h1>
@@ -109,12 +114,12 @@ export default function BrokersPage() {
               {
                 icon: <Zap size={22} />,
                 title: 'Swift Closings',
-                desc: 'Term sheets in 24 hours. Closings in as few as 7 days. Your clients get certainty of execution — and you get a reputation for delivering.',
+                desc: 'Term sheets in 24 hours. Closings in as few as 7 days. Your clients get certainty of execution and you get a reputation for delivering.',
               },
               {
                 icon: <Settings size={22} />,
                 title: 'Flexible Loan Terms',
-                desc: 'Access the full Integrated Capital Solutionsproduct suite — Ground Up, Fix & Flip, DSCR Rental, and Bridge Loans — all through one trusted lender relationship.',
+                desc: 'Access the full Integrated Capital Solutionsproduct suite - Ground Up, Fix & Flip, DSCR Rental, and Bridge Loans - all through one trusted lender relationship.',
               },
             ].map((v) => (
               <div key={v.title} className="bg-white rounded-xl p-6 border border-[#e8eaef]">
