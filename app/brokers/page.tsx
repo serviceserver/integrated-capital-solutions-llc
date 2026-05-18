@@ -69,10 +69,10 @@ const testimonials = [
 ];
 
 const products = [
-  { label: 'Ground Up', href: '/ground-up', term: '12–30 Months', amount: '$250K–$5M+', ltc: 'Up to 90%' },
-  { label: 'Fix & Flip', href: '/fix-flip', term: '6–30 Months', amount: '$150K–$5M+', ltc: 'Up to 95%' },
-  { label: 'DSCR Rental', href: '/dscr-rental', term: '30 Years', amount: '$75K–$2.5M', ltc: 'Up to 80% LTV' },
-  { label: 'Bridge Loan', href: '/bridge-loan', term: '6–15 Months', amount: '$150K–$5M+', ltc: 'Up to 80% LTV' },
+  { label: 'Ground Up', image: '/construction-site.JPG', href: '/ground-up', term: '12–30 Months', amount: '$250K–$5M+', ltc: 'Up to 90%' },
+  { label: 'Fix & Flip', image: '/fix-flip.JPG', href: '/fix-flip', term: '6–30 Months', amount: '$150K–$5M+', ltc: 'Up to 95%' },
+  { label: 'DSCR Rental', image: '/rent.JPG', href: '/dscr-rental', term: '30 Years', amount: '$75K–$2.5M', ltc: 'Up to 80% LTV' },
+  { label: 'Bridge Loan', image: '/family.jpg', href: '/bridge-loan', term: '6–15 Months', amount: '$150K–$5M+', ltc: 'Up to 80% LTV' },
 ];
 
 export default function BrokersPage() {
@@ -142,6 +142,7 @@ export default function BrokersPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {products.map((p) => (
               <div key={p.label} className="bg-white border border-[#e8eaef] rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+                <Image src={p.image} alt={p.label} width={600} height={400} className="w-full h-48 object-cover" />
                 <div className="bg-[#0a1628] px-5 py-4 flex items-center justify-between">
                   <h3 className="text-white font-bold">{p.label}</h3>
                   <Link href={p.href} className="text-[#c8922a] text-xs font-semibold hover:underline">

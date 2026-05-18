@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ArrowRight, Check, ChevronLeft, ChevronRight, Star, Phone, Building2, TrendingUp, Users } from 'lucide-react';
 import FAQAccordion from '@/components/FAQAccordion';
 import CTABanner from '@/components/CTABanner';
+import Image from 'next/image';
 
 const products = [
   {
@@ -153,11 +154,16 @@ export default function HomePage() {
 
       {/* READY FOR FINANCING CTA */}
       <section className="bg-[#c8922a] py-10">
-        <div className="container-wide flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="container-wide flex flex-col md:flex-row items-center justify-center gap-20">
+          <div className="flex items-center gap-3">
+            <Image src="/financing.jpg" alt="Financing" width={350} height={350} className="w-full" />
+            </div>
+            <div className="flex flex-col items-start gap-4">
           <h3 className="text-white text-2xl font-bold">Ready for Financing?</h3>
           <Link href="/app" className="bg-white text-[#c8922a] font-bold px-6 py-2.5 rounded-md hover:bg-[#f7f8fa] transition-colors text-sm">
             Get an Estimate
           </Link>
+          </div>
         </div>
       </section>
 
