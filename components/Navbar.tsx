@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Phone, X, Menu } from 'lucide-react';
+import { Phone, X, Menu , Mail} from 'lucide-react';
 import DropdownMenu from './DropdownMenu';
 import Image from 'next/image';
 
@@ -76,15 +76,15 @@ export default function Navbar() {
         <div className="fixed inset-0 z-40 bg-[#0a1628] pt-16 overflow-y-auto">
           <div className="container-wide py-6 flex flex-col gap-1">
             <p className="text-xs font-bold uppercase tracking-widest text-[#c8922a] mb-2 mt-2">Products</p>
-            {products.map(p => <Link key={p.href} href={p.href} className="text-gray/85 hover:text-white font-medium py-2.5 border-b border-white/10 text-sm" onClick={() => setMobileOpen(false)}>{p.label}</Link>)}
+            {products.map(p => <Link key={p.href} href={p.href} className="text-white/85 hover:text-gray-500 font-medium py-2.5 border-b border-white/10 text-sm" onClick={() => setMobileOpen(false)}>{p.label}</Link>)}
             <p className="text-xs font-bold uppercase tracking-widest text-[#c8922a] mb-2 mt-4">About</p>
-            {about.map(p => <Link key={p.href} href={p.href} className="text-white/85 hover:text-white font-medium py-2.5 border-b border-white/10 text-sm" onClick={() => setMobileOpen(false)}>{p.label}</Link>)}
+            {about.map(p => <Link key={p.href} href={p.href} className="text-white/85 hover:text-gray-500 font-medium py-2.5 border-b border-white/10 text-sm" onClick={() => setMobileOpen(false)}>{p.label}</Link>)}
             <Link href="/brokers" className="text-white/85 hover:text-white font-semibold py-3 border-b border-white/10 text-sm mt-4" onClick={() => setMobileOpen(false)}>Brokers</Link>
             <p className="text-xs font-bold uppercase tracking-widest text-[#c8922a] mb-2 mt-4">Resources</p>
-            {resources.map(p => <Link key={p.href} href={p.href} className="text-white/85 hover:text-white font-medium py-2.5 border-b border-white/10 text-sm" onClick={() => setMobileOpen(false)}>{p.label}</Link>)}
+            {resources.map(p => <Link key={p.href} href={p.href} className="text-white/85 hover:text-gray-500 font-medium py-2.5 border-b border-white/10 text-sm" onClick={() => setMobileOpen(false)}>{p.label}</Link>)}
             <div className="mt-8 flex flex-col gap-3">
-              <a href="tel:16612273649" className="btn-secondary w-full justify-center text-sm">
-                <Phone size={14} /> (661) 227-3649
+              <a href="mailto:info@integratedcapitalsolutionsllc.com" className="btn-secondary w-full justify-center text-sm">
+                <Mail size={14} /> info@integratedcapitalsolutionsllc.com
               </a>
               <Link href="/app" className="btn-primary w-full justify-center text-sm" onClick={() => setMobileOpen(false)}>Get an Estimate</Link>
             </div>

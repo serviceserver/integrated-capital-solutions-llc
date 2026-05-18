@@ -108,8 +108,8 @@ export default function ProductPageLayout({
       />
 
       {/* Hero */}
-      <section className="section-dark pt-28 pb-16" style={{backgroundImage: `url('${heroImage}')`, width: '100%', height: "100%", backgroundSize: 'cover', backgroundPosition: "center"}} aria-label={`${heroTitle} loan hero`}>
-      <div className="absolute inset-0 bg-linear-to-b from-[#0a1628]/80 to-[#0a1628]/75 h-[69%] sm:h-[67%]" />
+      <section className="section-dark pt-28 pb-16 h-125" style={{backgroundImage: `url('${heroImage}')`, width: '100%', height: "500px", backgroundSize: 'cover', backgroundPosition: "center"}} aria-label={`${heroTitle} loan hero`}>
+      <div className="absolute inset-0 bg-linear-to-b from-[#0a1628]/80 to-[#0a1628]/75 h-125 sm:h-[67%]" />
         <div className="container-wide z-20" >
           <Breadcrumb items={[{ name: 'Products', href: '/products' }, { name: heroTitle, href: slug }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-5 mb-4 animate-fadeUp">

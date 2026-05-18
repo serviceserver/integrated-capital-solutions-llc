@@ -83,7 +83,6 @@ export default function BrokersPage() {
       {/* Hero */}
       <section className="section-dark pt-28 h-[500px] pb-16 bg-[url('/brokers-hero.jpg')] bg-cover bg-top ">
       <div className="absolute inset-0 h-[500px] bg-[#0a1628]/80"/>
-      < div className="absolute linear-to-b from-[#0a1628]/80 w-full h-full"/>
         <div className="container-wide">
           <Breadcrumb items={[{ name: 'Partners', href: '/brokers' }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fadeUp">

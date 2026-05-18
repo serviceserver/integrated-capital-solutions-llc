@@ -100,8 +100,8 @@ export default function CareersPage() {
                   </div>
                 </div>
                 <a href={role.linkedIn} target="_blank" rel="noopener noreferrer"
-                  className="btn-primary text-sm py-2 px-5 flex-shrink-0 flex items-center gap-1.5">
-                  Apply on LinkedIn <ExternalLink size={13} />
+                  className="btn-primary text-sm py-2 px-5 shrink-0 flex items-center gap-1.5">
+                  Apply Now <ExternalLink size={13} />
                 </a>
               </article>
             ))}

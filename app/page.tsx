@@ -8,24 +8,24 @@ import Image from 'next/image';
 
 const products = [
   {
-    label: 'Ground Up', href: '/ground-up',
+    label: 'Ground Up', href: '/ground-up', image: '/construction-site.JPG',
     desc: 'New construction financing for experienced builders',
-    specs: [['Term','12–30 Months'],['Loan Amount','$250K–$5M+'],['LTC','Up to 90%'],['LTV','Up to 75%']],
+    specs: [['Term', '12–30 Months'], ['Loan Amount', '$250K–$5M+'], ['LTC', 'Up to 90%'], ['LTV', 'Up to 75%']],
   },
   {
-    label: 'Fix & Flip', href: '/fix-flip',
+    label: 'Fix & Flip', href: '/fix-flip', image: '/fix-flip.JPG',
     desc: 'Acquisition and renovation financing at scale',
-    specs: [['Term','6–30 Months'],['Loan Amount','$150K–$5M+'],['LTC','Up to 95%'],['Purchase','Up to 92.5%']],
+    specs: [['Term', '6–30 Months'], ['Loan Amount', '$150K–$5M+'], ['LTC', 'Up to 95%'], ['Purchase', 'Up to 92.5%']],
   },
   {
-    label: 'DSCR Rental', href: '/dscr-rental',
+    label: 'DSCR Rental', href: '/dscr-rental', image: '/rent.JPG',
     desc: 'Long-term rental financing based on cash flow',
-    specs: [['Term','30 Years'],['Loan Amount','$75K–$2.5M'],['LTV','Up to 80%'],['Min DSCR','As Low as .75']],
+    specs: [['Term', '30 Years'], ['Loan Amount', '$75K–$2.5M'], ['LTV', 'Up to 80%'], ['Min DSCR', 'As Low as .75']],
   },
   {
-    label: 'Bridge Loan', href: '/bridge-loan',
+    label: 'Bridge Loan', href: '/bridge-loan', image: '/family.jpg',
     desc: 'Flexible short-term capital for any investment scenario',
-    specs: [['Term','6–15 Months'],['Loan Amount','$150K–$5M+'],['LTV','Up to 80%'],['Cashout','Up to 75%']],
+    specs: [['Term', '6–15 Months'], ['Loan Amount', '$150K–$5M+'], ['LTV', 'Up to 80%'], ['Cashout', 'Up to 75%']],
   },
 ];
 
@@ -56,7 +56,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative section-dark pt-28 pb-20 overflow-hidden">
         {/* Background texture */}
-        <div className="absolute inset-0 opacity-5" style={{backgroundImage: "url('/house-isolated-field.jpg')", width: '100%', height: "100%", backgroundSize: 'cover', backgroundPosition: "center"}} />
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('/house-isolated-field.jpg')", width: '100%', height: "100%", backgroundSize: 'cover', backgroundPosition: "center" }} />
         <div className="container-wide relative z-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-[#c8922a]/15 border border-[#c8922a]/30 text-[#c8922a] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6 animate-fadeUp">
@@ -130,6 +130,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             {products.map(p => (
               <div key={p.href} className="bg-white rounded-xl border border-[#e8eaef] overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+                <Image src={p.image} alt={p.label} width={400} height={400} className="w-full h-42 object-cover" />
                 <div className="bg-[#0a1628] px-5 py-4">
                   <h3 className="text-white font-bold">{p.label}</h3>
                   <p className="text-white/60 text-xs mt-0.5">{p.desc}</p>
@@ -154,15 +155,15 @@ export default function HomePage() {
 
       {/* READY FOR FINANCING CTA */}
       <section className="bg-[#c8922a] py-10">
-        <div className="container-wide flex flex-col md:flex-row items-center justify-center gap-20">
+        <div className="container-wide flex flex-col md:flex-row items-center justify-center gap-x-20">
           <div className="flex items-center gap-3">
             <Image src="/financing.jpg" alt="Financing" width={350} height={350} className="w-full" />
-            </div>
-            <div className="flex flex-col items-start gap-4">
-          <h3 className="text-white text-2xl font-bold">Ready for Financing?</h3>
-          <Link href="/app" className="bg-white text-[#c8922a] font-bold px-6 py-2.5 rounded-md hover:bg-[#f7f8fa] transition-colors text-sm">
-            Get an Estimate
-          </Link>
+          </div>
+          <div className="flex flex-col items-start gap-y-4">
+            <h3 className="text-white text-2xl font-bold">Ready for Financing?</h3>
+            <Link href="/app" className="bg-white text-[#c8922a] font-bold px-6 py-2.5 rounded-md hover:bg-[#f7f8fa] transition-colors text-sm">
+              Get an Estimate
+            </Link>
           </div>
         </div>
       </section>
