@@ -244,7 +244,7 @@ const glossarySchema = {
       '@type': 'DefinedTerm',
       name: t.term,
       description: t.definition,
-      inDefinedTermSet: 'https://www.archwestcapital.com/glossary',
+      inDefinedTermSet: 'https://www.integratedcapitalsolutionsllc.com/glossary',
     }))
   ),
 };

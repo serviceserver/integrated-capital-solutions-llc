@@ -89,19 +89,19 @@ const blogListingSchema = {
   '@context': 'https://schema.org',
   '@type': 'Blog',
   name: 'Archwest Capital Blog',
-  url: 'https://www.archwestcapital.com/blog',
+  url: 'https://www.integratedcapitalsolutionsllc.com/blog',
   description:
     'Expert insights, market analysis, and practical guides for residential real estate investors.',
   publisher: {
     '@type': 'Organization',
     name: 'Archwest Capital',
-    url: 'https://www.archwestcapital.com',
+    url: 'https://www.integratedcapitalsolutionsllc.com',
   },
   blogPost: posts.map((p) => ({
     '@type': 'BlogPosting',
     headline: p.title,
     description: p.excerpt,
-    url: `https://www.archwestcapital.com/blog/${p.slug}`,
+    url: `https://www.integratedcapitalsolutionsllc.com/blog/${p.slug}`,
     datePublished: p.date,
     author: { '@type': 'Organization', name: 'Archwest Capital' },
   })),

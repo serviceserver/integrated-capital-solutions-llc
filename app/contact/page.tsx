@@ -17,7 +17,7 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'FinancialService',
   name: 'Archwest Capital',
-  url: 'https://www.archwestcapital.com',
+  url: 'https://www.integratedcapitalsolutionsllc.com',
   telephone: '+18449222724',
   address: {
     '@type': 'PostalAddress',

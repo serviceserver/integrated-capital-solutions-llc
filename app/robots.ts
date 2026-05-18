@@ -10,7 +10,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/', '/app/'],
       },
     ],
-    sitemap: 'https://www.archwestcapital.com/sitemap.xml',
-    host: 'https://www.archwestcapital.com',
+    // sitemap: 'https://www.integratedcapitalsolutionsllc.com/sitemap.xml',
+    host: 'https://www.integratedcapitalsolutionsllc.com',
   };
 }

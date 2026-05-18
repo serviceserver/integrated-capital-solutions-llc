@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo';
 import Link from 'next/link';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Fix and Flip Loans — Fast Funding for Renovation Investors',
+  title: 'Fix and Flip Loans - Fast Funding for Renovation Investors',
   description:
     'Archwest Capital offers fix and flip loans up to 95% LTC, 100% rehab costs covered, closings in as fast as 7 days, and term sheets within 24 hours. Nationwide private lender.',
   slug: '/fix-flip',
@@ -47,6 +47,7 @@ export default function FixFlipPage() {
   return (
     <ProductPageLayout
       heroTitle="Fix & Flip"
+      heroImage='/fix-flip.JPG'
       heroSubtitle="Industry-leading speed, rates, and leverage for residential real estate renovation investors. Up to 95% LTC and 100% of rehab costs covered nationwide."
       activeTab="Fix & Flip"
       slug="/fix-flip"
@@ -69,6 +70,7 @@ export default function FixFlipPage() {
         { text: 'Interest on Drawn Amounts Only' },
         { text: '100% of Rehab Funding Available' },
       ]}
+      bodyImage='/repair.JPG'
       bodyContent={
         <div>
           <h2 className="text-2xl font-bold text-[#0a1628] mb-4">Funding That Fits Your Strategy</h2>
@@ -79,7 +81,7 @@ export default function FixFlipPage() {
             maximize leverage and move on more deals simultaneously.
           </p>
           <p className="text-[#4a5568] leading-relaxed mb-4">
-            Interest is charged only on drawn amounts — not on the total loan commitment — keeping your
+            Interest is charged only on drawn amounts - not on the total loan commitment - keeping your
             carrying costs low throughout the renovation. Combined with closings as fast as 7 days and
             term sheets in under 24 hours, Archwest gives renovation investors a decisive edge.
           </p>
@@ -106,7 +108,7 @@ export default function FixFlipPage() {
         },
         {
           title: 'Same-Day Term Sheets',
-          desc: 'Receive a full term sheet within 24 hours of your loan inquiry — no waiting, no guessing.',
+          desc: 'Receive a full term sheet within 24 hours of your loan inquiry - no waiting, no guessing.',
         },
         {
           title: 'Closings in Days, Not Weeks',

@@ -68,6 +68,7 @@ export default function BridgeLoanPage() {
         { text: 'No Prepayment Penalties' },
         { text: 'Seamless Transition to DSCR' },
       ]}
+      bodyImage='/family.jpg'
       bodyContent={
         <div>
           <h2 className="text-2xl font-bold text-[#0a1628] mb-4">

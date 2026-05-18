@@ -41,7 +41,7 @@ const jobPostingSchemas = openRoles.map((role) => ({
   hiringOrganization: {
     '@type': 'Organization',
     name: 'Archwest Capital',
-    sameAs: 'https://www.archwestcapital.com',
+    sameAs: 'https://www.integratedcapitalsolutionsllc.com',
   },
   jobLocation: {
     '@type': 'Place',

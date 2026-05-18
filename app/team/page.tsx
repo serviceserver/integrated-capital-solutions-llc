@@ -76,7 +76,7 @@ const teamSchema = {
       worksFor: {
         '@type': 'Organization',
         name: 'Archwest Capital',
-        url: 'https://www.archwestcapital.com',
+        url: 'https://www.integratedcapitalsolutionsllc.com',
       },
       description: member.bio,
     },
