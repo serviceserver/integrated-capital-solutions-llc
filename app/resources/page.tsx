@@ -8,7 +8,7 @@ import { MapPin, HelpCircle, BookOpen, HardHat } from 'lucide-react';
 export const metadata: Metadata = buildMetadata({
   title: 'Resources to Guide Your Lending Journey',
   description:
-    'Explore expert insights, essential FAQs, lending terms, lending locations, and key tools to make informed decisions and streamline your loan process with Archwest Capital.',
+    'Explore expert insights, essential FAQs, lending terms, lending locations, and key tools to make informed decisions and streamline your loan process with Integrated Capital Solutions.',
   slug: '/resources',
   keywords: [
     'real estate lending resources',

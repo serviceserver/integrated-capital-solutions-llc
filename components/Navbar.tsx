@@ -43,7 +43,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 shrink-0">
-               <Image src="/logo-int.jpg" alt="Archwest Capital Logo" width={150} height={40} />
+               <Image src="/logo-int.jpg" alt="Integrated Capital Solutions Logo" width={150} height={40} />
             </Link>
 
             {/* Desktop Nav */}

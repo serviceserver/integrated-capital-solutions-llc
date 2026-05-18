@@ -8,14 +8,14 @@ import { Download, ExternalLink, Mail, HardHat } from 'lucide-react';
 export const metadata: Metadata = buildMetadata({
   title: 'Construction Draw — Loan Management & Resources',
   description:
-    'Access Archwest Capital construction loan management tools, download lien waiver forms, budget spreadsheets, and contact our dedicated construction draw team at draws@archwestcapital.com.',
+    'Access Integrated Capital Solutions construction loan management tools, download lien waiver forms, budget spreadsheets, and contact our dedicated construction draw team at draws@integratedcapitalsolutionsllc.com.',
   slug: '/construction-draw',
   keywords: [
     'construction draw request',
     'lien waiver form',
     'construction loan management',
     'construction loan portal',
-    'Archwest construction draw',
+    'Integrated Capital Solutionsconstruction draw',
     'builder draw form download',
   ],
 });
@@ -176,10 +176,10 @@ export default function ConstructionDrawPage() {
               and expect a response within one business day.
             </p>
             <a
-              href="mailto:draws@archwestcapital.com"
+              href="mailto:draws@integratedcapitalsolutionsllc.com"
               className="btn-primary inline-flex items-center gap-2"
             >
-              <Mail size={16} /> draws@archwestcapital.com
+              <Mail size={16} /> draws@integratedcapitalsolutionsllc.com
             </a>
           </div>
         </div>

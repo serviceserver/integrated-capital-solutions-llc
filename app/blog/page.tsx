@@ -88,13 +88,13 @@ const categoryColors: Record<string, string> = {
 const blogListingSchema = {
   '@context': 'https://schema.org',
   '@type': 'Blog',
-  name: 'Archwest Capital Blog',
+  name: 'Integrated Capital Solutions Blog',
   url: 'https://www.integratedcapitalsolutionsllc.com/blog',
   description:
     'Expert insights, market analysis, and practical guides for residential real estate investors.',
   publisher: {
     '@type': 'Organization',
-    name: 'Archwest Capital',
+    name: 'Integrated Capital Solutions',
     url: 'https://www.integratedcapitalsolutionsllc.com',
   },
   blogPost: posts.map((p) => ({
@@ -103,7 +103,7 @@ const blogListingSchema = {
     description: p.excerpt,
     url: `https://www.integratedcapitalsolutionsllc.com/blog/${p.slug}`,
     datePublished: p.date,
-    author: { '@type': 'Organization', name: 'Archwest Capital' },
+    author: { '@type': 'Organization', name: 'Integrated Capital Solutions' },
   })),
 };
 

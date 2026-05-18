@@ -8,11 +8,11 @@ import { buildMetadata } from '@/lib/seo';
 import { MapPin, Briefcase, ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Careers at Archwest Capital — Join Our Team',
+  title: 'Careers at Integrated Capital Solutions — Join Our Team',
   description:
-    'Explore career opportunities at Archwest Capital. We hire for attitude and aptitude across loan operations, underwriting, closing, sales, and technology. Full benefits, Irvine CA.',
+    'Explore career opportunities at Integrated Capital Solutions. We hire for attitude and aptitude across loan operations, underwriting, closing, sales, and technology. Full benefits, Irvine CA.',
   slug: '/careers',
-  keywords: ['Archwest Capital careers', 'private lending jobs', 'mortgage jobs Irvine CA', 'loan officer jobs', 'real estate finance careers'],
+  keywords: ['Integrated Capital Solutions careers', 'private lending jobs', 'mortgage jobs Irvine CA', 'loan officer jobs', 'real estate finance careers'],
 });
 
 const openRoles = [
@@ -37,10 +37,10 @@ const jobPostingSchemas = openRoles.map((role) => ({
   '@context': 'https://schema.org',
   '@type': 'JobPosting',
   title: role.title,
-  description: `Archwest Capital is hiring a ${role.title}. We hire for attitude and aptitude and care about growing your career in real estate finance.`,
+  description: `Integrated Capital Solutions is hiring a ${role.title}. We hire for attitude and aptitude and care about growing your career in real estate finance.`,
   hiringOrganization: {
     '@type': 'Organization',
-    name: 'Archwest Capital',
+    name: 'Integrated Capital Solutions',
     sameAs: 'https://www.integratedcapitalsolutionsllc.com',
   },
   jobLocation: {
@@ -71,7 +71,7 @@ export default function CareersPage() {
             ))}
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Careers at Archwest Capital
+            Careers at Integrated Capital Solutions
           </h1>
           <p className="text-white/65 text-lg max-w-2xl">
             We&apos;re looking for ambitious, diligent, and passionate individuals. We hire for attitude
@@ -181,7 +181,7 @@ export default function CareersPage() {
 
       <CTABanner
         title="Get to Know Our Team First"
-        subtitle="Read about the people and culture behind Archwest Capital before you apply."
+        subtitle="Read about the people and culture behind Integrated Capital Solutions before you apply."
         primaryLabel="Meet the Team"
         primaryHref="/team"
         dark={false}

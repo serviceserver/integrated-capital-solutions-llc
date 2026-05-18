@@ -81,7 +81,7 @@ const sections = [
       {
         term: 'Debt Service Coverage Ratio (DSCR)',
         definition:
-          'Assesses the ability to service debt from property income alone. A DSCR of 1.2 means a property\'s NOI is 20% higher than its debt obligations. Archwest accepts DSCR as low as 0.75.',
+          'Assesses the ability to service debt from property income alone. A DSCR of 1.2 means a property\'s NOI is 20% higher than its debt obligations. Integrated Capital Solutionsaccepts DSCR as low as 0.75.',
         formula: 'DSCR = Net Operating Income / Total Debt Service',
       },
       {
@@ -175,7 +175,7 @@ const sections = [
       {
         term: 'Prepayment Penalty',
         definition:
-          'A fee charged to borrowers for paying off a loan before its maturity date. Archwest bridge loans carry no prepayment penalties.',
+          'A fee charged to borrowers for paying off a loan before its maturity date. Integrated Capital Solutionsbridge loans carry no prepayment penalties.',
       },
       {
         term: 'Rehab',
@@ -238,7 +238,7 @@ const glossarySchema = {
   '@type': 'DefinedTermSet',
   name: 'Real Estate and Lending Glossary',
   description:
-    'A comprehensive glossary of real estate investment and private lending terminology by Archwest Capital.',
+    'A comprehensive glossary of real estate investment and private lending terminology by Integrated Capital Solutions.',
   hasDefinedTerm: sections.flatMap((s) =>
     s.terms.map((t) => ({
       '@type': 'DefinedTerm',

@@ -7,7 +7,7 @@ import Link from 'next/link';
 export const metadata: Metadata = buildMetadata({
   title: 'Bridge Loans for Real Estate Investors - Fast Short-Term Financing',
   description:
-    'Archwest Capital bridge loans offer closings in as fast as 7 days, up to 80% LTV, no prepayment penalties, and flexible use cases for acquisition, refinance, or stabilization.',
+    'Integrated Capital Solutions bridge loans offer closings in as fast as 7 days, up to 80% LTV, no prepayment penalties, and flexible use cases for acquisition, refinance, or stabilization.',
   slug: '/bridge-loan',
   keywords: [
     'bridge loan real estate',
@@ -27,19 +27,19 @@ const extraFAQs = [
       'A bridge loan is a short-term loan that provides immediate capital to acquire, refinance, or stabilize an investment property while the borrower arranges permanent financing or sells the asset. Bridge loans typically carry 6–15 month terms and are ideal when speed or flexibility is critical.',
   },
   {
-    question: 'What can I use an Archwest bridge loan for?',
+    question: 'What can I use an Integrated Capital Solutionsbridge loan for?',
     answer:
       'Bridge loans can be used for property acquisition, cash-out refinance, partner buyout, stabilization of a value-add asset, or as gap financing while transitioning into a long-term DSCR rental loan.',
   },
   {
-    question: 'Are there prepayment penalties on Archwest bridge loans?',
+    question: 'Are there prepayment penalties on Integrated Capital Solutionsbridge loans?',
     answer:
-      'No. Archwest bridge loans have no prepayment penalties, giving you the freedom to pay off the loan early when your project is complete or your long-term financing is in place.',
+      'No. Integrated Capital Solutionsbridge loans have no prepayment penalties, giving you the freedom to pay off the loan early when your project is complete or your long-term financing is in place.',
   },
   {
     question: 'Can I convert a bridge loan into a long-term rental loan?',
     answer:
-      'Yes. Archwest bridge loans are designed to transition seamlessly into a 30-year DSCR rental loan once the property is stabilized, making it easy to move from short-term capital to a long-term hold strategy.',
+      'Yes. Integrated Capital Solutionsbridge loans are designed to transition seamlessly into a 30-year DSCR rental loan once the property is stabilized, making it easy to move from short-term capital to a long-term hold strategy.',
   },
 ];
 
@@ -76,7 +76,7 @@ export default function BridgeLoanPage() {
           </h2>
           <div className="divider" />
           <p className="text-[#4a5568] leading-relaxed mb-4">
-            When opportunity moves fast, your financing needs to move faster. Archwest bridge loans give
+            When opportunity moves fast, your financing needs to move faster. Integrated Capital Solutionsbridge loans give
             experienced investors the speed and flexibility to act decisively - whether you&apos;re acquiring a
             new asset, pulling equity out of an existing property, buying out a partner, or bridging a
             property to stabilization before a long-term hold.

@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Site Map',
-  description: 'A complete map of all pages on the Archwest Capital website.',
+  description: 'A complete map of all pages on the Integrated Capital Solutions website.',
   slug: '/site-map',
   noindex: true,
 });
@@ -72,7 +72,7 @@ export default function SiteMapPage() {
       'div',
       { className: 'container-wide' },
       React.createElement('h1', { className: 'text-3xl md:text-4xl font-bold text-white mb-3' }, 'Site Map'),
-      React.createElement('p', { className: 'text-white/55 text-base' }, 'A complete directory of all pages on archwestcapital.com.')
+      React.createElement('p', { className: 'text-white/55 text-base' }, 'A complete directory of all pages on integratedcapitalsolutionsllc.com.')
     )
   );
 

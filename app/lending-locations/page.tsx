@@ -10,14 +10,14 @@ import { CheckCircle, XCircle, MinusCircle } from 'lucide-react';
 export const metadata: Metadata = buildMetadata({
   title: 'Lending Locations - Real Estate Investment Loans Nationwide',
   description:
-    'Archwest Capital lends in 46+ states across the US. Find out if we lend in your state for fix-and-flip, ground-up construction, DSCR rental, and bridge loans.',
+    'Integrated Capital Solutions lends in 46+ states across the US. Find out if we lend in your state for fix-and-flip, ground-up construction, DSCR rental, and bridge loans.',
   slug: '/lending-locations',
   keywords: [
     'private lender lending states',
     'real estate investor loans by state',
     'nationwide private lender',
     'fix flip lender near me',
-    'where does Archwest Capital lend',
+    'where does Integrated Capital Solutions lend',
   ],
 });
 
@@ -38,9 +38,9 @@ const inactiveStates = ['Alaska', 'Minnesota', 'Nevada', 'North Dakota', 'Vermon
 
 const faqItems = [
   {
-    question: 'What is Archwest and who is your audience?',
+    question: 'What is Integrated Capital Solutionsand who is your audience?',
     answer:
-      'Archwest is a national, direct, private lender (non-bank) specializing in financing solutions for residential real estate investors. With a proven track record and deep industry expertise, we are the go-to partner for experienced investors seeking fast, flexible, and reliable funding.',
+      'Integrated Capital Solutionsis a national, direct, private lender (non-bank) specializing in financing solutions for residential real estate investors. With a proven track record and deep industry expertise, we are the go-to partner for experienced investors seeking fast, flexible, and reliable funding.',
   },
   {
     question: 'What kind of loan products do you offer?',
@@ -50,7 +50,7 @@ const faqItems = [
   {
     question: 'How do I start my loan application process?',
     answer:
-      'You can begin instantly and obtain a quick quote at archwestcapital.com/app. Once complete, a member of our team will connect with you to gather more information and prepare a term sheet based on the specifics of your loan.',
+      'You can begin instantly and obtain a quick quote at integratedcapitalsolutionsllc.com/app. Once complete, a member of our team will connect with you to gather more information and prepare a term sheet based on the specifics of your loan.',
   },
   {
     question: 'Do you work with brokers?',

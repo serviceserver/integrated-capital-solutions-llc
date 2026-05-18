@@ -8,9 +8,9 @@ import { buildMetadata, faqPageSchema } from '@/lib/seo';
 import { Star, Handshake, Zap, Settings } from 'lucide-react';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Broker Program — Partner with Archwest Capital',
+  title: 'Broker Program — Partner with Integrated Capital Solutions',
   description:
-    'Archwest Capital partners with real estate brokers nationwide. Access fast closings, competitive terms, and a full suite of fix-and-flip, DSCR, ground-up, and bridge loan products for your clients.',
+    'Integrated Capital Solutions partners with real estate brokers nationwide. Access fast closings, competitive terms, and a full suite of fix-and-flip, DSCR, ground-up, and bridge loan products for your clients.',
   slug: '/brokers',
   keywords: [
     'real estate broker program',
@@ -24,9 +24,9 @@ export const metadata: Metadata = buildMetadata({
 
 const brokerFAQs = [
   {
-    question: 'Does Archwest work with mortgage brokers?',
+    question: 'Does Integrated Capital Solutionswork with mortgage brokers?',
     answer:
-      'Yes. Archwest Capital works extensively with mortgage brokers and real estate professionals nationwide and is always looking for new broker partnerships. You can get started by filling out our broker registration form.',
+      'Yes. Integrated Capital Solutions works extensively with mortgage brokers and real estate professionals nationwide and is always looking for new broker partnerships. You can get started by filling out our broker registration form.',
   },
   {
     question: 'How do brokers submit a loan to Archwest?',
@@ -36,12 +36,12 @@ const brokerFAQs = [
   {
     question: 'How quickly will my client receive a term sheet?',
     answer:
-      'Archwest provides term sheets within 24 hours of a complete loan inquiry submission. Once a term sheet is issued, our team works to close as fast as possible — typically 7–14 days depending on the loan type.',
+      'Integrated Capital Solutionsprovides term sheets within 24 hours of a complete loan inquiry submission. Once a term sheet is issued, our team works to close as fast as possible — typically 7–14 days depending on the loan type.',
   },
   {
     question: 'What loan products are available through the broker channel?',
     answer:
-      'All Archwest loan products are available through brokers: Ground Up Construction, Fix & Flip, DSCR Rental, and Bridge Loans. Loan amounts range from $55K to $50M+.',
+      'All Integrated Capital Solutionsloan products are available through brokers: Ground Up Construction, Fix & Flip, DSCR Rental, and Bridge Loans. Loan amounts range from $55K to $50M+.',
   },
 ];
 
@@ -50,19 +50,19 @@ const testimonials = [
     name: 'Dawna T.',
     role: 'Mortgage Broker',
     quote:
-      'Archwest is hands-down the most reliable private lending partner I\'ve worked with. Their responsiveness is unmatched — every time I submit a file, I know exactly where it stands and when it will close.',
+      'Integrated Capital Solutionsis hands-down the most reliable private lending partner I\'ve worked with. Their responsiveness is unmatched — every time I submit a file, I know exactly where it stands and when it will close.',
   },
   {
     name: 'Jason S.',
     role: 'Real Estate Broker',
     quote:
-      'First deal with Archwest and the process was smoother than any lender I\'ve used before. Tight timeline, moving parts everywhere, and they delivered without a single hiccup. Already sent my next file.',
+      'First deal with Integrated Capital Solutionsand the process was smoother than any lender I\'ve used before. Tight timeline, moving parts everywhere, and they delivered without a single hiccup. Already sent my next file.',
   },
   {
     name: 'Jason F.',
     role: 'Mortgage Broker',
     quote:
-      'Another lender ghosted my client at the last minute. I called Archwest on a Wednesday, had a term sheet by Thursday, and we closed the following Wednesday. That\'s 7 days from first call to funded.',
+      'Another lender ghosted my client at the last minute. I called Integrated Capital Solutionson a Wednesday, had a term sheet by Thursday, and we closed the following Wednesday. That\'s 7 days from first call to funded.',
   },
 ];
 
@@ -85,7 +85,7 @@ export default function BrokersPage() {
             Strategic Lending Solutions for<br />Brokers and Their Clients
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mb-8 animate-fadeUp delay-100">
-            Partner with Archwest to offer your clients fast, flexible, and competitive private lending
+            Partner with Integrated Capital Solutionsto offer your clients fast, flexible, and competitive private lending
             solutions across all major residential investment strategies.
           </p>
           <Link href="/broker-form" className="btn-primary animate-fadeUp delay-200">
@@ -94,7 +94,7 @@ export default function BrokersPage() {
         </div>
       </section>
 
-      {/* Why Archwest for Brokers */}
+      {/* Why Integrated Capital Solutionsfor Brokers */}
       <section className="py-16 section-light" aria-label="Why brokers choose Archwest">
         <div className="container-wide">
           <span className="section-label">WHY ARCHWEST</span>
@@ -114,7 +114,7 @@ export default function BrokersPage() {
               {
                 icon: <Settings size={22} />,
                 title: 'Flexible Loan Terms',
-                desc: 'Access the full Archwest product suite — Ground Up, Fix & Flip, DSCR Rental, and Bridge Loans — all through one trusted lender relationship.',
+                desc: 'Access the full Integrated Capital Solutionsproduct suite — Ground Up, Fix & Flip, DSCR Rental, and Bridge Loans — all through one trusted lender relationship.',
               },
             ].map((v) => (
               <div key={v.title} className="bg-white rounded-xl p-6 border border-[#e8eaef]">
@@ -192,7 +192,7 @@ export default function BrokersPage() {
 
       <CTABanner
         title="Ready to Partner with Archwest?"
-        subtitle="Join hundreds of brokers nationwide who trust Archwest to deliver fast, reliable funding for their clients' investment properties."
+        subtitle="Join hundreds of brokers nationwide who trust Integrated Capital Solutionsto deliver fast, reliable funding for their clients' investment properties."
         primaryLabel="Register as a Broker"
         primaryHref="/broker-form"
         secondaryLabel="Contact Us"

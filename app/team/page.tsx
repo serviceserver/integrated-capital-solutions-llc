@@ -7,11 +7,11 @@ import CTABanner from '@/components/CTABanner';
 import { buildMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Leadership Team — Meet the Experts Behind Archwest Capital',
+  title: 'Leadership Team — Meet the Experts Behind Integrated Capital Solutions',
   description:
-    'Meet the Archwest Capital leadership team — experienced real estate finance professionals with 25+ years of industry expertise and $10B+ in managed assets.',
+    'Meet the Integrated Capital Solutions leadership team — experienced real estate finance professionals with 25+ years of industry expertise and $10B+ in managed assets.',
   slug: '/team',
-  keywords: ['Archwest Capital team', 'real estate lending executives', 'private lender leadership'],
+  keywords: ['Integrated Capital Solutions team', 'real estate lending executives', 'private lender leadership'],
 });
 
 const team = [
@@ -38,7 +38,7 @@ const team = [
   {
     name: 'Tricia Mitchell',
     title: 'Chief Operating Officer',
-    bio: 'Tricia previously served as VP of Legal at 5 Arch and has been with the Archwest founding team since 2012. She oversees operations, compliance, and the day-to-day execution that keeps Archwest running at the highest standard.',
+    bio: 'Tricia previously served as VP of Legal at 5 Arch and has been with the Integrated Capital Solutionsfounding team since 2012. She oversees operations, compliance, and the day-to-day execution that keeps Integrated Capital Solutionsrunning at the highest standard.',
   },
   {
     name: 'Tuan Pham',
@@ -65,7 +65,7 @@ const team = [
 const teamSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Archwest Capital Leadership Team',
+  name: 'Integrated Capital Solutions Leadership Team',
   itemListElement: team.map((member, i) => ({
     '@type': 'ListItem',
     position: i + 1,
@@ -75,7 +75,7 @@ const teamSchema = {
       jobTitle: member.title,
       worksFor: {
         '@type': 'Organization',
-        name: 'Archwest Capital',
+        name: 'Integrated Capital Solutions',
         url: 'https://www.integratedcapitalsolutionsllc.com',
       },
       description: member.bio,

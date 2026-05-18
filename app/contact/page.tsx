@@ -6,17 +6,17 @@ import { buildMetadata } from '@/lib/seo';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Contact Archwest Capital — Speak to a Loan Expert',
+  title: 'Contact Integrated Capital Solutions — Speak to a Loan Expert',
   description:
-    'Contact Archwest Capital by phone, form, or visit us in Irvine, CA. Our team is available Mon–Fri 8:30 AM to 5:00 PM PT to answer your real estate lending questions.',
+    'Contact Integrated Capital Solutions by phone, form, or visit us in Irvine, CA. Our team is available Mon–Fri 8:30 AM to 5:00 PM PT to answer your real estate lending questions.',
   slug: '/contact',
-  keywords: ['contact Archwest Capital', 'real estate lender phone number', 'private lender Irvine CA', 'loan inquiry contact'],
+  keywords: ['contact Integrated Capital Solutions', 'real estate lender phone number', 'private lender Irvine CA', 'loan inquiry contact'],
 });
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'FinancialService',
-  name: 'Archwest Capital',
+  name: 'Integrated Capital Solutions',
   url: 'https://www.integratedcapitalsolutionsllc.com',
   telephone: '+18449222724',
   address: {

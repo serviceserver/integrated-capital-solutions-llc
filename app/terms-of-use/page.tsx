@@ -24,7 +24,7 @@ export default function TermsPage() {
           <div className="flex flex-col gap-8 text-[#4a5568] text-sm leading-relaxed">
             <div>
               <h2 className="text-lg font-bold text-[#0a1628] mb-3">Acceptance of Terms</h2>
-              <p>By accessing and using the Integrated Capital Solutions website (archwestcapital.com), you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to these terms, please do not use this website.</p>
+              <p>By accessing and using the Integrated Capital Solutions website (integratedcapitalsolutionsllc.com), you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to these terms, please do not use this website.</p>
             </div>
             <div>
               <h2 className="text-lg font-bold text-[#0a1628] mb-3">Use of Website</h2>

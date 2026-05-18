@@ -7,7 +7,7 @@ import Link from 'next/link';
 export const metadata: Metadata = buildMetadata({
   title: 'DSCR Rental Loans - Long-Term Financing for Rental Properties',
   description:
-    'Archwest Capital DSCR rental loans offer 30-year terms, up to 80% LTV, DSCR as low as 0.75, and support for short-term rentals. No personal income verification required.',
+    'Integrated Capital Solutions DSCR rental loans offer 30-year terms, up to 80% LTV, DSCR as low as 0.75, and support for short-term rentals. No personal income verification required.',
   slug: '/dscr-rental',
   keywords: [
     'DSCR loan',
@@ -28,14 +28,14 @@ const extraFAQs = [
       'A DSCR (Debt Service Coverage Ratio) loan qualifies borrowers based on the rental income of the property rather than the borrower\'s personal income. If the property\'s rental income covers the debt payments, the borrower can qualify - making it ideal for investors with complex finances or growing portfolios.',
   },
   {
-    question: 'What is the minimum DSCR Archwest requires?',
+    question: 'What is the minimum DSCR Integrated Capital Solutionsrequires?',
     answer:
-      'Archwest accepts a minimum DSCR as low as 0.75, offering more flexibility than many lenders who require a minimum of 1.0 or higher.',
+      'Integrated Capital Solutionsaccepts a minimum DSCR as low as 0.75, offering more flexibility than many lenders who require a minimum of 1.0 or higher.',
   },
   {
     question: 'Can I finance a short-term rental (Airbnb or VRBO) with a DSCR loan?',
     answer:
-      'Yes. Archwest allows short-term rental income to be used for DSCR qualification, making our program ideal for Airbnb and VRBO investment properties.',
+      'Yes. Integrated Capital Solutionsallows short-term rental income to be used for DSCR qualification, making our program ideal for Airbnb and VRBO investment properties.',
   },
   {
     question: 'Do I need to provide personal income documentation for a DSCR loan?',

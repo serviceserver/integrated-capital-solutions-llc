@@ -7,7 +7,7 @@ import Link from 'next/link';
 export const metadata: Metadata = buildMetadata({
   title: 'Fix and Flip Loans - Fast Funding for Renovation Investors',
   description:
-    'Archwest Capital offers fix and flip loans up to 95% LTC, 100% rehab costs covered, closings in as fast as 7 days, and term sheets within 24 hours. Nationwide private lender.',
+    'Integrated Capital Solutions offers fix and flip loans up to 95% LTC, 100% rehab costs covered, closings in as fast as 7 days, and term sheets within 24 hours. Nationwide private lender.',
   slug: '/fix-flip',
   keywords: [
     'fix and flip loans',
@@ -24,17 +24,17 @@ const extraFAQs = [
   {
     question: 'What is a fix and flip loan?',
     answer:
-      'A fix and flip loan is a short-term bridge loan used to purchase and renovate a property with the intent to sell it for a profit. Archwest covers up to 95% of total project costs, including 100% of rehabilitation costs, with interest charged only on drawn amounts.',
+      'A fix and flip loan is a short-term bridge loan used to purchase and renovate a property with the intent to sell it for a profit. Integrated Capital Solutionscovers up to 95% of total project costs, including 100% of rehabilitation costs, with interest charged only on drawn amounts.',
   },
   {
-    question: 'Does Archwest finance 100% of rehab costs?',
+    question: 'Does Integrated Capital Solutionsfinance 100% of rehab costs?',
     answer:
-      'Yes. Archwest provides up to 100% of rehabilitation costs within the approved budget. Funds are distributed through a draw process as work is completed and verified.',
+      'Yes. Integrated Capital Solutionsprovides up to 100% of rehabilitation costs within the approved budget. Funds are distributed through a draw process as work is completed and verified.',
   },
   {
     question: 'How fast can I close a fix and flip loan?',
     answer:
-      'Archwest can close fix and flip loans in as little as 7 days. Our record closing time is 1 day. You will receive a term sheet within 24 hours of submitting your loan inquiry.',
+      'Integrated Capital Solutionscan close fix and flip loans in as little as 7 days. Our record closing time is 1 day. You will receive a term sheet within 24 hours of submitting your loan inquiry.',
   },
   {
     question: 'What properties qualify for fix and flip financing?',
@@ -83,7 +83,7 @@ export default function FixFlipPage() {
           <p className="text-[#4a5568] leading-relaxed mb-4">
             Interest is charged only on drawn amounts - not on the total loan commitment - keeping your
             carrying costs low throughout the renovation. Combined with closings as fast as 7 days and
-            term sheets in under 24 hours, Archwest gives renovation investors a decisive edge.
+            term sheets in under 24 hours, Integrated Capital Solutionsgives renovation investors a decisive edge.
           </p>
           <p className="text-[#4a5568] leading-relaxed mb-6">
             We work with investors across the US on everything from single-unit flips to multi-property
