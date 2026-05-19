@@ -5,7 +5,7 @@ const SITE_URL = 'https://www.integratedcapitalsolutionsllc.vercel.app';
 const SITE_NAME = 'Integrated Capital Solutions';
 const DEFAULT_DESCRIPTION =
   "Integrated Capital Solutions LLC is a national, direct private lender specializing in fast, flexible financing for experienced residential real estate investors. Ground Up, Fix & Flip, DSCR, and Bridge loans available.";
-const DEFAULT_OG_IMAGE = '/og-image.jpg';
+const DEFAULT_OG_IMAGE = 'https://integratedcapitalsolutionsllc.vercel.app/integrated-capital.png';
 
 export interface SEOProps {
   title: string;
