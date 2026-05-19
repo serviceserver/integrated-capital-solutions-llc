@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Get an Estimate — Start Your Loan Application',
+  title: 'Get an Estimate - Start Your Loan Application',
   description:
     'Get a same-day quote from Integrated Capital Solutions. Fill out our quick loan inquiry form and receive a term sheet within 24 hours for fix-and-flip, ground-up, DSCR, or bridge loans.',
   slug: '/app',

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@archwestcap',
+    site: '@Integrated Capital Solutionscap',
   },
   icons: {
     icon: [

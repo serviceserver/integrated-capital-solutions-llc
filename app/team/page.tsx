@@ -8,9 +8,9 @@ import { buildMetadata } from '@/lib/seo';
 import Image from 'next/image';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Leadership Team — Meet the Experts Behind Integrated Capital Solutions',
+  title: 'Leadership Team - Meet the Experts Behind Integrated Capital Solutions',
   description:
-    'Meet the Integrated Capital Solutions leadership team — experienced real estate finance professionals with 25+ years of industry expertise and $10B+ in managed assets.',
+    'Meet the Integrated Capital Solutions leadership team - experienced real estate finance professionals with 25+ years of industry expertise and $10B+ in managed assets.',
   slug: '/team',
   keywords: ['Integrated Capital Solutions team', 'real estate lending executives', 'private lender leadership'],
 });
@@ -38,7 +38,7 @@ const team = [
     name: 'Timothy Gannaway',
     title: 'Chief Technology Officer',
         image:'/HS-timothy-gannaway.webp',
-    bio: 'A former SVP at Redwood Trust and Chief Analytics Officer at 5 Arch, Timothy leads Archwest\'s technology and data strategy, building the infrastructure that enables fast, accurate, and scalable loan decisioning.',
+    bio: 'A former SVP at Redwood Trust and Chief Analytics Officer at 5 Arch, Timothy leads Integrated Capital Solutions\'s technology and data strategy, building the infrastructure that enables fast, accurate, and scalable loan decisioning.',
   },
   {
     name: 'Tricia Mitchell',
@@ -50,25 +50,25 @@ const team = [
     name: 'Tuan Pham',
     title: 'Chief Marketing Officer',
         image:'/HS-tuan-pham.jpg',
-    bio: 'With 23 years of experience across marketing and brand strategy, Tuan previously served as CMO at Dunmor and CoreVest, and as a Managing Director at Redwood Trust. He leads Archwest\'s go-to-market strategy and brand growth.',
+    bio: 'With 23 years of experience across marketing and brand strategy, Tuan previously served as CMO at Dunmor and CoreVest, and as a Managing Director at Redwood Trust. He leads Integrated Capital Solutions\'s go-to-market strategy and brand growth.',
   },
   {
     name: 'Henry Frome',
     title: 'EVP, Corporate Development & Capital Markets',
         image:'/HS-henry-frome.jpg',
-    bio: 'Henry brings deep capital markets expertise from his time at Eastdil Secured, where he advised on some of the largest real estate transactions in the country. He leads Archwest\'s capital markets and strategic growth initiatives.',
+    bio: 'Henry brings deep capital markets expertise from his time at Eastdil Secured, where he advised on some of the largest real estate transactions in the country. He leads Integrated Capital Solutions\'s capital markets and strategic growth initiatives.',
   },
   {
     name: 'Kimberly DiFrancesco Correa',
     title: 'SVP, Construction',
         image:'/HS-kim-correa.jpg',
-    bio: 'Previously at Genesis Capital, Kimberly leads Archwest\'s construction lending division, overseeing the draw management, underwriting, and relationship management that supports ground-up builders across the country.',
+    bio: 'Previously at Genesis Capital, Kimberly leads Integrated Capital Solutions\'s construction lending division, overseeing the draw management, underwriting, and relationship management that supports ground-up builders across the country.',
   },
   {
     name: 'Kathy Perez',
     title: 'SVP, Closing',
         image:'/HS-kathy-perez.jpg',
-    bio: 'With over 6 years in business purpose lending and 10 years at First American and ServiceLink, Kathy leads Archwest\'s closing operations — ensuring every transaction closes efficiently, accurately, and on time.',
+    bio: 'With over 6 years in business purpose lending and 10 years at First American and ServiceLink, Kathy leads Integrated Capital Solutions\'s closing operations - ensuring every transaction closes efficiently, accurately, and on time.',
   },
 ];
 
@@ -148,7 +148,7 @@ export default function TeamPage() {
       </section>
 
       <CTABanner
-        title="Build Your Career with Archwest"
+        title="Build Your Career with Integrated Capital Solutions"
         subtitle="We hire for attitude and aptitude. If you're ambitious, diligent, and passionate about real estate finance, we want to meet you."
         primaryLabel="Explore Open Roles"
         primaryHref="/careers"

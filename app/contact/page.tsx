@@ -6,7 +6,7 @@ import { buildMetadata } from '@/lib/seo';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Contact Integrated Capital Solutions — Speak to a Loan Expert',
+  title: 'Contact Integrated Capital Solutions - Speak to a Loan Expert',
   description:
     'Contact Integrated Capital Solutions by phone, form, or visit us in Irvine, CA. Our team is available Mon–Fri 8:30 AM to 5:00 PM PT to answer your real estate lending questions.',
   slug: '/contact',
@@ -89,7 +89,7 @@ export default function ContactPage() {
 
               {/* Loan Servicing */}
               <div className="bg-[#f7f8fa] rounded-xl p-6 border border-[#e8eaef]">
-                <h3 className="font-bold text-[#0a1628] mb-1">Loan Servicing — FCI Lender Services</h3>
+                <h3 className="font-bold text-[#0a1628] mb-1">Loan Servicing - FCI Lender Services</h3>
                 <p className="text-xs text-[#9aa3b2] mb-4">For existing loan payment and servicing inquiries</p>
                 <div className="flex flex-col gap-2 text-sm">
                   <div className="flex flex-col gap-0.5">

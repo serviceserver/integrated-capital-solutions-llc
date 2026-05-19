@@ -40,7 +40,7 @@ const resources = [
     icon: <BookOpen size={22} />,
     label: 'LEARN',
     title: 'Understand Loan Terminology',
-    desc: 'A comprehensive glossary of lending and real estate investment terms to help you navigate financing with confidence. From ARV to DSCR to LTC — we define it all.',
+    desc: 'A comprehensive glossary of lending and real estate investment terms to help you navigate financing with confidence. From ARV to DSCR to LTC - we define it all.',
     cta: 'Explore Glossary',
     href: '/glossary',
   },

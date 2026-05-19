@@ -26,7 +26,7 @@ export async function generateMetadata(
     ogImage:     post.ogImage,
     type:        'article',
     publishedTime: post.date,
-    keywords:    [post.category.toLowerCase(), 'real estate investing', 'private lending', 'Archwest Capital'],
+    keywords:    [post.category.toLowerCase(), 'real estate investing', 'private lending', 'Integrated Capital Solutions'],
   })
 }
 
@@ -141,8 +141,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <SchemaScript schema={articleSchema} />
 
       {/* ── Hero ──────────────────────────────────────────────── */}
-      <section className="section-dark pt-28 pb-14">
-        <div className="container-wide max-w-[860px]">
+      <section className="relative section-dark pt-28 pb-14" style={{backgroundImage: `url('${post.ogImage}')`, width: '100%', height: "500px", backgroundSize: 'cover', backgroundPosition: "top"}}>
+        <div className="absolute inset-0 bg-linear-to-b from-[#0a1628]/80 to-[#0a1628]/75 h-125" />
+        <div className="relative container-wide max-w-215">
           <Breadcrumb items={[{ name: 'Resources', href: '/resources' }, { name: 'Blog', href: '/blog' }, { name: post.title, href: `/blog/${post.slug}` }]} />
 
           <div className="flex items-center gap-3 mt-6 mb-5 flex-wrap">
@@ -165,7 +166,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {post.title}
           </h1>
 
-          <p className="text-white/65 text-[1.0625rem] leading-[1.7] max-w-[680px]">
+          <p className="text-white/65 text-[1.0625rem] leading-[1.7] max-w-170">
             {post.excerpt}
           </p>
 

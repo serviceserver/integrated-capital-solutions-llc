@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo';
 import { MapPin, Briefcase, ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Careers at Integrated Capital Solutions — Join Our Team',
+  title: 'Careers at Integrated Capital Solutions - Join Our Team',
   description:
     'Explore career opportunities at Integrated Capital Solutions. We hire for attitude and aptitude across loan operations, underwriting, closing, sales, and technology. Full benefits, Irvine CA.',
   slug: '/careers',
@@ -17,9 +17,9 @@ export const metadata: Metadata = buildMetadata({
 
 const openRoles = [
   { title: 'Account Executive', type: 'Full-time', location: 'Remote', linkedIn: '#' },
-  { title: 'Loan Closing Associate', type: 'Full-time', location: 'In Office — Irvine, CA', linkedIn: '#' },
-  { title: 'Loan Processor', type: 'Full-time', location: 'In Office — Irvine, CA', linkedIn: '#' },
-  { title: 'Loan Underwriter', type: 'Full-time', location: 'In Office — Irvine, CA', linkedIn: '#' },
+  { title: 'Loan Closing Associate', type: 'Full-time', location: 'In Office - Irvine, CA', linkedIn: '#' },
+  { title: 'Loan Processor', type: 'Full-time', location: 'In Office - Irvine, CA', linkedIn: '#' },
+  { title: 'Loan Underwriter', type: 'Full-time', location: 'In Office - Irvine, CA', linkedIn: '#' },
 ];
 
 const benefits = [

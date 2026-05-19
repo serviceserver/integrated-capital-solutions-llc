@@ -31,7 +31,7 @@ const brokerFAQs = [
       'Yes. Integrated Capital Solutions works extensively with mortgage brokers and real estate professionals nationwide and is always looking for new broker partnerships. You can get started by filling out our broker registration form.',
   },
   {
-    question: 'How do brokers submit a loan to Archwest?',
+    question: 'How do brokers submit a loan to Integrated Capital Solutions?',
     answer:
       'Brokers can submit loans by completing the broker registration form on our website. Once registered, your Account Executive will walk you through the submission process and ensure your clients receive fast, accurate term sheets.',
   },
@@ -81,9 +81,9 @@ export default function BrokersPage() {
       <SchemaScript schema={faqPageSchema(brokerFAQs)} />
 
       {/* Hero */}
-      <section className="section-dark pt-28 h-[500px] pb-16 bg-[url('/brokers-hero.jpg')] bg-cover bg-top ">
-      <div className="absolute inset-0 h-[500px] bg-[#0a1628]/80"/>
-        <div className="container-wide">
+      <section className="relative section-dark pt-28 h-125 pb-16 bg-[url('/brokers-hero.jpg')] bg-cover bg-top ">
+      <div className="absolute inset-0 h-125 bg-[#0a1628]/80"/>
+        <div className="relative container-wide">
           <Breadcrumb items={[{ name: 'Partners', href: '/brokers' }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fadeUp">
             Strategic Lending Solutions for<br />Brokers and Their Clients
@@ -99,9 +99,9 @@ export default function BrokersPage() {
       </section>
 
       {/* Why Integrated Capital Solutionsfor Brokers */}
-      <section className="py-16 section-light" aria-label="Why brokers choose Archwest">
+      <section className="py-16 section-light" aria-label="Why brokers choose Integrated Capital Solutions">
         <div className="container-wide">
-          <span className="section-label">WHY ARCHWEST</span>
+          <span className="section-label">WHY Integrated Capital Solutions</span>
           <h2 className="text-3xl font-bold text-[#0a1628] mb-10">Built for Broker Success</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -196,7 +196,7 @@ export default function BrokersPage() {
       </section>
 
       <CTABanner
-        title="Ready to Partner with Archwest?"
+        title="Ready to Partner with Integrated Capital Solutions?"
         subtitle="Join hundreds of brokers nationwide who trust Integrated Capital Solutionsto deliver fast, reliable funding for their clients' investment properties."
         primaryLabel="Register as a Broker"
         primaryHref="/broker-form"

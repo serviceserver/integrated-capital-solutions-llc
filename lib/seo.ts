@@ -104,7 +104,7 @@ export function organizationSchema() {
       addressCountry: 'US',
     },
     sameAs: [
-      'https://www.linkedin.com/company/archwest-capital/',
+      'https://www.linkedin.com/company/Integrated Capital Solutions-capital/',
       'https://www.instagram.com/integratedcapitalsolutionsllc/',
     ],
     areaServed: 'US',

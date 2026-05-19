@@ -6,7 +6,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import { buildMetadata, faqPageSchema } from '@/lib/seo';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'FAQ — Frequently Asked Questions About Integrated Capital Solutions Loans',
+  title: 'FAQ - Frequently Asked Questions About Integrated Capital Solutions Loans',
   description:
     'Get answers to the most common questions about Integrated Capital Solutions loan products, borrower requirements, broker programs, DSCR, fix-and-flip, ground-up construction, and the loan process.',
   slug: '/faq',
@@ -23,7 +23,7 @@ const faqSections = [
       { question: 'Is Integrated Capital Solutionsa hard money lender?', answer: 'No. While Integrated Capital Solutionsis a private, non-bank lender, we are not a traditional hard money lender. We offer more competitive pricing, faster execution, and a higher level of service than most hard money lenders, with a focus on experienced investors.' },
       { question: 'What states does Integrated Capital Solutionslend in?', answer: 'Integrated Capital Solutionslends in most US states. Please contact us or start an estimate to confirm lending availability in your state. We are headquartered in Irvine, California, and operate as a national lender.' },
       { question: 'Does Integrated Capital Solutionsreport loans to credit bureaus?', answer: 'No. Integrated Capital Solutionsbusiness purpose loans are not reported to personal credit bureaus, as they are commercial loans made to LLCs or entities, not personal mortgages.' },
-      { question: 'What are Archwest\'s closing timelines?', answer: 'Fix & Flip: 5–10 days (record: 1 day). Ground-Up: 7–14 days (record: 2 days). DSCR: 10–20 days (record: 3 days). Bridge: 7–14 days. All timelines begin from a complete loan inquiry submission.' },
+      { question: 'What are Integrated Capital Solutions\'s closing timelines?', answer: 'Fix & Flip: 5–10 days (record: 1 day). Ground-Up: 7–14 days (record: 2 days). DSCR: 10–20 days (record: 3 days). Bridge: 7–14 days. All timelines begin from a complete loan inquiry submission.' },
     ],
   },
   {
@@ -35,7 +35,7 @@ const faqSections = [
       { question: 'What is the minimum credit score?', answer: 'Integrated Capital Solutionsgenerally requires a minimum FICO score of 680. Requirements may vary by loan product and scenario.' },
       { question: 'Are foreign nationals eligible?', answer: 'Yes, foreign nationals are eligible for certain Integrated Capital Solutionsloan products. Please contact us to discuss your specific situation and documentation requirements.' },
       { question: 'Can I finance an owner-occupied property?', answer: 'No. Integrated Capital Solutionsonly finances non-owner-occupied investment properties. Owner-occupied properties, mobile homes, and commercial properties are not eligible.' },
-      { question: 'Can I self-manage a rental property financed by Archwest?', answer: 'Yes. Integrated Capital Solutionsdoes not require a third-party property management company. Borrowers may self-manage their rental properties.' },
+      { question: 'Can I self-manage a rental property financed by Integrated Capital Solutions?', answer: 'Yes. Integrated Capital Solutionsdoes not require a third-party property management company. Borrowers may self-manage their rental properties.' },
     ],
   },
   {
@@ -43,7 +43,7 @@ const faqSections = [
     label: 'Brokers',
     items: [
       { question: 'Does Integrated Capital Solutionswork with mortgage brokers?', answer: 'Yes. Integrated Capital Solutions works extensively with mortgage brokers and real estate professionals and is always seeking new broker partnerships. Visit our Broker page to register.' },
-      { question: 'How do brokers submit a file to Archwest?', answer: 'Brokers begin by completing the broker registration form on the Integrated Capital Solutionswebsite. Once approved, you will be connected with a dedicated Account Executive who will guide you through the submission process.' },
+      { question: 'How do brokers submit a file to Integrated Capital Solutions?', answer: 'Brokers begin by completing the broker registration form on the Integrated Capital Solutionswebsite. Once approved, you will be connected with a dedicated Account Executive who will guide you through the submission process.' },
     ],
   },
   {

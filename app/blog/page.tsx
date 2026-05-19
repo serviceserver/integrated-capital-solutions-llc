@@ -3,10 +3,11 @@ import Link from 'next/link';
 import { buildMetadata } from '@/lib/seo';
 import { getAllPosts } from '@/lib/blog';
 import Breadcrumb from '@/components/Breadcrumb';
-import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
+import { Calendar, Clock, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Blog — Real Estate Investment Insights & Lending Tips',
+  title: 'Blog - Real Estate Investment Insights & Lending Tips',
   description:
     'Expert insights, market analysis, and practical guides for residential real estate investors. Fix-and-flip strategies, DSCR lending, construction financing, and more.',
   slug: '/blog',
@@ -19,7 +20,7 @@ export const metadata: Metadata = buildMetadata({
   ],
 });
 
-// Category pill colours — Tailwind-safe static strings only (no dynamic interpolation)
+// Category pill colours - Tailwind-safe static strings only (no dynamic interpolation)
 const CATEGORY_CLASSES: Record<string, { pill: string; dot: string }> = {
   'DSCR Rental': {
     pill: 'bg-blue-50 text-blue-700 border border-blue-200',
@@ -106,7 +107,7 @@ export default function BlogPage() {
                 {/* Thumbnail */}
                 <div className="relative min-h-72 lg:min-h-full bg-gradient-to-br from-[#0a1628] to-[#1a3560] flex items-center justify-center p-10">
                   <span className="text-white/10 text-sm font-medium">Featured Post</span>
-                  {/* Category pill — top-left */}
+                  {/* Category pill - top-left */}
                   <div className="absolute top-5 left-5">
                     <CategoryPill category={featured.category} />
                   </div>
@@ -152,13 +153,11 @@ export default function BlogPage() {
                 <article className="bg-white rounded-xl border border-[#e8eaef] overflow-hidden flex flex-col h-full transition-all duration-200 hover:shadow-xl hover:-translate-y-1">
 
                   {/* Card thumbnail */}
-                  <div className="relative h-40 bg-gradient-to-br from-[#0a1628] to-[#0f2040] flex-shrink-0 flex items-center justify-center">
+                  <div className="relative h-40 bg-linear-to-br from-[#0a1628] to-[#0f2040] shrink-0 flex items-center justify-center">
                     <div className="absolute top-3.5 left-3.5">
                       <CategoryPill category={post.category} />
                     </div>
-                    <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-                      <Tag size={16} className="text-white/20" />
-                    </div>
+                     <Image src={post.ogImage} alt={post.title} width={400} height={240} className="object-cover w-full h-full" />
                   </div>
 
                   {/* Card body */}

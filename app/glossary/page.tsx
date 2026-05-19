@@ -6,9 +6,9 @@ import Breadcrumb from '@/components/Breadcrumb';
 import CTABanner from '@/components/CTABanner';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Real Estate & Lending Glossary — Investment Financing Terms Defined',
+  title: 'Real Estate & Lending Glossary - Investment Financing Terms Defined',
   description:
-    'Comprehensive glossary of real estate investing and private lending terms. Definitions for ARV, DSCR, LTV, LTC, Cap Rate, NOI, bridge loans, and more — explained clearly.',
+    'Comprehensive glossary of real estate investing and private lending terms. Definitions for ARV, DSCR, LTV, LTC, Cap Rate, NOI, bridge loans, and more - explained clearly.',
   slug: '/glossary',
   keywords: [
     'real estate investing glossary',
@@ -70,7 +70,7 @@ const sections = [
       {
         term: 'Comparables (Comps)',
         definition:
-          'Properties with similar characteristics — such as location, size, and condition — used to determine a subject property\'s market value.',
+          'Properties with similar characteristics - such as location, size, and condition - used to determine a subject property\'s market value.',
       },
       {
         term: 'Debt Coverage Ratio (DCR)',
@@ -115,7 +115,7 @@ const sections = [
       {
         term: 'Hard Cost Budget',
         definition:
-          'The budget for tangible construction costs — labor, materials, and equipment — needed to complete a project.',
+          'The budget for tangible construction costs - labor, materials, and equipment - needed to complete a project.',
       },
       {
         term: 'IO Payments',
@@ -159,7 +159,7 @@ const sections = [
       {
         term: 'Operating Expenses',
         definition:
-          'The costs associated with maintaining and managing a property — including taxes, insurance, repairs, and utilities.',
+          'The costs associated with maintaining and managing a property - including taxes, insurance, repairs, and utilities.',
       },
       {
         term: 'Operating Expenses Ratio (OER)',
@@ -211,7 +211,7 @@ const sections = [
       {
         term: 'Soft Cost Budget',
         definition:
-          'The budget for non-tangible construction costs — permits, architectural fees, engineering, and legal expenses.',
+          'The budget for non-tangible construction costs - permits, architectural fees, engineering, and legal expenses.',
       },
       {
         term: 'Tax Lien',

@@ -6,7 +6,7 @@ import CTABanner from '@/components/CTABanner';
 import { Download, ExternalLink, Mail, HardHat } from 'lucide-react';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Construction Draw — Loan Management & Resources',
+  title: 'Construction Draw - Loan Management & Resources',
   description:
     'Access Integrated Capital Solutions construction loan management tools, download lien waiver forms, budget spreadsheets, and contact our dedicated construction draw team at draws@integratedcapitalsolutionsllc.com.',
   slug: '/construction-draw',
@@ -67,7 +67,7 @@ export default function ConstructionDrawPage() {
           </h1>
           <p className="text-white/65 text-lg max-w-2xl">
             Access essential resources, forms, and expert assistance to streamline your construction
-            financing journey — all in one place.
+            financing journey - all in one place.
           </p>
         </div>
       </section>

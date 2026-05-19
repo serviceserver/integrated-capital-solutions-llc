@@ -4,7 +4,7 @@ import ProcessSteps from '@/components/ProcessSteps';
 import CTABanner from '@/components/CTABanner';
 import { ShieldCheck, Zap, Handshake } from 'lucide-react';
 
-export const metadata: Metadata = { title: 'About Archwest Capital' };
+export const metadata: Metadata = { title: 'About Integrated Capital Solutions' };
 
 export default function AboutPage() {
   return (
@@ -31,10 +31,10 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-[#0a1628] mb-4">Close More Loans, Open More Doors</h2>
               <div className="divider" />
               <p className="text-[#4a5568] leading-relaxed mb-4">
-                Our mission is to empower investors to secure more loans and create greater opportunities — not just for themselves, but for a market in need of quality housing.
+                Our mission is to empower investors to secure more loans and create greater opportunities - not just for themselves, but for a market in need of quality housing.
               </p>
               <p className="text-[#4a5568] leading-relaxed">
-                In today&apos;'s changing landscape, investors need a trusted lending partner that offers innovative products along with speed and certainty of execution. As one of the fastest-growing companies in private lending, Archwest is committed to supporting borrowers and broker partners in achieving this shared vision.
+                In today&apos;'s changing landscape, investors need a trusted lending partner that offers innovative products along with speed and certainty of execution. As one of the fastest-growing companies in private lending, Integrated Capital Solutions is committed to supporting borrowers and broker partners in achieving this shared vision.
               </p>
             </div>
             <div className="bg-[#0f2040] rounded-2xl p-8">
@@ -88,7 +88,7 @@ export default function AboutPage() {
             <div>
               <span className="section-label">OUR TEAM</span>
               <h2 className="text-3xl font-bold text-white mb-4">Specialists Who Understand Your Needs</h2>
-              <p className="text-white/65 leading-relaxed mb-6">Our experienced team offers investors more than just capital — we provide innovative, customized financing solutions, expert guidance, and dedicated support. With every transaction, we prioritize efficiency, expediency, and a commitment to excellence.</p>
+              <p className="text-white/65 leading-relaxed mb-6">Our experienced team offers investors more than just capital - we provide innovative, customized financing solutions, expert guidance, and dedicated support. With every transaction, we prioritize efficiency, expediency, and a commitment to excellence.</p>
               <div className="flex gap-3">
                 <Link href="/team" className="btn-primary">Meet Our Team</Link>
                 <Link href="/careers" className="btn-secondary">Explore Open Roles</Link>

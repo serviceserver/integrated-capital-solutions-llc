@@ -4,7 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Privacy Notice',
-  description: 'Integrated Capital Solutions Privacy Notice — how we collect, use, and protect your personal information.',
+  description: 'Integrated Capital Solutions Privacy Notice - how we collect, use, and protect your personal information.',
   slug: '/privacy-policy',
   noindex: true,
 });
