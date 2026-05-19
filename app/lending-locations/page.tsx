@@ -92,10 +92,10 @@ export default function LendingLocationsPage() {
       <section className="py-16 section-light" aria-label="Lending coverage map">
         <div className="container-wide">
           {/* Map visual placeholder */}
-          <div className="bg-[#0a1628] rounded-2xl aspect-[16/7] flex items-center justify-center mb-10 overflow-hidden relative">
-            <div className="absolute inset-0 opacity-10"
+          <div className="bg-[#0a1628] rounded-2xl sm:aspect-[16/7] flex items-center justify-center mb-10 overflow-hidden relative">
+            <div className="absolute inset-0 opacity-10 h-120"
               style={{ backgroundImage: 'radial-gradient(circle at 30% 50%, #c8922a, transparent 60%), radial-gradient(circle at 70% 40%, #1a3560, transparent 60%)' }} />
-             <Image src="/integratedcapital-Map-1-5pt.svg" alt="Map of the United States showing lending locations" width={800} height={400} className="w-full h-full object-cover" />
+             <Image src="/integratedcapital-Map-1-5pt.svg" alt="Map of the United States showing lending locations" width={800} height={400} className="w-full h-full object-fit hover:scale-105 transition-transform" />
           </div>
 
           {/* Legend */}
