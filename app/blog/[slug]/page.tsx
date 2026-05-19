@@ -36,14 +36,14 @@ function RenderSection({ section }: { section: BlogSection }) {
 
     case 'paragraph':
       return (
-        <p className="text-gray-700 leading-[1.85] text-base mb-[1.375rem]">
+        <p className="text-gray-700 leading-[1.85] text-base mb-5.5">
           {section.text}
         </p>
       )
 
     case 'h2':
       return (
-        <h2 className="text-[1.375rem] font-extrabold text-[#0a1628] mt-10 mb-4 leading-[1.25] tracking-[-0.01em]">
+        <h2 className="text-[1.375rem] font-extrabold text-[#0a1628] mt-10 mb-4 leading-tight tracking-[-0.01em]">
           {section.text}
         </h2>
       )
@@ -60,7 +60,7 @@ function RenderSection({ section }: { section: BlogSection }) {
         <ul className="mb-6 pl-0 list-none flex flex-col gap-2.5">
           {section.items?.map((item, i) => (
             <li key={i} className="flex items-start gap-3 text-gray-700 text-base leading-[1.7]">
-              <span className="w-[6px] h-[6px] rounded-full bg-[#c8922a] shrink-0 mt-[6px]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#c8922a] shrink-0 mt-1.5" />
               {item}
             </li>
           ))}
@@ -184,7 +184,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       {/* ── Body ──────────────────────────────────────────────── */}
       <section className="py-16 bg-white">
-        <div className="container-wide max-w-[860px]">
+        <div className="container-wide max-w-215">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-16 items-start">
 
             {/* Article content */}
@@ -292,7 +292,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 return (
                   <Link key={r.slug} href={`/blog/${r.slug}`} className="group">
                     <article className="bg-white border border-gray-200 rounded-3xl overflow-hidden h-full transition-all hover:-translate-y-1 hover:shadow-xl">
-                      <div className="h-[140px] bg-linear-to-br from-[#0a1628] to-[#0f2040] relative flex items-center justify-center">
+                      <div className="h-35 bg-linear-to-br from-[#0a1628] to-[#0f2040] relative flex items-center justify-center">
                         <div 
                           className="absolute top-3.5 left-3.5 text-[0.625rem] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full"
                           style={{ background: rCat.bg, color: rCat.color }}

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ProcessSteps from '@/components/ProcessSteps';
 import CTABanner from '@/components/CTABanner';
 import { ShieldCheck, Zap, Handshake } from 'lucide-react';
+import Image from 'next/image';
 
 export const metadata: Metadata = { title: 'About Integrated Capital Solutions' };
 
@@ -10,8 +11,9 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="section-dark pt-28 pb-14">
-        <div className="container-wide">
+      <section className="relative section-dark pt-28 pb-14 bg-[url('/2729.jpg')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-[#0a1628]/80" />
+        <div className=" relative container-wide">
           <div className="flex flex-wrap gap-2 mb-6">
             {[['About','/about'],['Team','/team'],['Careers','/careers']].map(([l,h]) => (
               <Link key={h} href={h} className={`text-sm font-semibold px-4 py-1.5 rounded-full border transition-colors ${h === '/about' ? 'bg-[#c8922a] border-[#c8922a] text-white' : 'border-white/30 text-white/70 hover:text-white hover:border-white/60'}`}>{l}</Link>
@@ -34,10 +36,9 @@ export default function AboutPage() {
                 Our mission is to empower investors to secure more loans and create greater opportunities - not just for themselves, but for a market in need of quality housing.
               </p>
               <p className="text-[#4a5568] leading-relaxed">
-                In today&apos;'s changing landscape, investors need a trusted lending partner that offers innovative products along with speed and certainty of execution. As one of the fastest-growing companies in private lending, Integrated Capital Solutions is committed to supporting borrowers and broker partners in achieving this shared vision.
+                In today&apos;s changing landscape, investors need a trusted lending partner that offers innovative products along with speed and certainty of execution. As one of the fastest-growing companies in private lending, Integrated Capital Solutions is committed to supporting borrowers and broker partners in achieving this shared vision.
               </p>
-            </div>
-            <div className="bg-[#0f2040] rounded-2xl p-8">
+               <div className="bg-[#0f2040] rounded-2xl p-8 mt-8">
               <div className="grid grid-cols-3 gap-6 text-center">
                 {[{n:'25+',l:'Years in Real Estate Finance'},{n:'$10B+',l:'In Managed Assets'},{n:'$8B+',l:'In Loans Financed'}].map(s => (
                   <div key={s.l}>
@@ -47,6 +48,10 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
+            </div>
+            <div className="bg-white/5 rounded-2xl ">
+              <Image src="/open-doors.jpg" alt="Mission Image" width={600} height={600} className="rounded-2xl object-cover" />
+              </div>
           </div>
         </div>
       </section>
@@ -94,8 +99,8 @@ export default function AboutPage() {
                 <Link href="/careers" className="btn-secondary">Explore Open Roles</Link>
               </div>
             </div>
-            <div className="bg-white/5 rounded-2xl aspect-video flex items-center justify-center border border-white/10">
-              <span className="text-white/20 text-sm">Team Photo</span>
+            <div className="bg-white/5 rounded-2xl">
+             <Image src="/business-hands-joined-together-teamwork.jpg" alt="Team Collaboration" width={600} height={400} className="rounded-2xl object-cover" />
             </div>
           </div>
         </div>

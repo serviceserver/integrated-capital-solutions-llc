@@ -21,16 +21,16 @@ export const metadata: Metadata = {
     siteName: 'Integrated Capital Solutions',
     type: 'website',
     locale: 'en_US',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Integrated Capital Solutions' }],
+    images: [{ url: '/integrated-capital.png', width: 1200, height: 630, alt: 'Integrated Capital Solutions' }],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@Integrated Capital Solutionscap',
+    site: '@IntegratedCapitalSolutions',
   },
   icons: {
     icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: '16x16', type: 'image/x-icon' },
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
     ],
     apple: '/apple-touch-icon.png',
   },
