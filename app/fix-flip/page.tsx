@@ -65,22 +65,20 @@ export default function FixFlipPage() {
         },
       ]}
       highlights={[
-        { text: 'Term Sheet Within 24 Hours' },
-        { text: 'Closings as Fast as 7 Days' },
-        { text: 'Interest on Drawn Amounts Only' },
-        { text: '100% of Rehab Funding Available' },
+        { text: 'Fast Approvals & Funding' },
+        { text: 'Flexible Loan Terms' },
+        { text: 'Competitive Interest Rates' },
+        { text: 'No Income Verification' },
       ]}
       bodyImage='/repair.JPG'
       bodyContent={
         <div>
-          <h2 className="text-2xl font-bold text-[#0a1628] mb-4">Funding That Fits Your Strategy</h2>
+          <h2 className="text-2xl font-bold text-[#0a1628] mb-4">Transform Properties, Maximize Profits</h2>
           <div className="divider" />
           <p className="text-[#4a5568] leading-relaxed mb-4">
-            Our Fix and Flip loans provide the speed and flexibility you need to purchase, renovate, and
-            sell properties profitably. With up to 95% LTC and 100% of rehab costs covered, you can
-            maximize leverage and move on more deals simultaneously.
+            Our Fix & Flip Loan Program is designed for investors who want to purchase, renovate, and sell properties quickly. Whether you’re a seasoned investor or just starting out, we offer fast funding and tailored loan solutions to help you scale your business and boost your returns.
           </p>
-          <p className="text-[#4a5568] leading-relaxed mb-4">
+          {/* <p className="text-[#4a5568] leading-relaxed mb-4">
             Interest is charged only on drawn amounts - not on the total loan commitment - keeping your
             carrying costs low throughout the renovation. Combined with closings as fast as 7 days and
             term sheets in under 24 hours, Integrated Capital Solutionsgives renovation investors a decisive edge.
@@ -88,7 +86,7 @@ export default function FixFlipPage() {
           <p className="text-[#4a5568] leading-relaxed mb-6">
             We work with investors across the US on everything from single-unit flips to multi-property
             portfolios, providing a consistent, reliable capital partner at every stage.
-          </p>
+          </p> */}
           <div className="bg-[#f7f8fa] rounded-xl p-5 border border-[#e8eaef]">
             <p className="text-sm font-semibold text-[#0a1628] mb-1">Have a deal under contract?</p>
             <p className="text-sm text-[#4a5568]">

@@ -2,10 +2,10 @@ import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 const steps = [
-  { num: '01', title: 'Loan Inquiry', desc: 'Start with a quick and easy loan inquiry. Provide basic details about your project to receive an instant quote, followed by a consultation with an Account Executive.', cta: true },
-  { num: '02', title: 'Underwriting', desc: 'Experience our fast and efficient underwriting process. With dedicated lending experts guiding you at each step, we deliver unmatched speed and seamless execution.' },
-  { num: '03', title: 'Closing', desc: 'Once approved, we move swiftly to closing. Your funds are disbursed quickly, allowing you to move forward without delay. Draws are made simple and hassle-free.' },
-  { num: '04', title: 'Loan Funded', desc: 'With your loan funded, you can focus on executing your project with confidence. Our efficient disbursement process ensures timely access to capital.' },
+  { num: '01', title: 'Apply Online', desc: 'Submit your application with basic property details.', cta: true },
+  { num: '02', title: 'Get Pre-Approved', desc: 'Quick approval process with minimal paperwork.' },
+  { num: '03', title: 'Receive Funding', desc: 'Close deals fast with flexible financing.' },
+  { num: '04', title: 'Renovate & Sell', desc: 'Improve the property and list it for profit.' },
 ];
 
 export default function ProcessSteps() {
