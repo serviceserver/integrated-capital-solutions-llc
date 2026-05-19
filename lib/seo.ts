@@ -1,7 +1,7 @@
 // lib/seo.ts
 import type { Metadata } from 'next';
 
-const SITE_URL = 'https://www.integratedcapitalsolutionsllc.com';
+const SITE_URL = 'https://www.integratedcapitalsolutionsllc.vercel.app';
 const SITE_NAME = 'Integrated Capital Solutions';
 const DEFAULT_DESCRIPTION =
   "Integrated Capital Solutions LLC is a national, direct private lender specializing in fast, flexible financing for experienced residential real estate investors. Ground Up, Fix & Flip, DSCR, and Bridge loans available.";
@@ -94,7 +94,7 @@ export function organizationSchema() {
     logo: `${SITE_URL}/logo.png`,
     description: DEFAULT_DESCRIPTION,
     telephone: '+18449222724',
-    email: 'info@integratedcapitalsolutionsllc.com',
+    email: 'info@integratedcapitalsolutionsllc.vercel.app',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '18400 Von Karman Ave., Suite 500',

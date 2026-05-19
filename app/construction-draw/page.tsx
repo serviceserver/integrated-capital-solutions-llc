@@ -8,7 +8,7 @@ import { Download, ExternalLink, Mail, HardHat } from 'lucide-react';
 export const metadata: Metadata = buildMetadata({
   title: 'Construction Draw - Loan Management & Resources',
   description:
-    'Access Integrated Capital Solutions construction loan management tools, download lien waiver forms, budget spreadsheets, and contact our dedicated construction draw team at draws@integratedcapitalsolutionsllc.com.',
+    'Access Integrated Capital Solutions construction loan management tools, download lien waiver forms, budget spreadsheets, and contact our dedicated construction draw team at draws@integratedcapitalsolutionsllc.vercel.app.',
   slug: '/construction-draw',
   keywords: [
     'construction draw request',
@@ -176,10 +176,10 @@ export default function ConstructionDrawPage() {
               and expect a response within one business day.
             </p>
             <a
-              href="mailto:draws@integratedcapitalsolutionsllc.com"
+              href="mailto:draws@integratedcapitalsolutionsllc.vercel.app"
               className="btn-primary inline-flex items-center gap-2"
             >
-              <Mail size={16} /> draws@integratedcapitalsolutionsllc.com
+              <Mail size={16} /> draws@integratedcapitalsolutionsllc.vercel.app
             </a>
           </div>
         </div>

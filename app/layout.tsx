@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   description:
     "Integrated Capital Solutions LLc is a national, direct private lender specializing in fast, flexible financing for experienced residential real estate investors. Ground Up, Fix & Flip, DSCR, and Bridge loans.",
-  metadataBase: new URL('https://www.integratedcapitalsolutionsllc.com'),
+  metadataBase: new URL('https://www.integratedcapitalsolutionsllc.vercel.app'),
   keywords:
     'private lender, real estate investor loans, fix and flip loans, DSCR rental loan, bridge loan, ground up construction loan, hard money alternative, non-bank lender',
   robots: { index: true, follow: true },

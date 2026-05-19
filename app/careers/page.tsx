@@ -41,7 +41,7 @@ const jobPostingSchemas = openRoles.map((role) => ({
   hiringOrganization: {
     '@type': 'Organization',
     name: 'Integrated Capital Solutions',
-    sameAs: 'https://www.integratedcapitalsolutionsllc.com',
+    sameAs: 'https://www.integratedcapitalsolutionsllc.vercel.app',
   },
   jobLocation: {
     '@type': 'Place',

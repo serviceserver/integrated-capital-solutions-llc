@@ -51,7 +51,7 @@ const faqItems = [
   {
     question: 'How do I start my loan application process?',
     answer:
-      'You can begin instantly and obtain a quick quote at integratedcapitalsolutionsllc.com/app. Once complete, a member of our team will connect with you to gather more information and prepare a term sheet based on the specifics of your loan.',
+      'You can begin instantly and obtain a quick quote at integratedcapitalsolutionsllc.vercel.app/app. Once complete, a member of our team will connect with you to gather more information and prepare a term sheet based on the specifics of your loan.',
   },
   {
     question: 'Do you work with brokers?',

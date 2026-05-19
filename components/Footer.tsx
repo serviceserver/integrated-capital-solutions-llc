@@ -33,9 +33,9 @@ export default function Footer() {
             <p className="text-xs font-bold uppercase tracking-widest text-[#c8922a] mb-4">Get in Touch</p>
             <div className="flex flex-col gap-2">
               <Link href="/contact" className="text-white/70 hover:text-white text-sm transition-colors">Contact</Link>
-              <a href="mailto:info@integratedcapitalsolutionsllc.com" className="flex items-center gap-1.5 text-white/70 hover:text-white text-sm transition-colors">
+              <a href="mailto:info@integratedcapitalsolutionsllc.vercel.app" className="flex items-center gap-1.5 text-white/70 hover:text-white text-sm transition-colors">
                 {/* <Phone size={12} /> (844) 922-2724 */}
-                <Mail size={12} /> info@integratedcapitalsolutionsllc.com
+                <Mail size={12} /> info@integratedcapitalsolutionsllc.vercel.app
               </a>
             </div>
           </div>

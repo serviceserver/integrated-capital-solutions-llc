@@ -83,8 +83,8 @@ export default function Navbar() {
             <p className="text-xs font-bold uppercase tracking-widest text-[#c8922a] mb-2 mt-4">Resources</p>
             {resources.map(p => <Link key={p.href} href={p.href} className="text-white/85 hover:text-gray-500 font-medium py-2.5 border-b border-white/10 text-sm" onClick={() => setMobileOpen(false)}>{p.label}</Link>)}
             <div className="mt-8 flex flex-col gap-3">
-              <a href="mailto:info@integratedcapitalsolutionsllc.com" className="btn-secondary w-full justify-center text-sm">
-                <Mail size={14} /> info@integratedcapitalsolutionsllc.com
+              <a href="mailto:info@integratedcapitalsolutionsllc.vercel.app" className="btn-secondary w-full justify-center text-sm">
+                <Mail size={14} /> info@integratedcapitalsolutionsllc.vercel.app
               </a>
               <Link href="/app" className="btn-primary w-full justify-center text-sm" onClick={() => setMobileOpen(false)}>Get an Estimate</Link>
             </div>

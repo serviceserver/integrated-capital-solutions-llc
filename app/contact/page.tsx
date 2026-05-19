@@ -17,7 +17,7 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'FinancialService',
   name: 'Integrated Capital Solutions',
-  url: 'https://www.integratedcapitalsolutionsllc.com',
+  url: 'https://www.integratedcapitalsolutionsllc.vercel.app',
   telephone: '+18449222724',
   address: {
     '@type': 'PostalAddress',
