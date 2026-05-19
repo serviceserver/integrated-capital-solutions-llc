@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'Integrated Capital Solutions',
     type: 'website',
     locale: 'en_US',
-    images: [{ url: '/integrated-capital.png', width: 1200, height: 630, alt: 'Integrated Capital Solutions' }],
+    images: [{ url: 'https://integratedcapitalsolutionsllc.vercel.app/integrated-capital.png', width: 1200, height: 630, alt: 'Integrated Capital Solutions' }],
   },
   twitter: {
     card: 'summary_large_image',
