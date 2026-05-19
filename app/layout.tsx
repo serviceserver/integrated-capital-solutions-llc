@@ -8,7 +8,7 @@ import { organizationSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Integrated Capital Solutions | Best Lender for Experienced Real Estate Investors',
+    default: 'Integrated Capital Solutions | Best Lender for Real Estate Investors',
     template: '%s | Integrated Capital Solutions',
   },
   description:
@@ -18,10 +18,14 @@ export const metadata: Metadata = {
     'private lender, real estate investor loans, fix and flip loans, DSCR rental loan, bridge loan, ground up construction loan, hard money alternative, non-bank lender',
   robots: { index: true, follow: true },
   openGraph: {
-    siteName: 'Integrated Capital Solutions',
+    title: 'Integrated Capital Solutions LLC',
+    siteName: 'Integrated Capital Solutions LLC',
+    description:
+      "Integrated Capital Solutions LLc business purpose loan solutions are made for today's experienced real estate investors. Get the financing you need to move forward with your business.",
     type: 'website',
     locale: 'en_US',
     images: [{ url: 'https://integratedcapitalsolutionsllc.vercel.app/integrated-capital.png', width: 1200, height: 630, alt: 'Integrated Capital Solutions' }],
+    url: 'https://www.integratedcapitalsolutionsllc.vercel.app',
   },
   twitter: {
     card: 'summary_large_image',
