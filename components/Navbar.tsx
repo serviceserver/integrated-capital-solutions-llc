@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Phone, X, Menu , Mail} from 'lucide-react';
+import { X, Menu , Mail} from 'lucide-react';
 import DropdownMenu from './DropdownMenu';
 import Image from 'next/image';
 
@@ -43,7 +43,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 shrink-0">
-               <Image src="/logo-int.PNG" alt="Integrated Capital Solutions Logo" width={150} height={40} />
+               <Image src="/logo-int.png" alt="Integrated Capital Solutions Logo" width={150} height={40} />
             </Link>
 
             {/* Desktop Nav */}
