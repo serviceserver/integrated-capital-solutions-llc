@@ -43,7 +43,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 shrink-0">
-               <Image src="/logo-int.jpg" alt="Integrated Capital Solutions Logo" width={150} height={40} />
+               <Image src="/logo-int.PNG" alt="Integrated Capital Solutions Logo" width={150} height={40} />
             </Link>
 
             {/* Desktop Nav */}
@@ -56,9 +56,9 @@ export default function Navbar() {
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-4">
-              <a href="tel:16612273649" className="flex items-center gap-1.5 text-sm text-gray/80 hover:text-gray transition-colors font-medium">
-                <Phone size={14} />
-                (661) 227-3649
+              <a href="mailto:info@integratedcapitalsolutionsllc.com" className="flex items-center gap-1.5 text-sm text-gray/80 hover:text-gray transition-colors font-medium">
+                <Mail size={14} />
+                info@integratedcapitalsolutionsllc.com
               </a>
               <Link href="/app" className="btn-primary text-sm py-2 px-4">Get an Estimate</Link>
             </div>
@@ -83,8 +83,8 @@ export default function Navbar() {
             <p className="text-xs font-bold uppercase tracking-widest text-[#c8922a] mb-2 mt-4">Resources</p>
             {resources.map(p => <Link key={p.href} href={p.href} className="text-white/85 hover:text-gray-500 font-medium py-2.5 border-b border-white/10 text-sm" onClick={() => setMobileOpen(false)}>{p.label}</Link>)}
             <div className="mt-8 flex flex-col gap-3">
-              <a href="mailto:info@integratedcapitalsolutionsllc.vercel.app" className="btn-secondary w-full justify-center text-sm">
-                <Mail size={14} /> info@integratedcapitalsolutionsllc.vercel.app
+              <a href="mailto:info@integratedcapitalsolutionsllc.com" className="btn-secondary w-full justify-center text-sm">
+                <Mail size={14} /> info@integratedcapitalsolutionsllc.com
               </a>
               <Link href="/app" className="btn-primary w-full justify-center text-sm" onClick={() => setMobileOpen(false)}>Get an Estimate</Link>
             </div>

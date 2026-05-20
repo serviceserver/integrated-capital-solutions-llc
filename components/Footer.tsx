@@ -11,12 +11,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 shrink-0">
-               <Image src="/logo-int.jpg" alt="Integrated Capital Solutions Logo" width={150} height={40} />
+               <Image src="/logo-int.PNG" alt="Integrated Capital Solutions Logo" width={150} height={40} />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-5 max-w-xs">
               A national, direct, private lender specializing in financing solutions for experienced residential real estate investors.
             </p>
-            <div className="flex items-center gap-3">
+            {/* <div className="flex items-center gap-3">
               <a href="#" target="_blank" rel="noopener noreferrer"
                 className="w-9 h-9 rounded bg-white/10 hover:bg-[#c8922a] flex items-center justify-center transition-colors">
                 <FaLinkedin size={16} />
@@ -25,7 +25,7 @@ export default function Footer() {
                 className="w-9 h-9 rounded bg-white/10 hover:bg-[#c8922a] flex items-center justify-center transition-colors">
                 <FaInstagram size={16} />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Get in Touch */}
