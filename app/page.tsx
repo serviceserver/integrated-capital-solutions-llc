@@ -31,15 +31,15 @@ const products = [
 
 const testimonials = [
   { quote: "I've worked with Integrated Capital Solutions on both a bridge loan and a full construction loan, and their team consistently goes above and beyond. Danny once took my call on a Saturday and had everything I needed in my inbox by Monday. Their dedication and flexibility have made a lasting impression.", name: 'Kevin H.', role: 'Developer' },
-  { quote: "If getting a loan was an Olympic sport, Justin would take home the gold. He's the kind of lender who actually picks up the phone, responds faster than our morning coffee kicks in, and somehow makes the whole process enjoyable. If you need a lender who makes financing feel effortless, call Justin.", name: 'Matt S.', role: 'Real Estate Investor' },
+  { quote: "If getting a loan was an Olympic sport, Justin would take home the gold. He's the kind of lender who actually picks up the phone, responds faster than our morning coffee kicks in, and somehow makes the whole process enjoyable. If you need a lender who makes financing feel effortless, call Justin.", name: 'Matt S.', role: 'Investor' },
   { quote: "I've had the pleasure of working with Jennifer Lightbody & Jennifer Tran on numerous transactions and the experience was nothing short of exceptional. They are always ahead of the game during the funding process and always make sure the loan gets funded as smoothly as possible.", name: 'Natalie N.', role: 'Real Estate Investor' },
   { quote: "I used Integrated Capital Solutions to help fund a large transaction involving multiple new construction homes. It was not a typical project, but we were able to close on time. I'd highly recommend collaborating with Integrated Capital Solutions on any real estate projects.", name: 'Jonathan C.', role: 'Real Estate Investor' },
-  { quote: "Integrated Capital Solutions has the most efficient lending team I have ever worked with. They work quickly and clearly to make sure their customers are fully satisfied, all while being friendly and approachable. They make what seems like the impossible, possible.", name: 'Emilienne F.', role: 'Real Estate Investor' },
+  { quote: "Integrated Capital Solutions has the most efficient lending team I have ever worked with. They work quickly and clearly to make sure their customers are fully satisfied, all while being friendly and approachable. They make what seems like the impossible, possible.", name: 'Emilienne F.', role: 'Developer' },
 ];
 
 const homeFAQs = [
-  { question: 'What is Integrated Capital Solutions and who is your audience?', answer: 'Integrated Capital Solution is a national, direct, private lender (non-bank) specializing in financing solutions for residential real estate investors. With a proven track record and deep industry expertise, we are the go-to partner for experienced investors seeking fast, flexible, and reliable funding.' },
-  { question: 'What kind of loan products do you offer?', answer: 'We provide short-term bridge loans for fix-and-flip projects and new ground-up construction, as well as long-term financing solutions for rental properties. Our flexible loan options are designed to support real estate investors at every stage of their investment journey.' },
+  { question: 'What is Integrated Capital Solutions and who is your audience?', answer: 'Integrated Capital Solution is a national, direct, private lender (non-bank) specializing in financing solutions for investors. With a proven track record and deep industry expertise, we are the go-to partner for experienced investors seeking fast, flexible, and reliable funding.' },
+  { question: 'What kind of loan products do you offer?', answer: 'We provide short-term bridge loans for fix-and-flip projects and new ground-up construction, as well as long-term financing solutions for rental properties. Our flexible loan options are designed to support investors at every stage of their investment journey.' },
   { question: 'How do I start my loan application process?', answer: <span>You can begin instantly and obtain a quick quote at <Link href="/app" className="text-[#c8922a] font-semibold">integratedcapitalsolutionsllc.vercel.app/app</Link>. Once complete, a member of our team will connect with you to gather more information and prepare a term sheet.</span> },
   { question: 'How quickly can I get approved and funded?', answer: <div><p className="mb-2 font-semibold">Fast, Reliable Closing Times - speed is our strength.</p><ul className="space-y-1 text-sm"><li><strong>Fix & Flip:</strong> 5–10 days. Record: 1 day.</li><li><strong>Ground-Up:</strong> 7–14 days. Record: 2 days.</li><li><strong>DSCR:</strong> 10–20 days. Record: 3 days.</li></ul></div> },
   { question: 'Do you work with first time investors?', answer: 'We typically work with experienced investors who have completed at least one prior investment. Fix & Flip requires at least one completed project in the past 36 months; Ground-Up requires three.' },
@@ -254,7 +254,7 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold text-[#0a1628] text-center mb-10">Your Go-To Lending Partner</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <div className="bg-[#0a1628] rounded-xl p-8 flex flex-col gap-4">
-              <span className="text-[#c8922a] text-xs font-bold uppercase tracking-widest">For Real Estate Investors</span>
+              <span className="text-[#c8922a] text-xs font-bold uppercase tracking-widest">For Investors</span>
               <h3 className="text-white text-xl font-bold">Access funds easily and quickly with our streamlined process</h3>
               <Link href="/app" className="btn-primary mt-2">Get an Estimate</Link>
             </div>

@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo';
 import Link from 'next/link';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Ground Up Construction Loans for Real Estate Investors',
+  title: 'Ground Up Construction Loans for Investors',
   description:
     'Integrated Capital Solutions offers ground up construction loans from $250K to $5M+, up to 90% LTC, 12–30 month terms, and closings as fast as 7 days. Built for experienced builders and developers.',
   slug: '/ground-up',
@@ -78,7 +78,7 @@ export default function GroundUpPage() {
           <div className="divider" />
           <p className="text-[#4a5568] leading-relaxed mb-4">
             Ground up construction demands speed, flexibility, and reliable capital. Our Ground Up
-            Construction Loan is built for experienced real estate investors ready to turn raw land or
+            Construction Loan is built for experienced investors ready to turn raw land or
             teardown sites into profitable residential developments.
           </p>
           <p className="text-[#4a5568] leading-relaxed mb-4">

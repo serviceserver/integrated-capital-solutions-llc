@@ -11,10 +11,10 @@ export const metadata: Metadata = buildMetadata({
     'Explore expert insights, essential FAQs, lending terms, lending locations, and key tools to make informed decisions and streamline your loan process with Integrated Capital Solutions.',
   slug: '/resources',
   keywords: [
-    'real estate lending resources',
+    'lending resources',
     'private lender FAQ',
     'construction loan forms',
-    'real estate glossary',
+    'glossary',
     'lending locations map',
   ],
 });
@@ -40,7 +40,7 @@ const resources = [
     icon: <BookOpen size={22} />,
     label: 'LEARN',
     title: 'Understand Loan Terminology',
-    desc: 'A comprehensive glossary of lending and real estate investment terms to help you navigate financing with confidence. From ARV to DSCR to LTC - we define it all.',
+    desc: 'A comprehensive glossary of lending and investment terms to help you navigate financing with confidence. From ARV to DSCR to LTC - we define it all.',
     cta: 'Explore Glossary',
     href: '/glossary',
   },
@@ -97,7 +97,7 @@ export default function ResourcesPage() {
 
       <CTABanner
         title="Proven Team. Trusted Lending Partner."
-        subtitle="With extensive industry expertise and an unwavering commitment to service, our team has successfully partnered with thousands of real estate investors on projects nationwide."
+        subtitle="With extensive industry expertise and an unwavering commitment to service, our team has successfully partnered with thousands of investors on projects nationwide."
         primaryLabel="Get an Estimate"
         primaryHref="/app"
       />

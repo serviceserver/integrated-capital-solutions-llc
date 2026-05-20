@@ -20,7 +20,7 @@ export default function AboutPage() {
             ))}
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Making Lending Simple with Innovation and Dedication</h1>
-          <p className="text-white/65 text-lg max-w-2xl">Driven by technology, transparency, and a commitment to exceptional service, we help real estate investors access capital quicker and with greater confidence.</p>
+          <p className="text-white/65 text-lg max-w-2xl">Driven by technology, transparency, and a commitment to exceptional service, we help investors access capital quicker and with greater confidence.</p>
         </div>
       </section>
 
@@ -106,7 +106,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <CTABanner title="Proven Team. Trusted Lending Partner." subtitle="With extensive industry expertise and an unwavering commitment to service, our team has successfully partnered with thousands of real estate investors on projects nationwide." />
+      <CTABanner title="Proven Team. Trusted Lending Partner." subtitle="With extensive industry expertise and an unwavering commitment to service, our team has successfully partnered with thousands of investors on projects nationwide." />
     </>
   );
 }

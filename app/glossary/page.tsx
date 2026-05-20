@@ -6,19 +6,19 @@ import Breadcrumb from '@/components/Breadcrumb';
 import CTABanner from '@/components/CTABanner';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Real Estate & Lending Glossary - Investment Financing Terms Defined',
+  title: 'Lending Glossary - Investment Financing Terms Defined',
   description:
-    'Comprehensive glossary of real estate investing and private lending terms. Definitions for ARV, DSCR, LTV, LTC, Cap Rate, NOI, bridge loans, and more - explained clearly.',
+    'Comprehensive glossary of investing and private lending terms. Definitions for ARV, DSCR, LTV, LTC, Cap Rate, NOI, bridge loans, and more - explained clearly.',
   slug: '/glossary',
   keywords: [
-    'real estate investing glossary',
+    'investing glossary',
     'private lending terms',
     'DSCR definition',
     'ARV meaning',
     'LTV LTC explained',
     'cap rate definition',
     'NOI real estate',
-    'real estate loan terminology',
+    'loan terminology',
   ],
 });
 
@@ -236,9 +236,9 @@ const sections = [
 const glossarySchema = {
   '@context': 'https://schema.org',
   '@type': 'DefinedTermSet',
-  name: 'Real Estate and Lending Glossary',
+  name: 'Lending Glossary',
   description:
-    'A comprehensive glossary of real estate investment and private lending terminology by Integrated Capital Solutions.',
+    'A comprehensive glossary of investment and private lending terminology by Integrated Capital Solutions.',
   hasDefinedTerm: sections.flatMap((s) =>
     s.terms.map((t) => ({
       '@type': 'DefinedTerm',
@@ -270,7 +270,7 @@ export default function GlossaryPage() {
             Investment Financing Terms
           </h1>
           <p className="text-white/65 text-lg max-w-2xl">
-            Navigate industry jargon with ease. A comprehensive glossary of real estate and lending
+            Navigate industry jargon with ease. A comprehensive glossary of lending
             terms to help you make informed decisions at every stage of your investment journey.
           </p>
         </div>
@@ -296,10 +296,10 @@ export default function GlossaryPage() {
           {/* Intro */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-[#0a1628] mb-3">
-              Simplifying Real Estate and Loan Terminology
+              Simplifying Loan Terminology
             </h2>
             <p className="text-[#4a5568] leading-relaxed">
-              Whether you&apos;re new to real estate investing or a seasoned professional, understanding
+              Whether you&apos;re new to investing or a seasoned professional, understanding
               the terms used in construction loans and financing is essential. Our glossary provides
               clear and concise definitions to help you make informed decisions.
             </p>

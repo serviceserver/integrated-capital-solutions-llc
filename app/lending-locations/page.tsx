@@ -9,13 +9,13 @@ import { CheckCircle, XCircle, MinusCircle } from 'lucide-react';
 import Image from 'next/image';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Lending Locations - Real Estate Investment Loans Nationwide',
+  title: 'Lending Locations - Investment Loans Nationwide',
   description:
     'Integrated Capital Solutions lends in 46+ states across the US. Find out if we lend in your state for fix-and-flip, ground-up construction, DSCR rental, and bridge loans.',
   slug: '/lending-locations',
   keywords: [
     'private lender lending states',
-    'real estate investor loans by state',
+    'investor loans by state',
     'nationwide private lender',
     'fix flip lender near me',
     'where does Integrated Capital Solutions lend',
@@ -41,12 +41,12 @@ const faqItems = [
   {
     question: 'What is Integrated Capital Solutionsand who is your audience?',
     answer:
-      'Integrated Capital Solutionsis a national, direct, private lender (non-bank) specializing in financing solutions for residential real estate investors. With a proven track record and deep industry expertise, we are the go-to partner for experienced investors seeking fast, flexible, and reliable funding.',
+      'Integrated Capital Solutionsis a national, direct, private lender (non-bank) specializing in financing solutions for  investors. With a proven track record and deep industry expertise, we are the go-to partner for experienced investors seeking fast, flexible, and reliable funding.',
   },
   {
     question: 'What kind of loan products do you offer?',
     answer:
-      'We provide short-term bridge loans for fix-and-flip projects and new ground-up construction, as well as long-term financing solutions for rental properties. Our flexible loan options are designed to support real estate investors at every stage of their investment journey.',
+      'We provide short-term bridge loans for fix-and-flip projects and new ground-up construction, as well as long-term financing solutions for rental properties. Our flexible loan options are designed to support investors at every stage of their investment journey.',
   },
   {
     question: 'How do I start my loan application process?',
@@ -75,7 +75,7 @@ export default function LendingLocationsPage() {
             ]}
           />
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-5 mb-4 z-100">
-            Serving Real Estate Investors from Coast to Coast
+            Serving Investors from Coast to Coast
           </h1>
           <p className="text-white/65 text-lg max-w-2xl">
             Whether you&apos;re working on a fix and flip, rental property, or ground-up construction,

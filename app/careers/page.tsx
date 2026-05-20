@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     'Explore career opportunities at Integrated Capital Solutions. We hire for attitude and aptitude across loan operations, underwriting, closing, sales, and technology. Full benefits, Irvine CA.',
   slug: '/careers',
-  keywords: ['Integrated Capital Solutions careers', 'private lending jobs', 'mortgage jobs Irvine CA', 'loan officer jobs', 'real estate finance careers'],
+  keywords: ['Integrated Capital Solutions careers', 'private lending jobs', 'mortgage jobs Irvine CA', 'loan officer jobs', 'finance careers'],
 });
 
 const openRoles = [

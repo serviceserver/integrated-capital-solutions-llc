@@ -8,20 +8,20 @@ import { organizationSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Integrated Capital Solutions | Best Lender for Real Estate Investors',
+    default: 'Integrated Capital Solutions | Best Lender for Investors',
     template: '%s | Integrated Capital Solutions',
   },
   description:
-    "Integrated Capital Solutions LLc is a national, direct private lender specializing in fast, flexible financing for experienced residential real estate investors. Ground Up, Fix & Flip, DSCR, and Bridge loans.",
+    "Integrated Capital Solutions LLc is a national, direct private lender specializing in fast, flexible financing for experienced residential investors. Ground Up, Fix & Flip, DSCR, and Bridge loans.",
   metadataBase: new URL('https://www.integratedcapitalsolutionsllc.vercel.app'),
   keywords:
-    'private lender, real estate investor loans, fix and flip loans, DSCR rental loan, bridge loan, ground up construction loan, hard money alternative, non-bank lender',
+    'private lender, investor loans, fix and flip loans, DSCR rental loan, bridge loan, ground up construction loan, hard money alternative, non-bank lender',
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Integrated Capital Solutions LLC',
     siteName: 'Integrated Capital Solutions LLC',
     description:
-      "Integrated Capital Solutions LLc business purpose loan solutions are made for today's experienced real estate investors. Get the financing you need to move forward with your business.",
+      "Integrated Capital Solutions LLc business purpose loan solutions are made for today's experienced investors. Get the financing you need to move forward with your business.",
     type: 'website',
     locale: 'en_US',
     images: [{ url: 'https://integratedcapitalsolutionsllc.vercel.app/integrated-capital.png', width: 1200, height: 630, alt: 'Integrated Capital Solutions' }],

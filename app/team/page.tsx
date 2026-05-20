@@ -10,7 +10,7 @@ import Image from 'next/image';
 export const metadata: Metadata = buildMetadata({
   title: 'Leadership Team - Meet the Experts Behind Integrated Capital Solutions',
   description:
-    'Meet the Integrated Capital Solutions leadership team - experienced real estate finance professionals with 25+ years of industry expertise and $10B+ in managed assets.',
+    'Meet the Integrated Capital Solutions leadership team - experienced finance professionals with 25+ years of industry expertise and $10B+ in managed assets.',
   slug: '/team',
   keywords: ['Integrated Capital Solutions team', 'real estate lending executives', 'private lender leadership'],
 });
@@ -112,7 +112,7 @@ export default function TeamPage() {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Leadership Team</h1>
           <p className="text-white/65 text-lg max-w-2xl">
-            Experienced real estate finance professionals with a shared commitment to speed, transparency,
+            Experienced finance professionals with a shared commitment to speed, transparency,
             and exceptional service for investors nationwide.
           </p>
         </div>
@@ -149,7 +149,7 @@ export default function TeamPage() {
 
       <CTABanner
         title="Build Your Career with Integrated Capital Solutions"
-        subtitle="We hire for attitude and aptitude. If you're ambitious, diligent, and passionate about real estate finance, we want to meet you."
+        subtitle="We hire for attitude and aptitude. If you're ambitious, diligent, and passionate about finance, we want to meet you."
         primaryLabel="Explore Open Roles"
         primaryHref="/careers"
         dark={true}

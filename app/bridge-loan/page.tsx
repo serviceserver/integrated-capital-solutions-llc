@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/seo';
 import Link from 'next/link';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Bridge Loans for Real Estate Investors - Fast Short-Term Financing',
+  title: 'Bridge Loans for Investors - Fast Short-Term Financing',
   description:
     'Integrated Capital Solutions bridge loans offer closings in as fast as 7 days, up to 80% LTV, no prepayment penalties, and flexible use cases for acquisition, refinance, or stabilization.',
   slug: '/bridge-loan',
@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
 
 const extraFAQs = [
   {
-    question: 'What is a real estate bridge loan?',
+    question: 'What is a bridge loan?',
     answer:
       'A bridge loan is a short-term loan that provides immediate capital to acquire, refinance, or stabilize an investment property while the borrower arranges permanent financing or sells the asset. Bridge loans typically carry 6–15 month terms and are ideal when speed or flexibility is critical.',
   },
@@ -48,7 +48,7 @@ export default function BridgeLoanPage() {
     <ProductPageLayout
       heroTitle="Bridge Loan"
       heroImage='/loan.JPG'
-      heroSubtitle="Fast, flexible short-term capital for real estate investors. Acquisition, refinance, stabilization, and partner buyouts - close in as little as 7 days with no prepayment penalties."
+      heroSubtitle="Fast, flexible short-term capital for investors. Acquisition, refinance, stabilization, and partner buyouts - close in as little as 7 days with no prepayment penalties."
       activeTab="Bridge"
       slug="/bridge-loan"
       extraFAQs={extraFAQs}

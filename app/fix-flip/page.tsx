@@ -48,7 +48,7 @@ export default function FixFlipPage() {
     <ProductPageLayout
       heroTitle="Fix & Flip"
       heroImage='/fix-flip.JPG'
-      heroSubtitle="Industry-leading speed, rates, and leverage for residential real estate renovation investors. Up to 95% LTC and 100% of rehab costs covered nationwide."
+      heroSubtitle="Industry-leading speed, rates, and leverage for investors. Up to 95% LTC and 100% of rehab costs covered nationwide."
       activeTab="Fix & Flip"
       slug="/fix-flip"
       extraFAQs={extraFAQs}

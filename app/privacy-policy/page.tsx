@@ -25,7 +25,7 @@ export default function PrivacyPage() {
             {[
               {
                 title: 'Information We Collect',
-                content: 'We collect information you provide directly to us, such as when you fill out a loan inquiry form, contact us, or register as a broker partner. This may include your name, email address, phone number, company name, and details about your real estate investment activity.',
+                content: 'We collect information you provide directly to us, such as when you fill out a loan inquiry form, contact us, or register as a broker partner. This may include your name, email address, phone number, company name, and details about your investment activity.',
               },
               {
                 title: 'How We Use Your Information',

@@ -7,7 +7,7 @@ import { CheckCircle } from 'lucide-react';
 export const metadata: Metadata = buildMetadata({
   title: 'Broker Registration - Partner with Integrated Capital Solutions',
   description:
-    'Register as a broker partner with Integrated Capital Solutions. Get access to our full loan product suite, dedicated support, and 24-hour term sheets for your real estate investor clients.',
+    'Register as a broker partner with Integrated Capital Solutions. Get access to our full loan product suite, dedicated support, and 24-hour term sheets for your investor clients.',
   slug: '/broker-form',
   keywords: [
     'broker registration private lender',
@@ -34,7 +34,7 @@ export default function BrokerFormPage() {
           </h1>
           <p className="text-white/65 text-lg max-w-xl">
             Join hundreds of brokers nationwide who trust Integrated Capital Solutions to deliver fast, reliable
-            funding for their real estate investor clients.
+            funding for their investor clients.
           </p>
         </div>
       </section>

@@ -187,7 +187,7 @@ export default function ConstructionDrawPage() {
 
       <CTABanner
         title="Proven Team. Trusted Lending Partner."
-        subtitle="With extensive industry expertise and an unwavering commitment to service, our team has successfully partnered with thousands of real estate investors on projects nationwide."
+        subtitle="With extensive industry expertise and an unwavering commitment to service, our team has successfully partnered with thousands of investors on projects nationwide."
         primaryLabel="Get an Estimate"
         primaryHref="/app"
       />

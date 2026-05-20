@@ -10,7 +10,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     'Get answers to the most common questions about Integrated Capital Solutions loan products, borrower requirements, broker programs, DSCR, fix-and-flip, ground-up construction, and the loan process.',
   slug: '/faq',
-  keywords: ['private lender FAQ', 'real estate investor loan questions', 'DSCR loan FAQ', 'fix flip loan requirements', 'bridge loan questions'],
+  keywords: ['private lender FAQ', 'investor loan questions', 'DSCR loan FAQ', 'fix flip loan requirements', 'bridge loan questions'],
 });
 
 const faqSections = [
@@ -18,7 +18,7 @@ const faqSections = [
     id: 'general',
     label: 'General',
     items: [
-      { question: 'What is Integrated Capital Solutions?', answer: 'Integrated Capital Solutions is a national, direct, private lender (non-bank) specializing in financing solutions for experienced residential real estate investors. We provide short-term and long-term loans for fix-and-flip, ground-up construction, DSCR rental, and bridge scenarios.' },
+      { question: 'What is Integrated Capital Solutions?', answer: 'Integrated Capital Solutions is a national, direct, private lender (non-bank) specializing in financing solutions for experienced investors. We provide short-term and long-term loans for fix-and-flip, ground-up construction, DSCR rental, and bridge scenarios.' },
       { question: 'What loan types does Integrated Capital Solutionsoffer?', answer: 'We offer four core loan products: Ground Up Construction Loans (12–30 months), Fix & Flip Loans (6–30 months), DSCR Rental Loans (30 years), and Bridge Loans (6–15 months). Loan amounts range from $55,000 to $50M+.' },
       { question: 'Is Integrated Capital Solutionsa hard money lender?', answer: 'No. While Integrated Capital Solutionsis a private, non-bank lender, we are not a traditional hard money lender. We offer more competitive pricing, faster execution, and a higher level of service than most hard money lenders, with a focus on experienced investors.' },
       { question: 'What states does Integrated Capital Solutionslend in?', answer: 'Integrated Capital Solutionslends in most US states. Please contact us or start an estimate to confirm lending availability in your state. We are headquartered in Irvine, California, and operate as a national lender.' },

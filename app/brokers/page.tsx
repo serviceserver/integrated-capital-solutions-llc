@@ -12,7 +12,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 export const metadata: Metadata = buildMetadata({
   title: 'Broker Program - Partner with Integrated Capital Solutions',
   description:
-    'Integrated Capital Solutions partners with real estate brokers nationwide. Access fast closings, competitive terms, and a full suite of fix-and-flip, DSCR, ground-up, and bridge loan products for your clients.',
+    'Integrated Capital Solutions partners with brokers nationwide. Access fast closings, competitive terms, and a full suite of fix-and-flip, DSCR, ground-up, and bridge loan products for your clients.',
   slug: '/brokers',
   keywords: [
     'real estate broker program',
@@ -89,7 +89,7 @@ export default function BrokersPage() {
             Strategic Lending Solutions for<br />Brokers and Their Clients
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mb-8 animate-fadeUp delay-100">
-            Partner with Integrated Capital Solutionsto offer your clients fast, flexible, and competitive private lending
+            Partner with Integrated Capital Solutions to offer your clients fast, flexible, and competitive private lending
             solutions across all major residential investment strategies.
           </p>
           <Link href="/broker-form" className="btn-primary animate-fadeUp delay-200">
