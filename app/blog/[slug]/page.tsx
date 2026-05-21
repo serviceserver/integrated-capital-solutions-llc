@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { buildMetadata } from '@/lib/seo';
+import { buildMetadata, articleSchema } from '@/lib/seo';
 import { getPostBySlug, getAllSlugs, getRelatedPosts, CATEGORY_STYLES, type BlogSection } from '@/lib/blog';
 import SchemaScript from '@/components/SchemaScript';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -134,7 +134,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const related = getRelatedPosts(post)
   const cat = CATEGORY_STYLES[post.category] ?? { bg: '#f3f4f6', color: '#374151', border: '#e5e7eb' }
 
-  const articleSchema = { /* ... unchanged ... */ }
+  const articleSchema = articleSchema({
+    title:       post.title,
+    description: post.excerpt,
+    image:       post.ogImage,
+    datePublished: post.date,
+    author:      post.author,
+    url:         `/blog/${post.slug}`,
+  })
 
   return (
     <>

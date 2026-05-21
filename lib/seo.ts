@@ -166,3 +166,40 @@ export function breadcrumbSchema(
     })),
   };
 }
+
+export function articleSchema({
+  title,
+  description,
+  image,
+  datePublished,
+  author,
+  url,
+}: {
+  title: string;
+  description: string;
+  image?: string;
+  datePublished: string;
+  author?: string;
+  url: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    image: image ? `${SITE_URL}${image}` : undefined,
+    datePublished,
+    dateModified: datePublished,
+    author: author
+      ? { '@type': 'Person', name: author }
+      : { '@type': 'Organization', name: SITE_NAME },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.png` },
+    },
+    url: `${SITE_URL}${url}`,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}${url}` },
+  } as Record<string, unknown>;
+}

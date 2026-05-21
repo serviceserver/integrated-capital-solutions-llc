@@ -29,7 +29,7 @@ const activeStates = [
   'Michigan', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'New Hampshire',
   'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'Ohio', 'Oklahoma',
   'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota',
-  'Tennessee', 'Texas', 'Utah', 'Virginia', 'Washington', 'West Virginia',
+  'Tennessee', 'Texas', 'Virginia', 'Washington', 'West Virginia',
   'Wisconsin', 'Wyoming',
 ];
 
@@ -82,7 +82,7 @@ export default function LendingLocationsPage() {
             see how we can support your vision across 46+ states.
           </p>
           <div className="mt-8">
-            <Link href="/products" className="btn-primary">
+              <Link href="/ground-up" className="btn-primary">
               Explore Loans
             </Link>
           </div>
