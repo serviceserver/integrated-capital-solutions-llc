@@ -104,7 +104,7 @@ export default function BrokerForm() {
         <p className="text-green-700 leading-relaxed text-sm">
           A dedicated Account Executive will reach out within{' '}
           <strong>1 business day</strong> to get you onboarded. Questions? Call{' '}
-          <a href="tel:18449222724" className="font-bold underline">(844) 922-2724</a>.
+          <a href="mailto:info@integratedcapitalsolutionsllc.com" className="font-bold underline">info@integratedcapitalsolutionsllc.com</a>.
         </p>
       </div>
     );

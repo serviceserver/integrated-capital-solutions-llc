@@ -8,23 +8,23 @@ import { buildMetadata, faqPageSchema } from '@/lib/seo';
 import { Star, Handshake, Zap, Settings } from 'lucide-react';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Broker Program — Partner with Archwest Capital',
-  description: 'Archwest Capital partners with real estate brokers nationwide. Fast closings, 24-hour term sheets, and a full suite of loan products for your clients.',
+  title: 'Broker Program — Partner with Integrated Capital Solutions',
+  description: 'Integrated Capital Solutions partners with real estate brokers nationwide. Fast closings, 24-hour term sheets, and a full suite of loan products for your clients.',
   slug: '/brokers',
   keywords: ['real estate broker program','broker partner private lender','fix flip broker','DSCR broker lender'],
 });
 
 const brokerFAQs = [
-  { question: 'Does Archwest work with mortgage brokers?', answer: 'Yes. Archwest Capital works extensively with mortgage brokers and real estate professionals nationwide and is always looking for new broker partnerships.' },
-  { question: 'How do brokers submit a loan to Archwest?', answer: 'Complete the broker registration form on this page. Once registered, your Account Executive will walk you through the submission process.' },
-  { question: 'How quickly will my client receive a term sheet?', answer: 'Archwest provides term sheets within 24 hours of a complete loan inquiry submission. Closings typically take 7–14 days depending on loan type.' },
-  { question: 'What loan products are available through the broker channel?', answer: 'All Archwest products are available: Ground Up Construction, Fix & Flip, DSCR Rental, and Bridge Loans. Loan amounts from $55K to $50M+.' },
+  { question: 'Does Integrated Capital Solutions work with mortgage brokers?', answer: 'Yes. Integrated Capital Solutions works extensively with mortgage brokers and real estate professionals nationwide and is always looking for new broker partnerships.' },
+  { question: 'How do brokers submit a loan to Integrated Capital Solutions?', answer: 'Complete the broker registration form on this page. Once registered, your Account Executive will walk you through the submission process.' },
+  { question: 'How quickly will my client receive a term sheet?', answer: 'Integrated Capital Solutions provides term sheets within 24 hours of a complete loan inquiry submission. Closings typically take 7–14 days depending on loan type.' },
+  { question: 'What loan products are available through the broker channel?', answer: 'All Integrated Capital Solutions products are available: Ground Up Construction, Fix & Flip, DSCR Rental, and Bridge Loans. Loan amounts from $55K to $50M+.' },
 ];
 
 const testimonials = [
-  { name: 'Dawna T.', role: 'Mortgage Broker', quote: "Archwest is hands-down the most reliable private lending partner I've worked with. Their responsiveness is unmatched — every time I submit a file, I know exactly where it stands and when it will close." },
-  { name: 'Jason S.', role: 'Real Estate Broker', quote: "First deal with Archwest and the process was smoother than any lender I've used before. Tight timeline, moving parts everywhere, and they delivered without a single hiccup." },
-  { name: 'Jason F.', role: 'Mortgage Broker', quote: "Another lender ghosted my client at the last minute. I called Archwest on a Wednesday, had a term sheet by Thursday, and we closed the following Wednesday. That's 7 days from first call to funded." },
+  { name: 'Dawna T.', role: 'Mortgage Broker', quote: "Integrated Capital Solutions is hands-down the most reliable private lending partner I've worked with. Their responsiveness is unmatched — every time I submit a file, I know exactly where it stands and when it will close." },
+  { name: 'Jason S.', role: 'Real Estate Broker', quote: "First deal with Integrated Capital Solutions and the process was smoother than any lender I've used before. Tight timeline, moving parts everywhere, and they delivered without a single hiccup." },
+  { name: 'Jason F.', role: 'Mortgage Broker', quote: "Another lender ghosted my client at the last minute. I called Integrated Capital Solutions on a Wednesday, had a term sheet by Thursday, and we closed the following Wednesday. That's 7 days from first call to funded." },
 ];
 
 const products = [
@@ -46,23 +46,23 @@ export default function BrokersPage() {
             Strategic Lending Solutions for<br />Brokers and Their Clients
           </h1>
           <p className="text-white/65 text-lg max-w-xl leading-relaxed mb-8">
-            Partner with Archwest to offer your clients fast, flexible private lending solutions
+            Partner with Integrated Capital Solutions to offer your clients fast, flexible private lending solutions
             across all major residential investment strategies.
           </p>
           <a href="#broker-form" className="btn-primary">Get Broker Support</a>
         </div>
       </section>
 
-      {/* Why Archwest */}
+      {/* Why Integrated Capital Solutions */}
       <section className="section-light py-20">
         <div className="container-wide">
-          <span className="section-label">WHY ARCHWEST</span>
+          <span className="section-label">WHY Integrated Capital Solutions</span>
           <h2 className="text-3xl font-bold text-[#0a1628] mb-10">Built for Broker Success</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { icon: <Handshake size={22} />, title: 'Trusted Partnership', desc: 'Transparent communication, consistent terms, and a dedicated Account Executive for every submission.' },
               { icon: <Zap size={22} />, title: 'Swift Closings', desc: 'Term sheets in 24 hours. Closings in as few as 7 days. Give your clients certainty of execution.' },
-              { icon: <Settings size={22} />, title: 'Flexible Loan Terms', desc: 'Access the full Archwest product suite — Ground Up, Fix & Flip, DSCR, and Bridge — all in one relationship.' },
+              { icon: <Settings size={22} />, title: 'Flexible Loan Terms', desc: 'Access the full Integrated Capital Solutions product suite — Ground Up, Fix & Flip, DSCR, and Bridge — all in one relationship.' },
             ].map(v => (
               <div key={v.title} className="bg-white rounded-xl p-6 border border-[#e8eaef]">
                 <div className="w-11 h-11 rounded-xl bg-[#0a1628] flex items-center justify-center text-[#c8922a] mb-4">

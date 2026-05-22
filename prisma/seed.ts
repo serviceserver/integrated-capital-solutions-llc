@@ -16,7 +16,7 @@
  *   npx ts-node --compiler-options '{"module":"CommonJS"}' prisma/seed.ts
  *
  * Environment overrides (optional — set in .env.local):
- *   SEED_ADMIN_EMAIL     defaults to admin@archwestcapital.com
+ *   SEED_ADMIN_EMAIL     defaults to admin@integratedcapitalsolutionsllc.com
  *   SEED_ADMIN_PASSWORD  defaults to ChangeMe123!
  *   SEED_ADMIN_NAME      defaults to Super Admin
  */
@@ -40,7 +40,7 @@ async function main() {
   console.log('\n🌱  Starting seed...\n')
 
   // ── 1. Admin users ──────────────────────────────────────────
-  const superEmail    = process.env.SEED_ADMIN_EMAIL    ?? 'admin@archwestcapital.com'
+  const superEmail    = process.env.SEED_ADMIN_EMAIL    ?? 'admin@integratedcapitalsolutionsllc.com'
   const superPassword = process.env.SEED_ADMIN_PASSWORD ?? 'ChangeMe123!'
   const superName     = process.env.SEED_ADMIN_NAME     ?? 'Super Admin'
 
@@ -59,7 +59,7 @@ async function main() {
     console.log(`    Role:     SUPER_ADMIN`)
   }
 
-  const adminEmail = 'staff@archwestcapital.com'
+  const adminEmail = 'staff@integratedcapitalsolutionsllc.com'
   const adminExists = await prisma.user.findUnique({ where: { email: adminEmail } })
 
   if (adminExists) {
@@ -207,7 +207,7 @@ async function main() {
       states: 'Georgia, Florida, Tennessee, North Carolina',
       monthlyVolume: '11-25',
       products: ['Ground Up Construction', 'Fix & Flip', 'Bridge Loan'],
-      notes: 'High-volume shop in Southeast. Want to add Archwest as our primary private lender.',
+      notes: 'High-volume shop in Southeast. Want to add Integrated Capital Solutions as our primary private lender.',
       status: 'IN_REVIEW' as const,
       assignedTo: 'Jennifer Lightbody',
       internalNotes: 'Strong volume. Call scheduled for 11/18. Sent broker agreement.',

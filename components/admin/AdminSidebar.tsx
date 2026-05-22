@@ -30,7 +30,7 @@ function SidebarPanel({ onClose }: { onClose: () => void }) {
               <span style={{ color: '#fff', fontWeight: 900, fontSize: 13 }}>A</span>
             </div>
             <div>
-              <span style={{ color: '#fff', fontWeight: 700, fontSize: 13, letterSpacing: '-0.2px' }}>ARCHWEST</span>
+              <span style={{ color: '#fff', fontWeight: 700, fontSize: 13, letterSpacing: '-0.2px' }}>Integrated Capital Solutions</span>
               <span style={{ color: '#c8922a', fontWeight: 300, fontSize: 13 }}> CAPITAL</span>
             </div>
           </div>

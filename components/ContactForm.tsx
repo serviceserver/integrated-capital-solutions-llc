@@ -83,8 +83,8 @@ export default function ContactForm() {
         </div>
         <h3 className="text-lg font-bold text-green-800 mb-2">Message Sent!</h3>
         <p className="text-green-700 text-sm leading-relaxed">
-          We&apos;ll get back to you shortly. For urgent matters, call{' '}
-          <a href="tel:18449222724" className="font-bold underline">(844) 922-2724</a>.
+          We&apos;ll get back to you shortly. For urgent matters, email{' '}
+          <a href="mailto:info@integratedcapitalsolutionsllc.com" className="font-bold underline">info@integratedcapitalsolutionsllc.com</a>.
         </p>
       </div>
     );

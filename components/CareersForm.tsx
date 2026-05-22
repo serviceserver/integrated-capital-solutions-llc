@@ -170,8 +170,8 @@ export default function CareersForm() {
       {/* Resume note */}
       <p className="text-xs text-[#9aa3b2] bg-[#f7f8fa] border border-[#e8eaef] rounded-lg px-4 py-3 leading-relaxed">
         📎 To attach a resume, apply directly via LinkedIn using the button above, or email your resume to{' '}
-        <a href="mailto:careers@archwestcapital.com" className="text-[#c8922a] font-semibold hover:underline">
-          careers@archwestcapital.com
+        <a href="mailto:careers@integratedcapitalsolutionsllc.com" className="text-[#c8922a] font-semibold hover:underline">
+          careers@integratedcapitalsolutionsllc.com
         </a>
         {' '}with the role in the subject line.
       </p>

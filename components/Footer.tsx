@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { Phone, Mail } from 'lucide-react';
-import { FaInstagram , FaLinkedin } from "react-icons/fa";
+import {  Mail } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Footer() {

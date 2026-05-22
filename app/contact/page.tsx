@@ -6,17 +6,17 @@ import { buildMetadata } from '@/lib/seo';
 import { Phone, MapPin, Clock, Mail } from 'lucide-react';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Contact Archwest Capital — Speak to a Loan Expert',
-  description: 'Contact Archwest Capital by phone or form. Mon–Fri 8:30 AM – 5:00 PM PT. Irvine, CA.',
+  title: 'Contact Integrated Capital Solutions — Speak to a Loan Expert',
+  description: 'Contact Integrated Capital Solutions by phone or form. Mon–Fri 8:30 AM – 5:00 PM PT. Irvine, CA.',
   slug: '/contact',
-  keywords: ['contact Archwest Capital', 'real estate lender phone number', 'private lender Irvine CA'],
+  keywords: ['contact Integrated Capital Solutions', 'real estate lender phone number', 'private lender Irvine CA'],
 });
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'FinancialService',
-  name: 'Archwest Capital',
-  url: 'https://www.archwestcapital.com',
+  name: 'Integrated Capital Solutions',
+  url: 'https://www.integratedcapitalsolutionsllc.com',
   telephone: '+18449222724',
   address: {
     '@type': 'PostalAddress',
@@ -64,12 +64,12 @@ export default function ContactPage() {
               <div className="flex flex-col gap-6 mb-10">
                 {[
                   { icon: <Phone size={18} />, label: 'Phone', value: '(844) 922-2724', href: 'tel:18449222724' },
-                  { icon: <Mail size={18} />, label: 'Email', value: 'info@archwestcapital.com', href: 'mailto:info@archwestcapital.com' },
+                  { icon: <Mail size={18} />, label: 'Email', value: 'info@integratedcapitalsolutionsllc.com', href: 'mailto:info@integratedcapitalsolutionsllc.com' },
                   { icon: <MapPin size={18} />, label: 'Address', value: '18400 Von Karman Ave., Suite 500, Irvine, CA 92612', href: 'https://maps.google.com/?q=18400+Von+Karman+Ave+Suite+500+Irvine+CA+92612' },
                   { icon: <Clock size={18} />, label: 'Hours', value: 'Mon – Fri, 8:30 AM – 5:00 PM PT', href: null },
                 ].map(item => (
                   <div key={item.label} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-[#0a1628] flex items-center justify-center text-[#c8922a] flex-shrink-0">
+                    <div className="w-10 h-10 rounded-lg bg-[#0a1628] flex items-center justify-center text-[#c8922a] shrink-0">
                       {item.icon}
                     </div>
                     <div>
@@ -98,24 +98,21 @@ export default function ContactPage() {
                 <div className="flex flex-col gap-4 text-sm">
                   <div>
                     <p className="text-[0.6875rem] font-bold uppercase tracking-widest text-[#9aa3b2] mb-1">Payments</p>
-                    <p className="font-medium text-[#0a1628]">ACH / Bill Pay: P.O. Box 27370, Anaheim, CA 92809</p>
+                    <p className="font-medium text-[#0a1628]">2175 Hunting Valley lane, Streetsboro, OH, 44241</p>
                   </div>
                   <div>
                     <p className="text-[0.6875rem] font-bold uppercase tracking-widest text-[#9aa3b2] mb-1">Payoff Requests</p>
-                    <a href="mailto:payoff@myfci.com" className="text-[#c8922a] font-semibold hover:underline">
-                      payoff@myfci.com
+                    <a href="mailto:curtis@integratedcapitalsolutionsllc.com" className="text-[#c8922a] font-semibold hover:underline">
+                      curtis@integratedcapitalsolutionsllc.com
                     </a>
                   </div>
                   <div>
                     <p className="text-[0.6875rem] font-bold uppercase tracking-widest text-[#9aa3b2] mb-1">Servicing Inquiries</p>
                     <div className="flex flex-wrap gap-3">
-                      <a href="mailto:loanservicing@myfci.com" className="text-[#c8922a] font-semibold hover:underline">
-                        loanservicing@myfci.com
+                      <a href="mailto:info@integratedcapitalsolutionsllc.com" className="text-[#c8922a] font-semibold hover:underline">
+                        info@integratedcapitalsolutionsllc.com
                       </a>
                       <span className="text-[#9aa3b2]">·</span>
-                      <a href="tel:18009312424" className="text-[#c8922a] font-semibold hover:underline">
-                        (800) 931-2424
-                      </a>
                     </div>
                   </div>
                 </div>

@@ -7,17 +7,17 @@ import { buildMetadata } from '@/lib/seo';
 import { MapPin, Briefcase, ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Careers at Archwest Capital — Join Our Team',
-  description: 'Explore career opportunities at Archwest Capital across loan operations, underwriting, closing, and sales. Based in Irvine, CA.',
+  title: 'Careers at Integrated Capital Solutions — Join Our Team',
+  description: 'Explore career opportunities at Integrated Capital Solutions across loan operations, underwriting, closing, and sales. Based in Irvine, CA.',
   slug: '/careers',
-  keywords: ['Archwest Capital careers', 'private lending jobs', 'mortgage jobs Irvine CA'],
+  keywords: ['Integrated Capital Solutions careers', 'private lending jobs', 'mortgage jobs Irvine CA'],
 });
 
 const openRoles = [
-  { title: 'Account Executive',      type: 'Full-time', location: 'Remote',                 linkedIn: 'https://www.linkedin.com/company/archwest-capital/jobs/' },
-  { title: 'Loan Closing Associate', type: 'Full-time', location: 'In Office — Irvine, CA', linkedIn: 'https://www.linkedin.com/company/archwest-capital/jobs/' },
-  { title: 'Loan Processor',         type: 'Full-time', location: 'In Office — Irvine, CA', linkedIn: 'https://www.linkedin.com/company/archwest-capital/jobs/' },
-  { title: 'Loan Underwriter',       type: 'Full-time', location: 'In Office — Irvine, CA', linkedIn: 'https://www.linkedin.com/company/archwest-capital/jobs/' },
+  { title: 'Account Executive',      type: 'Full-time', location: 'Remote',                 linkedIn: 'https://www.linkedin.com/company/Integrated Capital Solutions-capital/jobs/' },
+  { title: 'Loan Closing Associate', type: 'Full-time', location: 'In Office — Irvine, CA', linkedIn: 'https://www.linkedin.com/company/Integrated Capital Solutions-capital/jobs/' },
+  { title: 'Loan Processor',         type: 'Full-time', location: 'In Office — Irvine, CA', linkedIn: 'https://www.linkedin.com/company/Integrated Capital Solutions-capital/jobs/' },
+  { title: 'Loan Underwriter',       type: 'Full-time', location: 'In Office — Irvine, CA', linkedIn: 'https://www.linkedin.com/company/Integrated Capital Solutions-capital/jobs/' },
 ];
 
 const benefits = [
@@ -55,7 +55,7 @@ export default function CareersPage() {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight mb-3">
-            Careers at Archwest Capital
+            Careers at Integrated Capital Solutions
           </h1>
           <p className="text-white/65 text-lg max-w-xl leading-relaxed">
             We&apos;re looking for ambitious, diligent, and passionate individuals. We hire for
@@ -134,7 +134,7 @@ export default function CareersPage() {
 
       <CTABanner
         title="Get to Know Our Team First"
-        subtitle="Read about the people and culture behind Archwest Capital before you apply."
+        subtitle="Read about the people and culture behind Integrated Capital Solutions before you apply."
         primaryLabel="Meet the Team"
         primaryHref="/team"
         dark={false}

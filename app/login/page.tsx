@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import LoginForm from './LoginForm'
 
 export const metadata: Metadata = {
-  title: 'Admin Login | Archwest Capital',
+  title: 'Admin Login | Integrated Capital Solutions',
   robots: { index: false, follow: false },
 }
 

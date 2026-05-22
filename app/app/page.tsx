@@ -235,9 +235,9 @@ export default function AppPage() {
                 </div>
                 <div className="border-t border-white/10 pt-6">
                   <p className="text-white/50 text-xs mb-3">Prefer to speak with someone?</p>
-                  <a href="tel:18449222724"
+                  <a href="mailto:info@integratedcapitalsolutionsllc.com"
                     className="text-[#c8922a] font-bold text-lg hover:text-[#e8a83a] transition-colors">
-                    (844) 922-2724
+                    info@integratedcapitalsolutionsllc.com
                   </a>
                   <p className="text-white/40 text-xs mt-1">Mon – Fri, 8:30 AM – 5:00 PM PT</p>
                 </div>

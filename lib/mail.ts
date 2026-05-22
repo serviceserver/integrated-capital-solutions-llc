@@ -22,7 +22,7 @@ function getTransporter() {
 async function send(to: string, subject: string, html: string) {
   const transporter = getTransporter()
   return transporter.sendMail({
-    from:    process.env.SMTP_FROM!,   // noreply@archwestcapital.com
+    from:    process.env.SMTP_FROM!,   // noreply@integratedcapitalsolutionsllc.com
     to,
     subject,
     html,

@@ -242,7 +242,7 @@ export default function BrokerFormPage() {
                     'Broker protection on your deals',
                   ].map((b) => (
                     <div key={b} className="flex items-start gap-3">
-                      <CheckCircle size={16} className="text-[#c8922a] flex-shrink-0 mt-0.5" />
+                      <CheckCircle size={16} className="text-[#c8922a] shrink-0 mt-0.5" />
                       <span className="text-white/75 text-sm">{b}</span>
                     </div>
                   ))}

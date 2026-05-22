@@ -223,8 +223,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <Link href="/app" className="btn-primary w-full justify-center text-sm">
                   Get an Estimate
                 </Link>
-                <a href="tel:18449222724" className="block text-center text-white/45 text-xs mt-3.5 hover:text-white/70">
-                  or call (844) 922-2724
+                <a href="mailto:info@integratedcapitalsolutionsllc.com" className="block text-center text-white/45 text-xs mt-3.5 hover:text-white/70">
+                  or email info@integratedcapitalsolutionsllc.com
                 </a>
               </div>
 
