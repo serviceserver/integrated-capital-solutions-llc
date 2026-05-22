@@ -48,12 +48,6 @@ export default function SubmissionTable({ title, subtitle, rows, columns, detail
 
   return (
     <div>
-      {/* Page header */}
-      <div style={{ marginBottom: '1.5rem' }}>
-        <h1 style={{ fontSize: '1.375rem', fontWeight: 700, color: '#0a1628', margin: 0 }}>{title}</h1>
-        {subtitle && <p style={{ color: '#9aa3b2', fontSize: '0.875rem', margin: '0.25rem 0 0' }}>{subtitle}</p>}
-      </div>
-
       {/* Toolbar */}
       <div style={{ background: '#fff', border: '1px solid #e8eaef', borderRadius: '10px 10px 0 0', padding: '0.875rem 1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', background: '#f7f8fa', border: '1px solid #e8eaef', borderRadius: 7, padding: '0.4rem 0.875rem', width: 260 }}>
@@ -74,6 +68,8 @@ export default function SubmissionTable({ title, subtitle, rows, columns, detail
 
       {/* Server-rendered table */}
       <SubmissionTableInner
+        title={title}
+        subtitle={subtitle}
         rows={filtered}
         columns={columns}
         detailHref={detailHref}
