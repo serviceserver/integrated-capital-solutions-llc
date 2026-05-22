@@ -8,19 +8,19 @@ import Link from 'next/link';
 import { CheckCircle, Loader2, AlertCircle, Check } from 'lucide-react';
 import { useState } from 'react';
 
-export const metadata = buildMetadata({
-  title: 'Broker Registration - Partner with Integrated Capital Solutions',
-  description:
-    'Register as a broker partner with Integrated Capital Solutions. Get access to our full loan product suite, dedicated support, and 24-hour term sheets for your investor clients.',
-  slug: '/broker-form',
-  keywords: [
-    'broker registration private lender',
-    'become an Integrated Capital Solutionsbroker',
-    'mortgage broker partner program',
-    'wholesale lender broker signup',
-  ],
-  noindex: false,
-});
+// export const metadata = buildMetadata({
+//   title: 'Broker Registration - Partner with Integrated Capital Solutions',
+//   description:
+//     'Register as a broker partner with Integrated Capital Solutions. Get access to our full loan product suite, dedicated support, and 24-hour term sheets for your investor clients.',
+//   slug: '/broker-form',
+//   keywords: [
+//     'broker registration private lender',
+//     'become an Integrated Capital Solutionsbroker',
+//     'mortgage broker partner program',
+//     'wholesale lender broker signup',
+//   ],
+//   noindex: false,
+// });
 
 const PRODUCTS = ['Ground Up Construction', 'Fix & Flip', 'DSCR Rental', 'Bridge Loan'];
 
