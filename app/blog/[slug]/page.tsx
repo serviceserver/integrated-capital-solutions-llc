@@ -134,7 +134,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const related = getRelatedPosts(post)
   const cat = CATEGORY_STYLES[post.category] ?? { bg: '#f3f4f6', color: '#374151', border: '#e5e7eb' }
 
-  const articleSchema = articleSchema({
+  const articleData = articleSchema({
     title:       post.title,
     description: post.excerpt,
     image:       post.ogImage,
@@ -145,7 +145,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
-      <SchemaScript schema={articleSchema} />
+      <SchemaScript schema={articleData} />
 
       {/* ── Hero ──────────────────────────────────────────────── */}
       <section className="relative section-dark pt-28 pb-14" style={{backgroundImage: `url('${post.ogImage}')`, width: '100%', height: "500px", backgroundSize: 'cover', backgroundPosition: "top"}}>
