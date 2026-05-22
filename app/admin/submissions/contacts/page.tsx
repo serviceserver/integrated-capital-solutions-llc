@@ -1,8 +1,8 @@
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { redirect } from 'next/navigation'
-import SubmissionTable from '@/components/admin/SubmissionTable'
-import { StatusBadge } from '@/components/admin/SubmissionTable'
+import SubmissionTableInner from '@/components/admin/SubmissionTableInner'
+import { StatusBadge } from '@/components/admin/StatusBadge'
 
 export const metadata = { title: 'Contact Forms' }
 export const dynamic = 'force-dynamic'
@@ -24,13 +24,12 @@ export default async function ContactsPage() {
   ]
 
   return (
-    <SubmissionTable
+    <SubmissionTableInner
       title="Contact Form Submissions"
       subtitle="All messages submitted through the website contact form"
       rows={rows}
       columns={columns}
-      detailHref={r => `/admin/submissions/contacts/${r.id}`}
-      statusOptions={['NEW','IN_REVIEW','CONTACTED','CLOSED','SPAM']}
+      detailHref="/admin/submissions/contacts/{id}"
       totalCount={rows.length}
     />
   )

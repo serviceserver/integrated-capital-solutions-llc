@@ -2,8 +2,8 @@
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { redirect } from 'next/navigation'
-import SubmissionTable from '@/components/admin/SubmissionTable'
-import { StatusBadge } from '@/components/admin/SubmissionTable'
+import SubmissionTableInner from '@/components/admin/SubmissionTableInner'
+import { StatusBadge } from '@/components/admin/StatusBadge'
 
 export const metadata = { title: 'Loan Inquiries' }
 export const dynamic = 'force-dynamic'
@@ -42,13 +42,12 @@ export default async function LoanInquiriesPage() {
   ]
 
   return (
-    <SubmissionTable
+    <SubmissionTableInner
       title="Loan Inquiries"
       subtitle="All loan estimate requests submitted through the website"
       rows={rows}
       columns={columns}
-      detailHref={r => `/admin/submissions/loan-inquiries/${r.id}`}
-      statusOptions={['NEW','IN_REVIEW','CONTACTED','QUALIFIED','CLOSED','SPAM']}
+      detailHref="/admin/submissions/loan-inquiries/{id}"
       totalCount={rows.length}
     />
   )

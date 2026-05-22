@@ -2,8 +2,8 @@
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { redirect } from 'next/navigation'
-import SubmissionTable from '@/components/admin/SubmissionTable'
-import { StatusBadge } from '@/components/admin/SubmissionTable'
+import SubmissionTableInner from '@/components/admin/SubmissionTableInner'
+import { StatusBadge } from '@/components/admin/StatusBadge'
 
 export const metadata = { title: 'Broker Registrations' }
 export const dynamic = 'force-dynamic'
@@ -25,13 +25,12 @@ export default async function BrokersPage() {
   ]
 
   return (
-    <SubmissionTable
+    <SubmissionTableInner
       title="Broker Registrations"
       subtitle="All broker partner registration requests"
       rows={rows}
       columns={columns}
-      detailHref={r => `/admin/submissions/brokers/${r.id}`}
-      statusOptions={['NEW','IN_REVIEW','CONTACTED','QUALIFIED','CLOSED','SPAM']}
+      detailHref="/admin/submissions/brokers/{id}"
       totalCount={rows.length}
     />
   )

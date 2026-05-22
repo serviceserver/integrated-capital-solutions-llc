@@ -1,6 +1,12 @@
-// app/admin/submissions/page.tsx
 import Link from 'next/link'
 import { FileText, Users, MessageSquare, Briefcase, ArrowRight } from 'lucide-react'
+
+const LINK_STYLE = {
+  display: 'flex', flexDirection: 'column', width: '100%',
+  background: '#fff', border: '1px solid #e8eaef', borderRadius: 12,
+  padding: '1.5rem', textDecoration: 'none', color: 'inherit',
+  transition: 'box-shadow 0.2s, transform 0.2s',
+} as React.CSSProperties
 
 const cards = [
   {
@@ -51,20 +57,8 @@ export default function SubmissionsPage() {
             <Link
               key={card.href}
               href={card.href}
-              style={{
-                display: 'flex', flexDirection: 'column',
-                background: '#fff', border: '1px solid #e8eaef', borderRadius: 12,
-                padding: '1.5rem', textDecoration: 'none', color: 'inherit',
-                transition: 'box-shadow 0.2s, transform 0.2s',
-              }}
-              onMouseEnter={e => {
-                (e.currentTarget.style.boxShadow = '0 4px 24px rgba(0,0,0,0.08)')
-                e.currentTarget.style.transform = 'translateY(-2px)'
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.boxShadow = 'none'
-                e.currentTarget.style.transform = 'translateY(0)'
-              }}
+              className="hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] hover:-translate-y-[2px]"
+              style={LINK_STYLE}
             >
               <div style={{
                 width: 44, height: 44, borderRadius: 10,

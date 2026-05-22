@@ -1,8 +1,9 @@
 // components/admin/SubmissionTable.tsx
+// Client Component wrapper: adds search + filter toolbar around SubmissionTableInner.
 'use client';
 import { useState } from 'react';
-import Link from 'next/link';
-import { ChevronDown, Search, Filter } from 'lucide-react';
+import SubmissionTableInner from './SubmissionTableInner';
+import { StatusBadge } from './StatusBadge';
 
 const STATUS_COLORS: Record<string, [string, string]> = {
   NEW:          ['#dbeafe', '#1d4ed8'],
@@ -18,15 +19,7 @@ const STATUS_COLORS: Record<string, [string, string]> = {
   HIRED:        ['#d1fae5', '#065f46'],
   REJECTED:     ['#fee2e2', '#b91c1c'],
 };
-
-export function StatusBadge({ status }: { status: string }) {
-  const [bg, color] = STATUS_COLORS[status] ?? ['#f3f4f6', '#6b7280'];
-  return (
-    <span style={{ background: bg, color, fontSize: '0.6875rem', fontWeight: 700, padding: '0.2rem 0.625rem', borderRadius: 100, whiteSpace: 'nowrap', letterSpacing: '0.04em' }}>
-      {status.replace(/_/g, ' ')}
-    </span>
-  );
-}
+export { StatusBadge } from './StatusBadge';
 
 interface Column {
   key: string;
@@ -39,14 +32,11 @@ interface Props {
   subtitle?: string;
   rows: any[];
   columns: Column[];
-  detailHref: (row: any) => string;
-  statusOptions: string[];
+  detailHref: string;   // URL pattern with {id} placeholder
   totalCount: number;
 }
 
-export default function SubmissionTable({
-  title, subtitle, rows, columns, detailHref, statusOptions, totalCount,
-}: Props) {
+export default function SubmissionTable({ title, subtitle, rows, columns, detailHref, totalCount }: Props) {
   const [search, setSearch] = useState('');
 
   const filtered = rows.filter(row => {
@@ -81,53 +71,13 @@ export default function SubmissionTable({
         </div>
       </div>
 
-      {/* Table */}
-      <div style={{ background: '#fff', border: '1px solid #e8eaef', borderTop: 'none', borderRadius: '0 0 10px 10px', overflow: 'hidden' }}>
-        <div style={{ overflowX: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 700 }}>
-            <thead>
-              <tr style={{ background: '#f7f8fa', borderBottom: '1px solid #e8eaef' }}>
-                {columns.map(col => (
-                  <th key={col.key} style={{ padding: '0.6rem 1.125rem', textAlign: 'left', fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#9aa3b2', whiteSpace: 'nowrap' }}>
-                    {col.label}
-                  </th>
-                ))}
-                <th style={{ padding: '0.6rem 1.125rem', textAlign: 'left', fontSize: '0.6875rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#9aa3b2' }}>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filtered.map((row, i) => (
-                <tr key={row.id ?? i} style={{ borderBottom: '1px solid #f0f2f5', transition: 'background 0.1s' }}
-                  onMouseEnter={e => (e.currentTarget.style.background = '#fafbfc')}
-                  onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
-                >
-                  {columns.map(col => (
-                    <td key={col.key} style={{ padding: '0.875rem 1.125rem', fontSize: '0.875rem', color: '#2d3748', maxWidth: 220 }}>
-                      {col.render ? col.render(row) : (
-                        <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', display: 'block' }}>
-                          {row[col.key] ?? '—'}
-                        </span>
-                      )}
-                    </td>
-                  ))}
-                  <td style={{ padding: '0.875rem 1.125rem' }}>
-                    <Link href={detailHref(row)} style={{ fontSize: '0.8125rem', fontWeight: 600, color: '#c8922a', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-                      View →
-                    </Link>
-                  </td>
-                </tr>
-              ))}
-              {filtered.length === 0 && (
-                <tr>
-                  <td colSpan={columns.length + 1} style={{ padding: '3rem', textAlign: 'center', color: '#9aa3b2', fontSize: '0.875rem' }}>
-                    {search ? 'No results match your search.' : 'No submissions yet.'}
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
-        </div>
-      </div>
+      {/* Server-rendered table */}
+      <SubmissionTableInner
+        rows={filtered}
+        columns={columns}
+        detailHref={detailHref}
+        totalCount={totalCount}
+      />
     </div>
   );
 }
