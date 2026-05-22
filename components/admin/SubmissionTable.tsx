@@ -4,6 +4,7 @@
 import { useState } from 'react';
 import SubmissionTableInner from './SubmissionTableInner';
 import { StatusBadge } from './StatusBadge';
+import { Search, Filter } from 'lucide-react';
 
 const STATUS_COLORS: Record<string, [string, string]> = {
   NEW:          ['#dbeafe', '#1d4ed8'],
