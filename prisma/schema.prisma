@@ -1,10 +1,12 @@
 // prisma/schema.prisma
 generator client {
-  provider = "prisma-client-js"
+  provider   = "prisma-client-js"
+  engineType = "library"
 }
 
 datasource db {
   provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 // ─── Auth (NextAuth v5) ───────────────────────────────────────
@@ -125,6 +127,7 @@ model ContactSubmission {
   email         String
   message       String           @db.Text
   status        SubmissionStatus @default(NEW)
+  assignedTo    String?
   internalNotes String?          @db.Text
   createdAt     DateTime         @default(now())
   updatedAt     DateTime         @updatedAt

@@ -1,23 +1,23 @@
-// middleware.ts
 import { auth } from '@/lib/auth'
 import { NextResponse } from 'next/server'
 
 export default auth((req) => {
-  const isAdminRoute = req.nextUrl.pathname.startsWith('/admin')
-  const isLoginPage  = req.nextUrl.pathname === '/admin/login'
-  const isApiAuth    = req.nextUrl.pathname.startsWith('/api/auth')
+  const { nextUrl } = req
+  const isAdminRoute = nextUrl.pathname.startsWith('/admin')
+  const isLoginPage = nextUrl.pathname === '/admin/login'
+  const isApiAuth = nextUrl.pathname.startsWith('/api/auth')
 
-  if (isApiAuth) return NextResponse.next()
+  // Allow the login page through without restriction
+  if (isLoginPage) return NextResponse.next()
 
-  if (isAdminRoute && !isLoginPage && !req.auth) {
-    const loginUrl = new URL('/admin/login', req.url)
-    loginUrl.searchParams.set('callbackUrl', req.nextUrl.pathname)
-    return NextResponse.redirect(loginUrl)
-  }
-
-  // Redirect already-logged-in users away from login page
-  if (isLoginPage && req.auth) {
-    return NextResponse.redirect(new URL('/admin', req.url))
+  // Protect all other admin routes
+  if (isAdminRoute) {
+    if (!req.auth) {
+      const loginUrl = new URL('/admin/login', req.url)
+      loginUrl.searchParams.set('callbackUrl', nextUrl.pathname)
+      return NextResponse.redirect(loginUrl)
+    }
+    return NextResponse.next()
   }
 
   return NextResponse.next()
