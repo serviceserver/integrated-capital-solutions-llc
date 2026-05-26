@@ -5,6 +5,7 @@ import CTABanner from '@/components/CTABanner';
 import Breadcrumb from '@/components/Breadcrumb';
 import { buildMetadata } from '@/lib/seo';
 import { MapPin, Briefcase, ExternalLink } from 'lucide-react';
+import { Suspense } from 'react';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Careers at Integrated Capital Solutions — Join Our Team',
@@ -117,18 +118,20 @@ export default function CareersPage() {
         </div>
       </section>
 
-       {/* Application form */}
-       <section id="apply-form" className="py-20 bg-white">
-        <div className="container-wide max-w-2xl">
-          <span className="section-label">APPLY</span>
-          <h2 className="text-3xl font-bold text-[#0a1628] mb-2">Submit Your Application</h2>
-          <p className="text-[#4a5568] mb-10 leading-relaxed">
-            Don&apos;t see the right role listed? Send us your details and we&apos;ll keep you in
-            mind for future openings that match your background.
-          </p>
-          <CareersForm />
-        </div>
-      </section>
+        {/* Application form */}
+        <section id="apply-form" className="py-20 bg-white">
+         <div className="container-wide max-w-2xl">
+           <span className="section-label">APPLY</span>
+           <h2 className="text-3xl font-bold text-[#0a1628] mb-2">Submit Your Application</h2>
+           <p className="text-[#4a5568] mb-10 leading-relaxed">
+             Don&apos;t see the right role listed? Send us your details and we&apos;ll keep you in
+             mind for future openings that match your background.
+           </p>
+           <Suspense fallback={<div>Loading application form...</div>}>
+             <CareersForm />
+           </Suspense>
+         </div>
+       </section>
 
       <CTABanner
         title="Get to Know Our Team First"
