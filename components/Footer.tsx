@@ -13,7 +13,7 @@ export default function Footer() {
                <Image src="/logo-int.png" alt="Integrated Capital Solutions Logo" width={150} height={40} />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-5 max-w-xs">
-              A national, direct, private lender specializing in financing solutions for experienced residential real estate investors.
+              A national, direct, private lender specializing in financing solutions for experienced investors.
             </p>
             {/* <div className="flex items-center gap-3">
               <a href="#" target="_blank" rel="noopener noreferrer"
@@ -32,9 +32,9 @@ export default function Footer() {
             <p className="text-xs font-bold uppercase tracking-widest text-[#c8922a] mb-4">Get in Touch</p>
             <div className="flex flex-col gap-2">
               <Link href="/contact" className="text-white/70 hover:text-white text-sm transition-colors">Contact</Link>
-              <a href="mailto:info@integratedcapitalsolutionsllc.vercel.app" className="flex items-center gap-1.5 text-white/70 hover:text-white text-sm transition-colors">
+              <a href="mailto:info@integratedcapitalsolutionsllc.com" className="flex items-center gap-1.5 text-white/70 hover:text-white text-sm transition-colors">
                 {/* <Phone size={12} /> (844) 922-2724 */}
-                <Mail size={12} /> info@integratedcapitalsolutionsllc.vercel.app
+                <Mail size={12} /> info@integratedcapitalsolutionsllc.com
               </a>
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function Footer() {
             The Integrated Capital Solutions family of companies utilizes Integrated Capital Solutions Funding, LLC and Integrated Capital Solutions Lending, LLC to conduct its lending operations.
           </p>
           <p className="text-white/35 text-xs leading-relaxed mb-4">
-            ©{new Date().getFullYear()} Integrated Capital Solutions Lending, LLC/NMLS ID: 2674250. 2175 Hunting Valley lane, Streetsboro, OH, 44241. In California, loans are made under California Financing Law License #60DBO-203056. Integrated Capital Solutions Lending makes commercial purpose loans secured by residential real estate and does not make any loans for personal, family, or household use.
+            ©{new Date().getFullYear()} Integrated Capital Solutions Lending, LLC/NMLS ID: 2674250. 2175 Hunting Valley lane, Streetsboro, OH, 44241. In California, loans are made under California Financing Law License #60DBO-203056. Integrated Capital Solutions Lending makes commercial purpose loans secured by brokers and does not make any loans for personal, family, or household use.
           </p>
           <p className="text-white/35 text-xs leading-relaxed mb-6">
             ©{new Date().getFullYear()} Integrated Capital Solutions Funding, LLC/NMLS ID: 2229965. 2175 Hunting Valley lane, Streetsboro, OH, 44241. In California, loans are made under California Financing Law License #60DBO-156808.

@@ -10,8 +10,8 @@ export const metadata: Metadata = buildMetadata({
     'Integrated Capital Solutions bridge loans offer closings in as fast as 7 days, up to 80% LTV, no prepayment penalties, and flexible use cases for acquisition, refinance, or stabilization.',
   slug: '/bridge-loan',
   keywords: [
-    'bridge loan real estate',
-    'short term real estate loan',
+    'bridge loan',
+    'short term loan',
     'private bridge lender',
     'bridge financing investor',
     'no prepayment penalty bridge loan',

@@ -49,7 +49,7 @@ export default function PrivacyPage() {
               },
               {
                 title: 'Contact Us',
-                content: 'If you have any questions about this Privacy Notice or our data practices, please contact us at 2175 Hunting Valley lane, Streetsboro, OH, 44241 or email info@integratedcapitalsolutionsllc.vercel.app.',
+                content: 'If you have any questions about this Privacy Notice or our data practices, please contact us at 2175 Hunting Valley lane, Streetsboro, OH, 44241 or email info@integratedcapitalsolutionsllc.com.',
               },
             ].map((section) => (
               <div key={section.title}>

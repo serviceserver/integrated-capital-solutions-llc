@@ -42,7 +42,7 @@ const faqSections = [
     id: 'brokers',
     label: 'Brokers',
     items: [
-      { question: 'Does Integrated Capital Solutionswork with mortgage brokers?', answer: 'Yes. Integrated Capital Solutions works extensively with mortgage brokers and real estate professionals and is always seeking new broker partnerships. Visit our Broker page to register.' },
+      { question: 'Does Integrated Capital Solutionswork with mortgage brokers?', answer: 'Yes. Integrated Capital Solutions works extensively with mortgage brokers and professionals and is always seeking new broker partnerships. Visit our Broker page to register.' },
       { question: 'How do brokers submit a file to Integrated Capital Solutions?', answer: 'Brokers begin by completing the broker registration form on the Integrated Capital Solutionswebsite. Once approved, you will be connected with a dedicated Account Executive who will guide you through the submission process.' },
     ],
   },

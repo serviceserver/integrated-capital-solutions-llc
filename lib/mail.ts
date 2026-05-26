@@ -5,28 +5,38 @@ import nodemailer from 'nodemailer'
 let _transporter: nodemailer.Transporter | null = null
 function getTransporter() {
     if (!_transporter) {
-    _transporter = nodemailer.createTransport({
-      host:   process.env.SMTP_HOST                    ?? 'smtp.hostinger.com',
-      port:   Number(process.env.SMTP_PORT             ?? '587'),
-      secure: (process.env.SMTP_SECURE ?? 'false') === 'true',
-      auth: {
-        user: process.env.SMTP_USER                    ?? 'info@integratedcapitalsolutionsllc.com',
-        pass: process.env.SMTP_PASS                    ?? '',
-      },
-    })
-  }
-  return _transporter
+        _transporter = nodemailer.createTransport({
+            host:   process.env.SMTP_HOST                    ?? 'smtp.hostinger.com',
+            port:   Number(process.env.SMTP_PORT             ?? '587'),
+            secure: (process.env.SMTP_SECURE ?? 'false') === 'true',
+            auth: {
+                user: process.env.SMTP_USER                    ?? 'info@integratedcapitalsolutionsllc.com',
+                pass: process.env.SMTP_PASS                    ?? '',
+            },
+        })
+    }
+    return _transporter
 }
 
 // ─── Generic send helper ───────────────────────────────────────────────────────
 async function send(to: string, subject: string, html: string) {
-  const transporter = getTransporter()
-  return transporter.sendMail({
-    from:    process.env.SMTP_FROM!,   // noreply@integratedcapitalsolutionsllc.com
-    to,
-    subject,
-    html,
-  })
+    const transporter = getTransporter()
+    const from = process.env.SMTP_FROM
+    
+    if (!from) {
+        throw new Error('[mail] SMTP_FROM is not set — email will not be sent')
+    }
+    
+    if (!to) {
+        throw new Error('[mail] ADMIN_NOTIFY_EMAIL is not set — email will not be sent')
+    }
+    
+    return transporter.sendMail({
+        from,
+        to,
+        subject,
+        html,
+    })
 }
 
 // ─── 1. Loan Inquiry ───────────────────────────────────────────────────────────

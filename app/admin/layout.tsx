@@ -1,6 +1,7 @@
 // app/admin/layout.tsx
 'use client'
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import AdminSidebar from '@/components/admin/AdminSidebar'
 import AdminHeader from '@/components/admin/AdminHeader'
 
@@ -12,6 +13,8 @@ export default function AdminLayout({
 }: {
   children: React.ReactNode
 }) {
+  const pathname = usePathname()
+  const isLoginPage = pathname === '/admin/login'
   const [mobileOpen, setMobileOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
@@ -63,20 +66,25 @@ export default function AdminLayout({
         />
       )}
 
-      {/* Sidebar */}
-      <AdminSidebar
-        style={sidebarStyle}
-        mobileOpen={mobileOpen}
-        onClose={() => setMobileOpen(false)}
-      />
+      {/* Sidebar - only show if not on login page */}
+      {!isLoginPage && (
+        <AdminSidebar
+          style={sidebarStyle}
+          mobileOpen={mobileOpen}
+          onClose={() => setMobileOpen(false)}
+        />
+      )}
 
       {/* Right column */}
       <div style={mainStyle}>
-        <AdminHeader
-          isMobile={isMobile}
-          onMenuClick={() => setMobileOpen(v => !v)}
-          mobileOpen={mobileOpen}
-        />
+        {/* Header - only show if not on login page */}
+        {!isLoginPage && (
+          <AdminHeader
+            isMobile={isMobile}
+            onMenuClick={() => setMobileOpen(v => !v)}
+            mobileOpen={mobileOpen}
+          />
+        )}
         <main style={{ flex: 1, padding: isMobile ? '1rem' : '2rem', overflowY: 'auto' }}>
           {children}
         </main>

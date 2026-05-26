@@ -45,8 +45,21 @@ export const jobApplicationSchema = z.object({
   phone:      z.string().max(20).optional(),
   position:   z.string().min(1, 'Required'),
   aboutText:  z.string().max(3000).optional(),
-  resumeUrl:  z.string().optional(),
-  resumeName: z.string().optional(),
+  resumeUrl:  z.string().url('Must be a valid URL').optional(),
+  resumeName: z.string().max(255).optional(),
+}).refine((data) => {
+  // If resumeName is provided, resumeUrl should also be provided
+  if (data.resumeName && !data.resumeUrl) {
+    return false;
+  }
+  // If resumeUrl is provided, resumeName should also be provided
+  if (data.resumeUrl && !data.resumeName) {
+    return false;
+  }
+  return true;
+}, {
+  message: "Resume name and URL must both be provided or both be omitted",
+  path: ["resumeName"], // or ["resumeUrl"] - either works
 })
 
 export type LoanInquiryInput        = z.infer<typeof loanInquirySchema>

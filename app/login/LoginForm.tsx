@@ -60,7 +60,7 @@ export default function LoginForm() {
           type="email"
           autoComplete="email"
           required
-          placeholder="integratedcapitalsolutionsllc.vercel.app"
+          placeholder="integratedcapitalsolutionsllc.com"
           value={email}
           onChange={e => setEmail(e.target.value)}
           className={inputBase}
@@ -114,10 +114,10 @@ export default function LoginForm() {
       <p className="text-center text-xs text-[#9aa3b2] leading-relaxed">
         Forgot your password? Contact{' '}
         <a
-          href="mailto:integratedcapitalsolutionsllc.vercel.app"
+          href="mailto:integratedcapitalsolutionsllc.com"
           className="text-[#c8922a] hover:underline font-medium"
         >
-          integratedcapitalsolutionsllc.vercel.app
+          integratedcapitalsolutionsllc.com
         </a>
       </p>
     </form>

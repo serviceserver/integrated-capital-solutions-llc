@@ -70,34 +70,32 @@ export default function CareersPage() {
           <span className="section-label">OPEN ROLES</span>
           <h2 className="text-3xl font-bold text-[#0a1628] mb-10">Current Opportunities</h2>
 
-          <div className="flex flex-col gap-3 max-w-3xl">
-            {openRoles.map(role => (
-              <article
-                key={role.title}
-                className="bg-white border border-[#e8eaef] rounded-xl px-6 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:shadow-md transition-shadow"
-              >
-                <div>
-                  <h3 className="font-bold text-[#0a1628] text-base mb-2">{role.title}</h3>
-                  <div className="flex flex-wrap gap-4">
-                    <span className="flex items-center gap-1.5 text-sm text-[#4a5568]">
-                      <Briefcase size={12} className="text-[#c8922a]" /> {role.type}
-                    </span>
-                    <span className="flex items-center gap-1.5 text-sm text-[#4a5568]">
-                      <MapPin size={12} className="text-[#c8922a]" /> {role.location}
-                    </span>
-                  </div>
-                </div>
-                <a
-                  href={role.linkedIn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary text-sm py-2 px-5 flex-shrink-0 flex items-center gap-1.5"
-                >
-                  Apply on LinkedIn <ExternalLink size={12} />
-                </a>
-              </article>
-            ))}
-          </div>
+           <div className="flex flex-col gap-3 max-w-3xl">
+             {openRoles.map((role, index) => (
+               <article
+                 key={role.title}
+                 className="bg-white border border-[#e8eaef] rounded-xl px-6 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:shadow-md transition-shadow"
+               >
+                 <div>
+                   <h3 className="font-bold text-[#0a1628] text-base mb-2">{role.title}</h3>
+                   <div className="flex flex-wrap gap-4">
+                     <span className="flex items-center gap-1.5 text-sm text-[#4a5568]">
+                       <Briefcase size={12} className="text-[#c8922a]" /> {role.type}
+                     </span>
+                     <span className="flex items-center gap-1.5 text-sm text-[#4a5568]">
+                       <MapPin size={12} className="text-[#c8922a]" /> {role.location}
+                     </span>
+                   </div>
+                 </div>
+                 <a
+                   href={`/careers?position=${encodeURIComponent(role.title)}#apply-form`}
+                   className="btn-primary text-sm py-2 px-5 flex-shrink-0 flex items-center gap-1.5"
+                 >
+                   Apply for {role.title} <ExternalLink size={12} />
+                 </a>
+               </article>
+             ))}
+           </div>
         </div>
       </section>
 
@@ -119,8 +117,8 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Application form */}
-      <section className="py-20 bg-white">
+       {/* Application form */}
+       <section id="apply-form" className="py-20 bg-white">
         <div className="container-wide max-w-2xl">
           <span className="section-label">APPLY</span>
           <h2 className="text-3xl font-bold text-[#0a1628] mb-2">Submit Your Application</h2>

@@ -1,6 +1,7 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CheckCircle, Loader2, AlertCircle } from 'lucide-react';
+import { useSearchParams } from 'next/navigation';
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
@@ -50,6 +51,8 @@ export default function CareersForm() {
   });
   const [status, setStatus] = useState<Status>('idle');
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [resume, setResumeState] = useState<File | null>(null);
+  const searchParams = useSearchParams();
 
   function set(k: keyof typeof form) {
     return (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -58,15 +61,46 @@ export default function CareersForm() {
     };
   }
 
+  function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0] ?? null;
+    setResumeState(file);
+    // Clear error if file is selected
+    if (file) {
+      setErrors(p => { const n = { ...p }; delete n['resume']; return n; });
+    }
+  }
+
+  // Handle setting position from URL parameter
+  useEffect(() => {
+    const pos = searchParams.get('position');
+    if (pos && OPEN_ROLES.includes(pos)) {
+      setForm(p => ({ ...p, position: pos }));
+    }
+  }, [searchParams]);
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatus('loading');
     setErrors({});
 
+    // Create FormData object
+    const formData = new FormData();
+    formData.append('firstName', form.firstName);
+    formData.append('lastName', form.lastName);
+    formData.append('email', form.email);
+    formData.append('phone', form.phone);
+    formData.append('position', form.position);
+    formData.append('aboutText', form.aboutText || '');
+    
+    // Append resume file if exists
+    if (resume) {
+      formData.append('resume', resume);
+    }
+
     const res = await fetch('/api/submissions/careers', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form),
+      body: formData,
+      // Note: Don't set Content-Type header for FormData, browser will set it
     });
 
     const data = await res.json();
@@ -167,26 +201,43 @@ export default function CareersForm() {
         />
       </Field>
 
-      {/* Resume note */}
-      <p className="text-xs text-[#9aa3b2] bg-[#f7f8fa] border border-[#e8eaef] rounded-lg px-4 py-3 leading-relaxed">
-        📎 To attach a resume, apply directly via LinkedIn using the button above, or email your resume to{' '}
-        <a href="mailto:careers@integratedcapitalsolutionsllc.com" className="text-[#c8922a] font-semibold hover:underline">
-          careers@integratedcapitalsolutionsllc.com
-        </a>
-        {' '}with the role in the subject line.
-      </p>
+       {/* Resume note */}
+       <p className="text-xs text-[#9aa3b2] bg-[#f7f8fa] border border-[#e8eaef] rounded-lg px-4 py-3 leading-relaxed">
+         📎 To attach a resume, upload it below, or email your resume to{' '}
+         <a href="mailto:careers@integratedcapitalsolutionsllc.com" className="text-[#c8922a] font-semibold hover:underline">
+           careers@integratedcapitalsolutionsllc.com
+         </a>
+         {' '}with the role in the subject line.
+       </p>
 
-      <button
-        type="submit"
-        disabled={status === 'loading'}
-        className="btn-primary w-full justify-center py-3.5 text-[0.9375rem] disabled:opacity-70 disabled:cursor-not-allowed mt-1"
-      >
-        {status === 'loading' ? (
-          <><Loader2 size={16} className="animate-spin" /> Submitting…</>
-        ) : (
-          'Submit Application'
-        )}
-      </button>
+        {/* Resume Upload */}
+        <Field label="Upload Resume (PDF, DOC, DOCX)" error={errors.resume}>
+          <input
+            type="file"
+            accept=".pdf,.doc,.docx"
+            className={errors.resume ? inputError : inputBase}
+            onChange={handleFileChange}
+          />
+          {resume && (
+            <p className="mt-1 text-xs text-green-600 flex items-center gap-1">
+              <CheckCircle size={11} /> {resume.name}
+            </p>
+          )}
+        </Field>
+
+       <button
+         type="submit"
+         disabled={status === 'loading'}
+         className="btn-primary w-full justify-center py-3.5 text-[0.9375rem] disabled:opacity-70 disabled:cursor-not-allowed mt-1"
+       >
+         {status === 'loading' ? (
+           <>
+             <Loader2 size={16} className="animate-spin" /> Submitting…
+           </>
+         ) : (
+           'Submit Application'
+         )}
+       </button>
     </form>
   );
 }

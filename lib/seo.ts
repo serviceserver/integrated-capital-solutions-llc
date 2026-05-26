@@ -1,11 +1,11 @@
 // lib/seo.ts
 import type { Metadata } from 'next';
 
-const SITE_URL = 'https://www.integratedcapitalsolutionsllc.vercel.app';
+const SITE_URL = 'https://www.integratedcapitalsolutionsllc.com';
 const SITE_NAME = 'Integrated Capital Solutions';
 const DEFAULT_DESCRIPTION =
-  "Integrated Capital Solutions LLC is a national, direct private lender specializing in fast, flexible financing for experienced residential real estate investors. Ground Up, Fix & Flip, DSCR, and Bridge loans available.";
-const DEFAULT_OG_IMAGE = 'https://integratedcapitalsolutionsllc.vercel.app/integrated-capital.png';
+  "Integrated Capital Solutions LLC is a national, direct private lender specializing in fast, flexible financing for experienced investors. Ground Up, Fix & Flip, DSCR, and Bridge loans available.";
+const DEFAULT_OG_IMAGE = 'https://integratedcapitalsolutionsllc.com/integrated-capital.png';
 
 export interface SEOProps {
   title: string;
@@ -94,7 +94,7 @@ export function organizationSchema() {
     logo: `${SITE_URL}/logo.png`,
     description: DEFAULT_DESCRIPTION,
     telephone: '+18449222724',
-    email: 'info@integratedcapitalsolutionsllc.vercel.app',
+    email: 'info@integratedcapitalsolutionsllc.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '18400 Von Karman Ave., Suite 500',

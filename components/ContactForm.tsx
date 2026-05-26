@@ -94,8 +94,8 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-4">
       {status === 'error' && (
         <div className="flex items-center gap-2 bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-red-600 text-sm">
-          <AlertCircle size={15} className="flex-shrink-0" />
-          Something went wrong. Please try again or call (844) 922-2724.
+          <AlertCircle size={15} className="shrink-0" />
+          Something went wrong. Please try again or email info@integratedcapitalsolutionsllc.com.
         </div>
       )}
 

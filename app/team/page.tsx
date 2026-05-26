@@ -86,7 +86,7 @@ const teamSchema = {
       worksFor: {
         '@type': 'Organization',
         name: 'Integrated Capital Solutions',
-        url: 'https://www.integratedcapitalsolutionsllc.vercel.app',
+        url: 'https://www.integratedcapitalsolutionsllc.com',
       },
           image: member.image,
       description: member.bio,

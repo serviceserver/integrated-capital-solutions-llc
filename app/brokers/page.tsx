@@ -9,9 +9,9 @@ import { Star, Handshake, Zap, Settings } from 'lucide-react';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Broker Program — Partner with Integrated Capital Solutions',
-  description: 'Integrated Capital Solutions partners with real estate brokers nationwide. Fast closings, 24-hour term sheets, and a full suite of loan products for your clients.',
+  description: 'Integrated Capital Solutions partners with brokers nationwide. Fast closings, 24-hour term sheets, and a full suite of loan products for your clients.',
   slug: '/brokers',
-  keywords: ['real estate broker program','broker partner private lender','fix flip broker','DSCR broker lender'],
+  keywords: ['broker program','broker partner private lender','fix flip broker','DSCR broker lender'],
 });
 
 const brokerFAQs = [

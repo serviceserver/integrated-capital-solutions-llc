@@ -8,7 +8,7 @@ import { Download, ExternalLink, Mail, HardHat } from 'lucide-react';
 export const metadata: Metadata = buildMetadata({
   title: 'Construction Draw - Loan Management & Resources',
   description:
-    'Access Integrated Capital Solutions construction loan management tools, download lien waiver forms, budget spreadsheets, and contact our dedicated construction draw team at draws@integratedcapitalsolutionsllc.vercel.app.',
+    'Access Integrated Capital Solutions construction loan management tools, download lien waiver forms, budget spreadsheets, and contact our dedicated construction draw team at curtis@integratedcapitalsolutionsllc.com.',
   slug: '/construction-draw',
   keywords: [
     'construction draw request',
@@ -23,31 +23,31 @@ export const metadata: Metadata = buildMetadata({
 const forms = [
   {
     title: 'Conditional Waiver Upon Progress Payment',
-    href: 'https://app.box.com/s/zt0hvzq1vy7rio408nubdnibwofcqsjm',
+    href: '#',
   },
   {
     title: 'Unconditional Waiver Upon Progress Payment',
-    href: 'https://app.box.com/s/skd20tjj373pivc4dl4cw7s7rdwoil20',
+    href: '#',
   },
   {
     title: 'Wire Request Set Up Form',
-    href: 'https://app.box.com/s/dykhaktegfaqy80v2of2zy7bkokbwbpn',
+    href: '#',
   },
   {
     title: 'Borrower Letter of Completion',
-    href: 'https://app.box.com/s/0qcqisuh1nr3z5mgk91n5knyocif3f3z',
+    href: '#',
   },
   {
     title: 'Conditional Waiver Upon Final Payment',
-    href: 'https://app.box.com/s/1f16garnrniy92lyxkyb737g4e9u6h18',
+    href: '#',
   },
   {
     title: 'Unconditional Waiver Upon Final Payment',
-    href: 'https://app.box.com/s/2ba21z6vedzzk9ymmlhnp6a37zk7s6dl',
+    href: '#',
   },
   {
     title: 'Blank Budget Spreadsheet (Excel)',
-    href: 'https://app.box.com/s/6gj44h2bgq23yk1e8aml92q7xjk4dtip',
+    href: '#',
   },
 ];
 
@@ -113,7 +113,7 @@ export default function ConstructionDrawPage() {
                   'Manage construction milestones',
                 ].map((f) => (
                   <li key={f} className="flex items-center gap-2 text-white/70 text-sm">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#c8922a] flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#c8922a] shrink-0" />
                     {f}
                   </li>
                 ))}
@@ -146,7 +146,7 @@ export default function ConstructionDrawPage() {
                 <span className="text-sm font-semibold text-[#0a1628] group-hover:text-[#c8922a] transition-colors">
                   {form.title}
                 </span>
-                <Download size={16} className="text-[#9aa3b2] group-hover:text-[#c8922a] flex-shrink-0 transition-colors" />
+                <Download size={16} className="text-[#9aa3b2] group-hover:text-[#c8922a] shrink-0 transition-colors" />
               </a>
             ))}
           </div>
@@ -176,10 +176,10 @@ export default function ConstructionDrawPage() {
               and expect a response within one business day.
             </p>
             <a
-              href="mailto:draws@integratedcapitalsolutionsllc.vercel.app"
+              href="mailto:draws@integratedcapitalsolutionsllc.com"
               className="btn-primary inline-flex items-center gap-2"
             >
-              <Mail size={16} /> draws@integratedcapitalsolutionsllc.vercel.app
+              <Mail size={16} /> curtis@integratedcapitalsolutionsllc.com
             </a>
           </div>
         </div>

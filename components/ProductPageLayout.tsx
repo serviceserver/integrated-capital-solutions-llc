@@ -19,12 +19,12 @@ const standardFAQs = [
   {
     question: 'What is Integrated Capital Solutions and who is your audience?',
     answer:
-      'Integrated Capital Solutions is a national, direct, private lender (non-bank) specializing in financing solutions for residential real estate investors. With a proven track record and deep industry expertise, we are the go-to partner for experienced investors seeking fast, flexible, and reliable funding.',
+      'Integrated Capital Solutions is a national, direct, private lender (non-bank) specializing in financing solutions for experienced investors. With a proven track record and deep industry expertise, we are the go-to partner for experienced investors seeking fast, flexible, and reliable funding.',
   },
   {
     question: 'What kind of loan products do you offer?',
     answer:
-      'We provide short-term bridge loans for fix-and-flip projects and new ground-up construction, as well as long-term financing solutions for rental properties. Our flexible loan options are designed to support real estate investors at every stage of their investment journey.',
+      'We provide short-term bridge loans for fix-and-flip projects and new ground-up construction, as well as long-term financing solutions for rental properties. Our flexible loan options are designed to support investors at every stage of their investment journey.',
   },
   {
     question: 'How do I start my loan application process?',
@@ -252,7 +252,7 @@ export default function ProductPageLayout({
       {/* Bottom CTA */}
       <CTABanner
         title="Proven Team. Trusted Lending Partner."
-        subtitle="With extensive industry expertise and an unwavering commitment to service, our team has successfully partnered with thousands of real estate investors on projects nationwide."
+        subtitle="With extensive industry expertise and an unwavering commitment to service, our team has successfully partnered with thousands of experienced investors on projects nationwide."
         primaryLabel="Get an Estimate"
         primaryHref="/app"
         secondaryLabel="Talk to an Expert"

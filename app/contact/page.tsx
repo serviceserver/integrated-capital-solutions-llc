@@ -63,7 +63,7 @@ export default function ContactPage() {
 
               <div className="flex flex-col gap-6 mb-10">
                 {[
-                  { icon: <Phone size={18} />, label: 'Phone', value: '(844) 922-2724', href: 'tel:18449222724' },
+                  // { icon: <Phone size={18} />, label: 'Phone', value: '(844) 922-2724', href: 'tel:18449222724' },
                   { icon: <Mail size={18} />, label: 'Email', value: 'info@integratedcapitalsolutionsllc.com', href: 'mailto:info@integratedcapitalsolutionsllc.com' },
                   { icon: <MapPin size={18} />, label: 'Address', value: '18400 Von Karman Ave., Suite 500, Irvine, CA 92612', href: 'https://maps.google.com/?q=18400+Von+Karman+Ave+Suite+500+Irvine+CA+92612' },
                   { icon: <Clock size={18} />, label: 'Hours', value: 'Mon – Fri, 8:30 AM – 5:00 PM PT', href: null },
