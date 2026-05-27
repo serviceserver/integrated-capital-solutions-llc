@@ -1,4 +1,4 @@
-// lib/mail.ts — email notification helpers for all submission types
+// lib/mail.ts - email notification helpers for all submission types
 import nodemailer from 'nodemailer'
 
 // ─── Transport (lazy-init, shared across calls) ────────────────────────────────
@@ -24,11 +24,11 @@ async function send(to: string, subject: string, html: string) {
     const from = process.env.SMTP_FROM
     
     if (!from) {
-        throw new Error('[mail] SMTP_FROM is not set — email will not be sent')
+        throw new Error('[mail] SMTP_FROM is not set - email will not be sent')
     }
     
     if (!to) {
-        throw new Error('[mail] ADMIN_NOTIFY_EMAIL is not set — email will not be sent')
+        throw new Error('[mail] ADMIN_NOTIFY_EMAIL is not set - email will not be sent')
     }
     
     return transporter.sendMail({
@@ -48,7 +48,7 @@ export async function sendLoanInquiryNotification(data: {
   const subject = `New Loan Inquiry – ${data.firstName} ${data.lastName}`
 
   const to       = process.env.ADMIN_NOTIFY_EMAIL ?? ''
-  if (!to) console.warn('[mail] ADMIN_NOTIFY_EMAIL is not set — email will not be sent')
+  if (!to) console.warn('[mail] ADMIN_NOTIFY_EMAIL is not set - email will not be sent')
 
   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 620px; margin: 0 auto; color: #1a202c;">
@@ -116,7 +116,7 @@ export async function sendBrokerRegistrationNotification(data: {
   const subject = `New Broker Registration – ${data.firstName} ${data.lastName}`
 
   const to       = process.env.ADMIN_NOTIFY_EMAIL ?? ''
-  if (!to) console.warn('[mail] ADMIN_NOTIFY_EMAIL is not set — email will not be sent')
+  if (!to) console.warn('[mail] ADMIN_NOTIFY_EMAIL is not set - email will not be sent')
 
   const productsDisplay = Array.isArray(data.products) ? data.products.join(', ') : 'None selected'
 
@@ -188,7 +188,7 @@ export async function sendContactNotification(data: {
   const subject = `New Contact Submission – ${data.firstName} ${data.lastName}`
 
   const to       = process.env.ADMIN_NOTIFY_EMAIL ?? ''
-  if (!to) console.warn('[mail] ADMIN_NOTIFY_EMAIL is not set — email will not be sent')
+  if (!to) console.warn('[mail] ADMIN_NOTIFY_EMAIL is not set - email will not be sent')
 
   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 620px; margin: 0 auto; color: #1a202c;">
@@ -241,7 +241,7 @@ export async function sendJobApplicationNotification(data: {
   const subject = `New Job Application – ${data.firstName} ${data.lastName} for ${data.position}`
 
   const to       = process.env.ADMIN_NOTIFY_EMAIL ?? ''
-  if (!to) console.warn('[mail] ADMIN_NOTIFY_EMAIL is not set — email will not be sent')
+  if (!to) console.warn('[mail] ADMIN_NOTIFY_EMAIL is not set - email will not be sent')
 
   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 620px; margin: 0 auto; color: #1a202c;">
