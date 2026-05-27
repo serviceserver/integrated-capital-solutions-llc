@@ -25,11 +25,10 @@ export default function AdminHeader({ user, isMobile, onMenuClick, mobileOpen }:
   }, [mobileOpen])
 
   return (
-    <div ref={scrollRef} style={{
+    <div style={{
       height: 60, background: '#fff', borderBottom: '1px solid #e8eaef',
       display: 'flex', alignItems: 'center',
-      padding: '4rem 1.75rem', 
-      margin: '4rem 0',
+      padding: '0 1.25rem',
       flexShrink: 0, position: 'sticky', top: 0, zIndex: 20,
     }}>
       {/* ── Hamburger / close toggle (mobile only) ── */}

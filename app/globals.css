@@ -259,3 +259,18 @@ button { font-family: inherit; }
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--off-white); }
 ::-webkit-scrollbar-thumb { background: var(--gray-mid); border-radius: 3px; }
+
+/* ─── Admin Mobile Responsive ────────────────────────────────────── */
+@media (max-width: 767px) {
+  /* Show mobile cards, hide desktop table */
+  .mobile-cards { display: block !important; }
+  .admin-table-container { display: none !important; }
+  
+  /* Mobile: detail grid single column */
+  .detail-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (min-width: 768px) {
+  /* Desktop: detail grid side-by-side */
+  .detail-grid { grid-template-columns: 1fr 320px !important; }
+}

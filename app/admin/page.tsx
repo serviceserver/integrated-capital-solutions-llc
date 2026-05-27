@@ -3,7 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
-import { FileText, Users, MessageSquare, Briefcase, TrendingUp, Clock } from 'lucide-react'
+import { FileText, Users, MessageSquare, Briefcase, Clock } from 'lucide-react'
 
 export const metadata = { title: 'Dashboard' }
 export const dynamic = 'force-dynamic'
@@ -57,7 +57,7 @@ export default async function AdminDashboard() {
       </div>
 
       {/* Stat cards */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '1.25rem', marginBottom: '2rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1.25rem', marginBottom: '2rem' }}>
         {stats.map(s => {
           const Icon = s.icon
           return (
@@ -87,43 +87,71 @@ export default async function AdminDashboard() {
           <Clock size={15} color="#c8922a" />
           <h2 style={{ fontSize: '0.9375rem', fontWeight: 700, color: '#0a1628', margin: 0 }}>Recent Activity</h2>
         </div>
-        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-          <thead>
-            <tr style={{ background: '#f7f8fa' }}>
-              {['Name', 'Type', 'Details', 'Status', 'Date'].map(h => (
-                <th key={h} style={{ padding: '0.625rem 1.25rem', textAlign: 'left', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#9aa3b2' }}>{h}</th>
+        {/* Desktop table */}
+        <div style={{ overflowX: 'auto' }} className="admin-table-container">
+          <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 600 }}>
+            <thead>
+              <tr style={{ background: '#f7f8fa' }}>
+                {['Name', 'Type', 'Details', 'Status', 'Date'].map(h => (
+                  <th key={h} style={{ padding: '0.625rem 1.25rem', textAlign: 'left', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#9aa3b2' }}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {allRecent.map((r, i) => (
+                <tr key={i} style={{ borderTop: '1px solid #f0f2f5' }}>
+                  <td style={{ padding: '0.875rem 1.25rem' }}>
+                    <Link href={r.href} style={{ fontWeight: 600, color: '#0a1628', fontSize: '0.875rem', textDecoration: 'none' }}>
+                      {r.name}
+                    </Link>
+                  </td>
+                  <td style={{ padding: '0.875rem 1.25rem' }}>
+                    <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#4a5568' }}>{r.type}</span>
+                  </td>
+                  <td style={{ padding: '0.875rem 1.25rem', color: '#9aa3b2', fontSize: '0.8125rem' }}>{r.sub}</td>
+                  <td style={{ padding: '0.875rem 1.25rem' }}>
+                    <StatusBadge status={r.status} />
+                  </td>
+                  <td style={{ padding: '0.875rem 1.25rem', color: '#9aa3b2', fontSize: '0.8125rem', whiteSpace: 'nowrap' }}>
+                    {new Date(r.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                  </td>
+                </tr>
               ))}
-            </tr>
-          </thead>
-          <tbody>
-            {allRecent.map((r, i) => (
-              <tr key={i} style={{ borderTop: '1px solid #f0f2f5' }}>
-                <td style={{ padding: '0.875rem 1.25rem' }}>
+              {allRecent.length === 0 && (
+                <tr>
+                  <td colSpan={5} style={{ padding: '3rem', textAlign: 'center', color: '#9aa3b2', fontSize: '0.875rem' }}>
+                    No submissions yet
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+        {/* Mobile cards */}
+        <div style={{ display: 'none' }} className="mobile-cards">
+          {allRecent.map((r, i) => (
+            <div key={i} style={{ padding: '1rem', borderBottom: '1px solid #f0f2f5' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
+                <div>
                   <Link href={r.href} style={{ fontWeight: 600, color: '#0a1628', fontSize: '0.875rem', textDecoration: 'none' }}>
                     {r.name}
                   </Link>
-                </td>
-                <td style={{ padding: '0.875rem 1.25rem' }}>
-                  <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#4a5568' }}>{r.type}</span>
-                </td>
-                <td style={{ padding: '0.875rem 1.25rem', color: '#9aa3b2', fontSize: '0.8125rem' }}>{r.sub}</td>
-                <td style={{ padding: '0.875rem 1.25rem' }}>
-                  <StatusBadge status={r.status} />
-                </td>
-                <td style={{ padding: '0.875rem 1.25rem', color: '#9aa3b2', fontSize: '0.8125rem' }}>
-                  {new Date(r.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                </td>
-              </tr>
-            ))}
-            {allRecent.length === 0 && (
-              <tr>
-                <td colSpan={5} style={{ padding: '3rem', textAlign: 'center', color: '#9aa3b2', fontSize: '0.875rem' }}>
-                  No submissions yet
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </table>
+                </div>
+                <StatusBadge status={r.status} />
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', fontSize: '0.75rem' }}>
+                <span style={{ color: '#9aa3b2' }}><strong style={{ color: '#9aa3b2', fontWeight: 600 }}>Type:</strong> {r.type}</span>
+                <span style={{ color: '#9aa3b2' }}><strong style={{ color: '#9aa3b2', fontWeight: 600 }}>Details:</strong> {r.sub}</span>
+                <span style={{ color: '#9aa3b2' }}><strong style={{ color: '#9aa3b2', fontWeight: 600 }}>Date:</strong> {new Date(r.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+              </div>
+            </div>
+          ))}
+          {allRecent.length === 0 && (
+            <div style={{ padding: '2rem', textAlign: 'center', color: '#9aa3b2', fontSize: '0.875rem' }}>
+              No submissions yet
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )

@@ -1,42 +1,34 @@
 // lib/mail.ts - email notification helpers for all submission types
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
-// ─── Transport (lazy-init, shared across calls) ────────────────────────────────
-let _transporter: nodemailer.Transporter | null = null
-function getTransporter() {
-    if (!_transporter) {
-        _transporter = nodemailer.createTransport({
-            host:   process.env.SMTP_HOST,
-            port:   Number(process.env.SMTP_PORT ),
-            secure: (process.env.SMTP_SECURE ?? 'true') === 'true',
-            auth: {
-                user: process.env.SMTP_USER                    ?? 'info@integratedcapitalsolutionsllc.com',
-                pass: process.env.SMTP_PASS,
-            },
-        })
-    }
-    return _transporter
+// ─── Resend client (lazy-init, shared across calls) ────────────────────────────
+let _resend: Resend | null = null
+function getResend() {
+  if (!_resend) {
+    const apiKey = process.env.RESEND_API_KEY
+    if (!apiKey) throw new Error('[mail] RESEND_API_KEY is not set')
+    _resend = new Resend(apiKey)
+  }
+  return _resend
 }
 
 // ─── Generic send helper ───────────────────────────────────────────────────────
 async function send(to: string, subject: string, html: string) {
-    const transporter = getTransporter()
-    const from = process.env.SMTP_FROM
-    
-    if (!from) {
-        throw new Error('[mail] SMTP_FROM is not set - email will not be sent')
-    }
-    
-    if (!to) {
-        throw new Error('[mail] ADMIN_NOTIFY_EMAIL is not set - email will not be sent')
-    }
-    
-    return transporter.sendMail({
-        from,
-        to,
-        subject,
-        html,
-    })
+  const from = process.env.SMTP_FROM
+
+  if (!from) throw new Error('[mail] SMTP_FROM is not set')
+  if (!to)   throw new Error('[mail] ADMIN_NOTIFY_EMAIL is not set')
+
+  const resend = getResend()
+  const { data, error } = await resend.emails.send({ from, to, subject, html })
+
+  if (error) {
+    console.error('[mail] Resend error:', error)
+    throw new Error(error.message)
+  }
+
+  console.log('[mail] sent:', data?.id)
+  return data
 }
 
 // ─── 1. Loan Inquiry ───────────────────────────────────────────────────────────
@@ -46,11 +38,11 @@ export async function sendLoanInquiryNotification(data: {
   propertyAddress?: string | null; experience?: string | null; notes?: string | null
 }) {
   const subject = `New Loan Inquiry – ${data.firstName} ${data.lastName}`
+  const to      = process.env.ADMIN_NOTIFY_EMAIL ?? ''
 
-  const to       = process.env.ADMIN_NOTIFY_EMAIL ?? ''
   if (!to) console.warn('[mail] ADMIN_NOTIFY_EMAIL is not set - email will not be sent')
 
-  const html = `
+   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 620px; margin: 0 auto; color: #1a202c;">
       <div style="background: #0a1628; color: #fff; padding: 1.5rem 2rem; border-radius: 8px 8px 0 0;">
         <h2 style="margin: 0; font-size: 1.25rem;">New Loan Inquiry</h2>
@@ -114,8 +106,8 @@ export async function sendBrokerRegistrationNotification(data: {
   products?: string[]; notes?: string | null
 }) {
   const subject = `New Broker Registration – ${data.firstName} ${data.lastName}`
+  const to      = process.env.ADMIN_NOTIFY_EMAIL ?? ''
 
-  const to       = process.env.ADMIN_NOTIFY_EMAIL ?? ''
   if (!to) console.warn('[mail] ADMIN_NOTIFY_EMAIL is not set - email will not be sent')
 
   const productsDisplay = Array.isArray(data.products) ? data.products.join(', ') : 'None selected'
@@ -177,6 +169,7 @@ export async function sendBrokerRegistrationNotification(data: {
     </div>
   `
 
+
   return send(to, subject, html)
 }
 
@@ -186,8 +179,8 @@ export async function sendContactNotification(data: {
   company?: string | null; phone: string; email: string; message: string
 }) {
   const subject = `New Contact Submission – ${data.firstName} ${data.lastName}`
+  const to      = process.env.ADMIN_NOTIFY_EMAIL ?? ''
 
-  const to       = process.env.ADMIN_NOTIFY_EMAIL ?? ''
   if (!to) console.warn('[mail] ADMIN_NOTIFY_EMAIL is not set - email will not be sent')
 
   const html = `
@@ -239,8 +232,8 @@ export async function sendJobApplicationNotification(data: {
   resumeUrl?: string | null; resumeName?: string | null
 }) {
   const subject = `New Job Application – ${data.firstName} ${data.lastName} for ${data.position}`
+  const to      = process.env.ADMIN_NOTIFY_EMAIL ?? ''
 
-  const to       = process.env.ADMIN_NOTIFY_EMAIL ?? ''
   if (!to) console.warn('[mail] ADMIN_NOTIFY_EMAIL is not set - email will not be sent')
 
   const html = `
@@ -290,4 +283,3 @@ export async function sendJobApplicationNotification(data: {
 
   return send(to, subject, html)
 }
-
