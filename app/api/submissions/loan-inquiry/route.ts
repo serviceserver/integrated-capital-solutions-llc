@@ -6,15 +6,20 @@ import { sendLoanInquiryNotification } from '@/lib/mail'
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json()
-    const parsed = loanInquirySchema.safeParse(body)
+       const body = await req.json()
+       console.log('[loan-inquiry] body type:', typeof body)
+       console.log('[loan-inquiry] body:', body)
+       console.log('[loan-inquiry] body as string:', JSON.stringify(body))
+       const parsed = loanInquirySchema.safeParse(body)
 
-    if (!parsed.success) {
-      return NextResponse.json(
-        { error: 'Validation failed', issues: parsed.error.flatten().fieldErrors },
-        { status: 422 }
-      )
-    }
+       if (!parsed.success) {
+         console.error('[loan-inquiry] Validation error:', parsed.error)
+         console.error('[loan-inquiry] body that failed:', body)
+         return NextResponse.json(
+           { error: 'Validation failed', issues: parsed.error.flatten().fieldErrors },
+           { status: 422 }
+         )
+       }
 
     const data = parsed.data
 

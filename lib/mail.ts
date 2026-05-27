@@ -6,12 +6,12 @@ let _transporter: nodemailer.Transporter | null = null
 function getTransporter() {
     if (!_transporter) {
         _transporter = nodemailer.createTransport({
-            host:   process.env.SMTP_HOST                    ?? 'smtp.hostinger.com',
-            port:   Number(process.env.SMTP_PORT             ?? '587'),
-            secure: (process.env.SMTP_SECURE ?? 'false') === 'true',
+            host:   process.env.SMTP_HOST,
+            port:   Number(process.env.SMTP_PORT ),
+            secure: (process.env.SMTP_SECURE ?? 'true') === 'true',
             auth: {
                 user: process.env.SMTP_USER                    ?? 'info@integratedcapitalsolutionsllc.com',
-                pass: process.env.SMTP_PASS                    ?? '',
+                pass: process.env.SMTP_PASS,
             },
         })
     }
