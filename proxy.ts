@@ -72,7 +72,7 @@ export default async function middleware(request: NextRequest) {
       <div class="divider"></div>
       <p>We are currently performing scheduled maintenance to improve our services. We will be back online shortly.</p>
       <p class="contact">
-        Please check back in a few minutes. If you need immediate assistance, contact us at 
+        Please check back in a few minutes. If you need immediate assistance, kindly contact us at 
         <a href="mailto:info@integratedcapitalsolutionsllc.com">info@integratedcapitalsolutionsllc.com</a>
       </p>
     </div>
