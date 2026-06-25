@@ -176,3 +176,11 @@ enum ApplicationStatus {
   HIRED
   REJECTED
 }
+
+// ─── Site Content ──────────────────────────────────────────────
+model SiteContent {
+  id          String   @id @default(cuid())
+  key         String   @unique
+  value       String   @db.Text
+  updatedAt   DateTime @updatedAt
+}

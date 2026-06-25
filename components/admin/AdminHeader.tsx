@@ -29,7 +29,7 @@ export default function AdminHeader({ user, isMobile, onMenuClick, mobileOpen }:
       height: 60, background: '#fff', borderBottom: '1px solid #e8eaef',
       display: 'flex', alignItems: 'center',
       padding: '0 1.25rem',
-      flexShrink: 0, position: 'sticky', top: 0, zIndex: 20,
+      flexShrink: 0, position: 'sticky', top: '4rem', zIndex: 20,
     }}>
       {/* ── Hamburger / close toggle (mobile only) ── */}
       {isMobile && (

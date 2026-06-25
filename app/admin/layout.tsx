@@ -34,6 +34,7 @@ export default function AdminLayout({
         width: SIDEBAR_WIDTH,
         transition: 'transform 0.25s ease',
         transform: mobileOpen ? 'translateX(0)' : 'translateX(-100%)',
+        pointerEvents: mobileOpen ? 'auto' : 'none',
       }
     : {
         position: 'sticky', top: 0,
@@ -85,7 +86,7 @@ export default function AdminLayout({
             mobileOpen={mobileOpen}
           />
         )}
-        <main style={{ flex: 1, padding: isMobile ? '1rem' : '2rem', overflowY: 'auto' }}>
+        <main style={{ flex: 1, padding: isMobile ? '1rem' : '2rem', overflowY: 'auto', marginTop: isLoginPage ? 0 : '4rem' }}>
           {children}
         </main>
       </div>

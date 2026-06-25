@@ -75,6 +75,25 @@ async function main() {
     console.log(`    Role:     ADMIN`)
   }
 
+  // ── 7. Site content ──────────────────────────────────────────
+  const defaultContent: [string, string][] = [
+    ['contact_email', 'info@integratedcapitalsolutionsllc.com'],
+    ['contact_phone', '(844) 922-2724'],
+    ['contact_address', '18400 Von Karman Ave., Suite 500, Irvine, CA 92612'],
+    ['contact_hours', 'Mon – Fri, 8:30 AM – 5:00 PM PT'],
+    ['loan_servicing_address', '2175 Hunting Valley lane, Streetsboro, OH, 44241'],
+    ['payoff_email', 'curtis@integratedcapitalsolutionsllc.com'],
+    ['servicing_email', 'info@integratedcapitalsolutionsllc.com'],
+  ]
+
+  for (const [key, value] of defaultContent) {
+    const existing = await prisma.siteContent.findUnique({ where: { key } })
+    if (!existing) {
+      await prisma.siteContent.create({ data: { key, value } })
+    }
+  }
+  console.log('  ✓ Site content seeded')
+
   // ── Summary ──────────────────────────────────────────────────
   console.log('\n✅  Seed complete!\n')
   console.log('─────────────────────────────────────────')

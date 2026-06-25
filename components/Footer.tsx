@@ -72,10 +72,10 @@ export default function Footer() {
             The Integrated Capital Solutions family of companies utilizes Integrated Capital Solutions Funding, LLC and Integrated Capital Solutions Lending, LLC to conduct its lending operations.
           </p>
           <p className="text-white/35 text-xs leading-relaxed mb-4">
-            ©{new Date().getFullYear()} Integrated Capital Solutions Lending, LLC/NMLS ID: 2674250. 2175 Hunting Valley lane, Streetsboro, OH, 44241. In California, loans are made under California Financing Law License #60DBO-203056. Integrated Capital Solutions Lending makes commercial purpose loans secured by brokers and does not make any loans for personal, family, or household use.
+            ©{new Date().getFullYear()} Integrated Capital Solutions Lending, LLC/NMLS ID: 2291522. 2175 Hunting Valley lane, Streetsboro, OH, 44241. In California, loans are made under California Financing Law License #60DBO-203056. Integrated Capital Solutions Lending makes commercial purpose loans secured by brokers and does not make any loans for personal, family, or household use.
           </p>
           <p className="text-white/35 text-xs leading-relaxed mb-6">
-            ©{new Date().getFullYear()} Integrated Capital Solutions Funding, LLC/NMLS ID: 2229965. 2175 Hunting Valley lane, Streetsboro, OH, 44241. In California, loans are made under California Financing Law License #60DBO-156808.
+            ©{new Date().getFullYear()} Integrated Capital Solutions Funding, LLC/NMLS ID: 2291522. 2175 Hunting Valley lane, Streetsboro, OH, 44241. In California, loans are made under California Financing Law License #60DBO-156808.
           </p>
           <div className="flex flex-wrap gap-4 items-center">
             <Link href="/terms-of-use" className="text-white/40 hover:text-white/70 text-xs transition-colors">Terms of Use</Link>

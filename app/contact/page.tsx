@@ -3,6 +3,7 @@ import SchemaScript from '@/components/SchemaScript';
 import Breadcrumb from '@/components/Breadcrumb';
 import ContactForm from '@/components/ContactForm';
 import { buildMetadata } from '@/lib/seo';
+import { prisma } from '@/lib/prisma'
 import { Phone, MapPin, Clock, Mail } from 'lucide-react';
 
 export const metadata: Metadata = buildMetadata({
@@ -12,29 +13,48 @@ export const metadata: Metadata = buildMetadata({
   keywords: ['contact Integrated Capital Solutions', 'real estate lender phone number', 'private lender Irvine CA'],
 });
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FinancialService',
-  name: 'Integrated Capital Solutions',
-  url: 'https://www.integratedcapitalsolutionsllc.com',
-  telephone: '+18449222724',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '18400 Von Karman Ave., Suite 500',
-    addressLocality: 'Irvine',
-    addressRegion: 'CA',
-    postalCode: '92612',
-    addressCountry: 'US',
-  },
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'],
-    opens: '08:30',
-    closes: '17:00',
-  },
-};
+export const dynamic = 'force-dynamic'
 
-export default function ContactPage() {
+async function getContent() {
+  const rows = await prisma.siteContent.findMany()
+  const map: Record<string, string> = {}
+  for (const r of rows) map[r.key] = r.value
+  return map
+}
+
+export default async function ContactPage() {
+  const content = await getContent()
+  const email = content.contact_email ?? 'info@integratedcapitalsolutionsllc.com'
+  const phone = content.contact_phone ?? '(844) 922-2724'
+  const phoneHref = phone.replace(/[^0-9+]/g, '')
+  const address = content.contact_address ?? '18400 Von Karman Ave., Suite 500, Irvine, CA 92612'
+  const hours = content.contact_hours ?? 'Mon – Fri, 8:30 AM – 5:00 PM PT'
+  const servicingAddress = content.loan_servicing_address ?? '2175 Hunting Valley lane, Streetsboro, OH, 44241'
+  const payoffEmail = content.payoff_email ?? 'curtis@integratedcapitalsolutionsllc.com'
+  const servicingEmail = content.servicing_email ?? 'info@integratedcapitalsolutionsllc.com'
+
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FinancialService',
+    name: 'Integrated Capital Solutions',
+    url: 'https://www.integratedcapitalsolutionsllc.com',
+    telephone: phoneHref,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: address.split(',').slice(0, -2).join(',').trim(),
+      addressLocality: address.split(',')[address.split(',').length - 2]?.trim() ?? 'Irvine',
+      addressRegion: 'CA',
+      postalCode: address.split(',').pop()?.trim() ?? '92612',
+      addressCountry: 'US',
+    },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'],
+      opens: '08:30',
+      closes: '17:00',
+    },
+  };
+
   return (
     <>
       <SchemaScript schema={localBusinessSchema} />
@@ -63,10 +83,9 @@ export default function ContactPage() {
 
               <div className="flex flex-col gap-6 mb-10">
                 {[
-                  // { icon: <Phone size={18} />, label: 'Phone', value: '(844) 922-2724', href: 'tel:18449222724' },
-                  { icon: <Mail size={18} />, label: 'Email', value: 'info@integratedcapitalsolutionsllc.com', href: 'mailto:info@integratedcapitalsolutionsllc.com' },
-                  { icon: <MapPin size={18} />, label: 'Address', value: '18400 Von Karman Ave., Suite 500, Irvine, CA 92612', href: 'https://maps.google.com/?q=18400+Von+Karman+Ave+Suite+500+Irvine+CA+92612' },
-                  { icon: <Clock size={18} />, label: 'Hours', value: 'Mon – Fri, 8:30 AM – 5:00 PM PT', href: null },
+                  { icon: <Mail size={18} />, label: 'Email', value: email, href: `mailto:${email}` },
+                  { icon: <MapPin size={18} />, label: 'Address', value: address, href: `https://maps.google.com/?q=${encodeURIComponent(address)}` },
+                  { icon: <Clock size={18} />, label: 'Hours', value: hours, href: null },
                 ].map(item => (
                   <div key={item.label} className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-[#0a1628] flex items-center justify-center text-[#c8922a] shrink-0">
@@ -98,21 +117,20 @@ export default function ContactPage() {
                 <div className="flex flex-col gap-4 text-sm">
                   <div>
                     <p className="text-[0.6875rem] font-bold uppercase tracking-widest text-[#9aa3b2] mb-1">Payments</p>
-                    <p className="font-medium text-[#0a1628]">2175 Hunting Valley lane, Streetsboro, OH, 44241</p>
+                    <p className="font-medium text-[#0a1628]">{servicingAddress}</p>
                   </div>
                   <div>
                     <p className="text-[0.6875rem] font-bold uppercase tracking-widest text-[#9aa3b2] mb-1">Payoff Requests</p>
-                    <a href="mailto:curtis@integratedcapitalsolutionsllc.com" className="text-[#c8922a] font-semibold hover:underline">
-                      curtis@integratedcapitalsolutionsllc.com
+                    <a href={`mailto:${payoffEmail}`} className="text-[#c8922a] font-semibold hover:underline">
+                      {payoffEmail}
                     </a>
                   </div>
                   <div>
                     <p className="text-[0.6875rem] font-bold uppercase tracking-widest text-[#9aa3b2] mb-1">Servicing Inquiries</p>
                     <div className="flex flex-wrap gap-3">
-                      <a href="mailto:info@integratedcapitalsolutionsllc.com" className="text-[#c8922a] font-semibold hover:underline">
-                        info@integratedcapitalsolutionsllc.com
+                      <a href={`mailto:${servicingEmail}`} className="text-[#c8922a] font-semibold hover:underline">
+                        {servicingEmail}
                       </a>
-                      <span className="text-[#9aa3b2]">·</span>
                     </div>
                   </div>
                 </div>
