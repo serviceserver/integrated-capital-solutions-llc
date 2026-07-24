@@ -17,59 +17,16 @@ export const metadata: Metadata = buildMetadata({
 
 const team = [
   {
-    name: 'Shawn Miller',
-    title: 'Chief Executive Officer',
-    image:'/HS-shawn-miller.jpg',
-    bio: 'Formerly a Managing Director at Redwood Trust and founder of 5 Arch Funding Corp., Shawn brings decades of residential real estate finance experience. Under his leadership, 5 Arch grew to fund billions in business purpose loans before its acquisition by Pretium Partners.',
+    name: 'Chad Droeg',
+    title: ' Direct Lender | CEO & Head of Operations, Integrated Capital Solutions LLC',
+    image:'/chad-droeg.jpg',
+    bio: [
+      'Chad Droeg is the CEO and Head of Operations at Integrated Capital Solutions LLC, a direct lending firm specializing in business financing, including SBA, conventional, and pre-revenue loans.',
+      'As a direct lender with NMLS ID 2291522, Chad is known for his creative structuring and his ability to fund deals that traditional banks often decline. He oversees all lending operations, from initial underwriting to final funding, ensuring a fast, transparent, and results-driven process for clients.',
+      'With a strong focus on separating real deals from time wasters, his commitment-based model ensures that serious entrepreneurs receive dedicated resources and a clear path to capital.',
+    ],
   },
-  {
-    name: 'Kieran Brady',
-    title: 'Chief Financial Officer',
-        image:'/HS-kieran-brady.jpg',
-    bio: 'Kieran has served as CFO at X1, Newport Group, and Earnest, and as a Managing Director at Barclays Capital. He brings deep institutional finance expertise and a track record of scaling high-growth financial services companies.',
-  },
-  {
-    name: 'Gene Clark',
-    title: 'Chief Legal Officer',
-        image:'/HS-gene-clark.jpg',
-    bio: 'Co-founder of 5 Arch Funding and former Chief Legal Officer at Redwood Trust, Gene has extensive experience structuring and managing complex real estate finance transactions at both the institutional and private market levels.',
-  },
-  {
-    name: 'Timothy Gannaway',
-    title: 'Chief Technology Officer',
-        image:'/HS-timothy-gannaway.webp',
-    bio: 'A former SVP at Redwood Trust and Chief Analytics Officer at 5 Arch, Timothy leads Integrated Capital Solutions\'s technology and data strategy, building the infrastructure that enables fast, accurate, and scalable loan decisioning.',
-  },
-  {
-    name: 'Tricia Mitchell',
-    title: 'Chief Operating Officer',
-        image:'/HS-tricia-mitchell.jpg',
-    bio: 'Tricia previously served as VP of Legal at 5 Arch and has been with the Integrated Capital Solutionsfounding team since 2012. She oversees operations, compliance, and the day-to-day execution that keeps Integrated Capital Solutionsrunning at the highest standard.',
-  },
-  {
-    name: 'Tuan Pham',
-    title: 'Chief Marketing Officer',
-        image:'/HS-tuan-pham.jpg',
-    bio: 'With 23 years of experience across marketing and brand strategy, Tuan previously served as CMO at Dunmor and CoreVest, and as a Managing Director at Redwood Trust. He leads Integrated Capital Solutions\'s go-to-market strategy and brand growth.',
-  },
-  {
-    name: 'Henry Frome',
-    title: 'EVP, Corporate Development & Capital Markets',
-        image:'/HS-henry-frome.jpg',
-    bio: 'Henry brings deep capital markets expertise from his time at Eastdil Secured, where he advised on some of the largest real estate transactions in the country. He leads Integrated Capital Solutions\'s capital markets and strategic growth initiatives.',
-  },
-  {
-    name: 'Kimberly DiFrancesco Correa',
-    title: 'SVP, Construction',
-        image:'/HS-kim-correa.jpg',
-    bio: 'Previously at Genesis Capital, Kimberly leads Integrated Capital Solutions\'s construction lending division, overseeing the draw management, underwriting, and relationship management that supports ground-up builders across the country.',
-  },
-  {
-    name: 'Kathy Perez',
-    title: 'SVP, Closing',
-        image:'/HS-kathy-perez.jpg',
-    bio: 'With over 6 years in business purpose lending and 10 years at First American and ServiceLink, Kathy leads Integrated Capital Solutions\'s closing operations - ensuring every transaction closes efficiently, accurately, and on time.',
-  },
+
 ];
 
 const teamSchema = {
@@ -89,7 +46,7 @@ const teamSchema = {
         url: 'https://www.integratedcapitalsolutionsllc.com',
       },
           image: member.image,
-      description: member.bio,
+      description: member.bio.join(' '),
     },
   })),
 };
@@ -119,11 +76,11 @@ export default function TeamPage() {
       </section>
 
       <section className="py-20" aria-label="Leadership team members">
-        <div className="container-wide">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="container-wide flex justify-center items-center">
+          <div className="grid grid-cols-1 items-center max-w-2xl">
             {team.map((member) => (
               <article key={member.name} className="bg-white rounded-xl border border-[#e8eaef] overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="bg-[#0f2040] aspect-[4/3] flex items-center justify-center">
+                <div className="bg-[#0f2040] aspect-4/3 flex items-center justify-center">
                   {member.image ? (
                     <Image src={member.image} alt={member.name} width={300} height={200} className="w-full h-full object-cover" />
                   ) : (
@@ -139,7 +96,11 @@ export default function TeamPage() {
                   <p className="text-[#c8922a] text-xs font-bold uppercase tracking-wider mt-0.5 mb-3">
                     {member.title}
                   </p>
-                  <p className="text-sm text-[#4a5568] leading-relaxed">{member.bio}</p>
+                  <div className="text-sm text-[#4a5568] leading-relaxed space-y-3">
+                    {member.bio.map((p, i) => (
+                      <p key={i}>{p}</p>
+                    ))}
+                  </div>
                 </div>
               </article>
             ))}
